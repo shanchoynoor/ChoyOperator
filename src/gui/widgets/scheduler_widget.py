@@ -177,9 +177,11 @@ class ScheduleItemDialog(QDialog):
         
         layout.addLayout(form)
         
-        # Content fields with AI generation
-        content_group = QGroupBox("Content (AI-Assisted)")
-        content_layout = QVBoxLayout(content_group)
+        # AI Generation controls - compact
+        ai_group = QGroupBox("AI Content Generation")
+        ai_layout = QVBoxLayout(ai_group)
+        ai_layout.setContentsMargins(8, 10, 8, 8)
+        ai_layout.setSpacing(6)
         
         # Title (for YouTube videos)
         title_layout = QHBoxLayout()
@@ -190,14 +192,18 @@ class ScheduleItemDialog(QDialog):
         gen_title_btn = QPushButton("🤖 Generate")
         gen_title_btn.clicked.connect(self._generate_title)
         title_layout.addWidget(gen_title_btn)
-        content_layout.addLayout(title_layout)
+        ai_layout.addLayout(title_layout)
         
         # Description/Caption
-        content_layout.addWidget(QLabel("Description/Caption:"))
-        self.description_input = QTextEdit()
-        self.description_input.setPlaceholderText("Post description or caption...")
-        self.description_input.setMaximumHeight(100)
-        content_layout.addWidget(self.description_input)
+        ai_layout.addWidget(QLabel("Description/Caption:"))
+        # Content text area (description)
+        self.content_edit = QTextEdit()
+        self.content_edit.setPlaceholderText("Write your post description here...")
+        self.content_edit.setFont(QFont("Segoe UI", 11))
+        self.content_edit.textChanged.connect(self._update_char_count)
+        self.content_edit.setMinimumHeight(100)
+        self.content_edit.setMaximumHeight(150)  # Cap max height
+        ai_layout.addWidget(self.content_edit)
         
         desc_btn_layout = QHBoxLayout()
         gen_desc_btn = QPushButton("🤖 Generate Description")
@@ -208,9 +214,20 @@ class ScheduleItemDialog(QDialog):
         gen_hashtags_btn.clicked.connect(self._generate_hashtags)
         desc_btn_layout.addWidget(gen_hashtags_btn)
         desc_btn_layout.addStretch()
-        content_layout.addLayout(desc_btn_layout)
+        ai_layout.addLayout(desc_btn_layout)
         
-        layout.addWidget(content_group)
+        layout.addWidget(ai_group)
+        
+        # Media attachments
+        media_group = QGroupBox("Media Attachments")
+        media_layout = QHBoxLayout(media_group)
+        media_layout.setContentsMargins(8, 10, 8, 8)
+        
+        self.media_list = QListWidget()
+        self.media_list.setMaximumHeight(60)  # Reduced from 80
+        media_layout.addWidget(self.media_list)
+        
+        layout.addWidget(media_group)
         
         # Schedule time
         schedule_group = QGroupBox("Schedule")
@@ -420,7 +437,7 @@ class SchedulerWidget(QWidget):
         self.drop_zone.files_dropped.connect(self._on_files_dropped)
         layout.addWidget(self.drop_zone)
         
-        # Scheduled posts table - increased size
+        # Scheduled posts table - compact size
         self.schedule_table = QTableWidget()
         self.schedule_table.setColumnCount(5)
         self.schedule_table.setHorizontalHeaderLabels([
@@ -429,7 +446,8 @@ class SchedulerWidget(QWidget):
         self.schedule_table.horizontalHeader().setSectionResizeMode(1, QHeaderView.Stretch)
         self.schedule_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.schedule_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.schedule_table.setMinimumHeight(250)  # Increased table height
+        self.schedule_table.setMinimumHeight(120)  # Reduced table height
+        self.schedule_table.setMaximumHeight(200)  # Cap max height
         layout.addWidget(self.schedule_table, stretch=1)
         
         # Action buttons

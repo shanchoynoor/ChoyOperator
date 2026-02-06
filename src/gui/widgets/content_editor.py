@@ -100,12 +100,15 @@ class ContentEditorWidget(QWidget):
         self.content_edit.setPlaceholderText("Write your post description here...")
         self.content_edit.setFont(QFont("Segoe UI", 11))
         self.content_edit.textChanged.connect(self._update_char_count)
-        self.content_edit.setMinimumHeight(120)
+        self.content_edit.setMinimumHeight(80)
+        self.content_edit.setMaximumHeight(140)
         layout.addWidget(self.content_edit)
         
         # AI Generation controls
         ai_group = QGroupBox("AI Content Generation")
         ai_layout = QVBoxLayout(ai_group)
+        ai_layout.setContentsMargins(8, 10, 8, 8)
+        ai_layout.setSpacing(6)
         
         # Topic input
         topic_layout = QHBoxLayout()
@@ -161,9 +164,10 @@ class ContentEditorWidget(QWidget):
         # Media attachments
         media_group = QGroupBox("Media Attachments")
         media_layout = QHBoxLayout(media_group)
+        media_layout.setContentsMargins(8, 10, 8, 8)
         
         self.media_list = QListWidget()
-        self.media_list.setMaximumHeight(80)
+        self.media_list.setMaximumHeight(60)
         media_layout.addWidget(self.media_list)
         
         media_btn_layout = QVBoxLayout()

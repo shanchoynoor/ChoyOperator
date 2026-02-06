@@ -1,574 +1,538 @@
-import logging
+"""
+AI-Powered Social Media Poster - Intelligent DOM manipulation for Facebook posting.
+Uses multiple detection strategies and AI-like fallback logic to find and interact
+with elements reliably, even when Facebook changes their DOM structure.
+"""
+
 import asyncio
-import shutil
-import sys
-import os
-from typing import Optional
+import logging
 from pathlib import Path
+from typing import Optional
+from playwright.async_api import async_playwright, Page, Locator
 
-# Hide console windows on Windows for browser subprocesses
-if sys.platform == "win32":
-    import subprocess
-    CREATE_NO_WINDOW = 0x08000000
-    _original_popen = subprocess.Popen
+from src.config import config
+from src.data.database import get_database
+from src.utils.logger import get_logger
+
+from src.core.browser_session_manager import get_session_manager, BrowserSessionManager
+
+logger = get_logger(__name__)
+
+
+class IntelligentElementFinder:
+    """Intelligent element finder with multiple detection strategies."""
     
-    class NoWindowPopen(_original_popen):
-        def __init__(self, *args, **kwargs):
-            if 'creationflags' not in kwargs:
-                kwargs['creationflags'] = CREATE_NO_WINDOW
-            super().__init__(*args, **kwargs)
-    
-    subprocess.Popen = NoWindowPopen
-
-
-logger = logging.getLogger(__name__)
-
-
-def _copy_session_data(
-    source_user_data: Path,
-    target_user_data: Path,
-    profile_name: str = "Default",
-):
-    """Copy essential session files from user's Brave profile to automation profile."""
-    try:
-        source_profile = source_user_data / profile_name
-        target_profile = target_user_data / profile_name
-        if not source_profile.exists():
-            logger.warning(f"Source Brave profile not found: {source_profile}")
-            return
-
-        # Ensure target exists
-        target_profile.mkdir(parents=True, exist_ok=True)
+    @staticmethod
+    async def find_text_input_intelligent(page: Page) -> Optional[Locator]:
+        """Intelligently find Facebook's text input/composer with extensive fallbacks."""
+        logger.info("🔍 Searching for text input...")
         
-        # Files to copy for preserving sessions (relative paths)
-        session_paths = [
-            Path("Login Data"),
-            Path("Cookies"),
-            Path("Network") / "Cookies",
-            Path("Web Data"),
-            Path("History"),
-            Path("Favicons"),
-            Path("Local Storage"),
-            Path("Session Storage"),
+        # Wait a moment for any animations/dialogs to settle
+        await page.wait_for_timeout(1500)
+        
+        # Comprehensive selector list - ordered by specificity
+        selectors = [
+            # Most specific - modern Facebook composer
+            "div[contenteditable='true'][data-lexical-editor='true']",
+            "div[data-lexical-editor='true'][contenteditable='true']",
+            "div[data-contents='true'][contenteditable='true']",
+            # Standard patterns
+            "div[contenteditable='true'][role='textbox']",
+            "div[role='textbox'][contenteditable='true']",
+            "div[contenteditable='true'][spellcheck='false']",
+            # Placeholder based
+            "div[aria-placeholder*='mind']",
+            "div[aria-placeholder*='your']",
+            "div[aria-placeholder*='post']",
+            "div[aria-placeholder*='text']",
+            # Data attributes
+            "[data-lexical-editor='true']",
+            "[data-contents='true']",
+            "[data-testid*='composer']",
+            "[data-testid*='textbox']",
+            # Class patterns (Facebook uses hashed classes but some patterns persist)
+            "div[class*='notranslate']",
+            "div[class*='editor']",
+            "div[class*='composer']",
+            # Generic fallbacks
+            "div[contenteditable='true']",
+            "div[role='textbox']",
+            "[contenteditable='true']",
         ]
         
-        copied = []
-        for rel_path in session_paths:
-            src = source_profile / rel_path
-            dst = target_profile / rel_path
-            if src.exists():
+        logger.info(f"Trying {len(selectors)} selectors...")
+        
+        for selector in selectors:
+            try:
+                locator = page.locator(selector).first
+                count = await locator.count()
+                if count > 0:
+                    is_visible = await locator.is_visible()
+                    if is_visible:
+                        # Try to verify it's actually a text input
+                        try:
+                            contenteditable = await locator.get_attribute("contenteditable")
+                            role = await locator.get_attribute("role")
+                            placeholder = await locator.get_attribute("aria-placeholder")
+                            logger.info(f"✓ Found element: {selector} (contenteditable={contenteditable}, role={role}, placeholder={placeholder})")
+                            if contenteditable == "true" or role == "textbox":
+                                logger.info(f"✓ Confirmed text input: {selector}")
+                                return locator
+                        except Exception:
+                            # If we can't check attributes but it's visible and contenteditable, use it
+                            if "contenteditable" in selector:
+                                logger.info(f"✓ Using visible contenteditable: {selector}")
+                                return locator
+            except Exception as e:
+                logger.debug(f"Selector {selector} failed: {e}")
+                continue
+        
+        # Deep fallback: scan all page elements for contenteditable
+        logger.info("🔍 Deep scan: looking for any contenteditable element...")
+        try:
+            # Get all contenteditable elements
+            all_editables = page.locator("[contenteditable='true']")
+            count = await all_editables.count()
+            logger.info(f"Found {count} contenteditable elements total")
+            
+            # Check each one
+            for i in range(min(count, 10)):
                 try:
-                    if src.is_file():
-                        dst.parent.mkdir(parents=True, exist_ok=True)
-                        shutil.copy2(src, dst)
-                        copied.append(str(rel_path))
-                    elif src.is_dir():
-                        if dst.exists():
-                            shutil.rmtree(dst)
-                        shutil.copytree(src, dst)
-                        copied.append(str(rel_path))
+                    locator = all_editables.nth(i)
+                    if await locator.is_visible():
+                        # Get some info about it
+                        text = await locator.inner_text()
+                        logger.info(f"  Element {i}: visible, text='{text[:50]}...'")
+                        # Return the first visible one that's likely a composer
+                        if i == 0 or len(text) < 500:  # First one or not too much text
+                            logger.info(f"✓ Using contenteditable element {i}")
+                            return locator
                 except Exception as e:
-                    logger.warning(f"Could not copy {rel_path}: {e}")
+                    logger.debug(f"Element {i} check failed: {e}")
+                    continue
+                    
+        except Exception as e:
+            logger.error(f"Deep scan failed: {e}")
         
-        if copied:
-            logger.info(f"Copied session data: {', '.join(copied)}")
-        else:
-            logger.warning("No session files copied from Brave profile")
+        logger.error("❌ Could not find any text input element")
+        return None
+    
+    @staticmethod
+    async def find_button_by_text(page: Page, text: str) -> Optional[Locator]:
+        """Find button by text content."""
+        logger.info(f"Searching for button: '{text}'")
         
-    except Exception as e:
-        logger.error(f"Failed to copy session data: {e}")
+        selectors = [
+            f"div[aria-label='{text}'][role='button']",
+            f"button:has-text('{text}')",
+            f"div[role='button']:has-text('{text}')",
+            f"span:has-text('{text}')",
+        ]
+        
+        for selector in selectors:
+            try:
+                locator = page.locator(selector).first
+                if await locator.count() > 0 and await locator.is_visible():
+                    return locator
+            except Exception:
+                continue
+        
+        return None
 
 
 class BrowserDOMPoster:
-    """Posts to social media by controlling browser DOM with Playwright."""
+    """AI-powered social media poster using intelligent DOM manipulation."""
     
     def __init__(self):
-        self.browser = None
-        self.context = None
+        self.element_finder = IntelligentElementFinder()
+        self.session_manager = get_session_manager()
     
-    def post_to_facebook(
-        self, 
-        content: str, 
-        media_paths: list[str] | None = None,
-        headless: bool = False
-    ) -> tuple[bool,str]:
-        """
-        Post to Facebook using Playwright browser automation.
-        
-        Opens browser, finds Facebook post UI, uploads media, types content, and clicks Post.
-        """
-        try:
-            # Run async posting in sync context (usually called from a thread)
-            return asyncio.run(self._async_post_to_facebook(content, media_paths, headless))
-        except Exception as e:
-            logger.error(f"Facebook posting error: {e}")
-            return False, f"Error: {str(e)}"
+    def post_to_facebook(self, content: str, media_paths: list[str] = None, headless: bool = False) -> tuple[bool, str]:
+        """Public method to post to Facebook (called by worker thread)."""
+        return asyncio.run(self._async_post_to_facebook(content, media_paths or [], headless))
+    
+    def post(self, platform: str, content: str, media_paths: list[str]) -> tuple[bool, str]:
+        """Post content to social media platform."""
+        if platform.lower() == "facebook":
+            return self.post_to_facebook(content, media_paths)
+        return False, f"{platform} posting not implemented"
     
     async def _async_post_to_facebook(
-        self,
-        content: str,
-        media_paths: list[str] | None,
-        headless: bool
+        self, content: str, media_paths: list[str], headless: bool = False
     ) -> tuple[bool, str]:
-        """Async Facebook posting with Playwright."""
-        from playwright.async_api import async_playwright
-        from src.config import config
-        import os
+        """Post to Facebook using saved browser session."""
+        logger.info("Starting Facebook post...")
+        platform = "facebook"
+        
+        # Check if we have a saved session
+        if not self.session_manager.has_session(platform):
+            logger.info("No saved session found. Need to authenticate first.")
+            success, message = await self.session_manager.authenticate(platform, headless=False)
+            if not success:
+                return False, f"Authentication required: {message}"
+            logger.info(f"Authentication successful: {message}")
+        
+        # Now post using the saved session
+        browser = None
         
         async with async_playwright() as p:
             try:
-                # Get browser preference from settings
-                browser_type = getattr(config.browser, 'browser_type', 'brave').lower()
+                # Get browser config
+                browser_config = self.session_manager.browser_configs.get(platform)
+                if not browser_config:
+                    return False, "No browser configured"
                 
-                # Launch browser based on preference
-                logger.info(f"Launching {browser_type} browser...")
+                session = self.session_manager.get_session(platform)
                 
-                launch_options = {"headless": headless}
-                
-                if browser_type == "brave":
-                    # Find Brave executable
-                    brave_paths = [
-                        os.path.join(os.environ.get("PROGRAMFILES", ""), "BraveSoftware", "Brave-Browser", "Application", "brave.exe"),
-                        os.path.join(os.environ.get("PROGRAMFILES(X86)", ""), "BraveSoftware", "Brave-Browser", "Application", "brave.exe"),
-                        os.path.join(os.environ.get("LOCALAPPDATA", ""), "BraveSoftware", "Brave-Browser", "Application", "brave.exe"),
+                # Launch browser
+                browser = await p.chromium.launch(
+                    headless=headless,
+                    executable_path=browser_config.executable_path,
+                    args=[
+                        "--disable-blink-features=AutomationControlled",
+                        "--no-first-run",
+                        "--start-maximized",
                     ]
-                    brave_path = None
-                    for path in brave_paths:
-                        if os.path.exists(path):
-                            brave_path = path
-                            break
-                    
-                    if brave_path:
-                        launch_options["executable_path"] = brave_path
-                        logger.info(f"Using Brave: {brave_path}")
-                    else:
-                        logger.warning("Brave not found, falling back to Chromium")
+                )
                 
-                elif browser_type == "chrome":
-                    launch_options["channel"] = "chrome"
-                elif browser_type == "edge":
-                    launch_options["channel"] = "msedge"
+                # Create context with session cookies
+                context = await browser.new_context(
+                    viewport={"width": 1280, "height": 800},
+                    user_agent=session.user_agent if session else None,
+                )
                 
-                # Use dedicated automation profile but copy session data from user profile
-                from src.config import PROJECT_ROOT
+                # Add saved cookies
+                if session and session.cookies:
+                    await context.add_cookies(session.cookies)
+                    logger.info(f"Loaded {len(session.cookies)} cookies from saved session")
                 
-                automation_profile = PROJECT_ROOT / "data" / "brave_automation"
-                automation_profile.mkdir(parents=True, exist_ok=True)
-                
-                if browser_type == "brave":
-                    # Copy session data from user's Brave profile
-                    local_app_data = os.environ.get("LOCALAPPDATA", "")
-                    user_profile = Path(local_app_data) / "BraveSoftware" / "Brave-Browser" / "User Data"
-                    
-                    try:
-                        if user_profile.exists():
-                            logger.info("Copying session data from user profile...")
-                            _copy_session_data(user_profile, automation_profile)
-                            logger.info("Session data copied successfully")
-                        else:
-                            logger.warning("User Brave profile not found")
-                    except Exception as e:
-                        logger.warning(f"Failed to copy session data (Brave may be running): {e}")
-                        logger.info("Continuing without session data - you'll need to log in manually")
-                    
-                    brave_profile = automation_profile
-                    logger.info(f"Using automation profile: {brave_profile}")
-                else:
-                    brave_profile = automation_profile
-                    logger.info(f"Using automation profile: {brave_profile}")
-                
-                # Launch directly with persistent context
-                try:
-                    context = await p.chromium.launch_persistent_context(
-                        str(brave_profile),
-                        headless=headless,
-                        executable_path=launch_options.get("executable_path"),
-                        channel=launch_options.get("channel"),
-                        args=["--disable-blink-features=AutomationControlled"]
-                    )
-                except Exception as e:
-                    logger.error(f"Failed to launch persistent context: {e}")
-                    # Try fallback without profile if it failed
-                    logger.info("Retrying with standard browser launch...")
-                    browser = await p.chromium.launch(**launch_options)
-                    context = await browser.new_context()
-                
-                # Always create a new page for clean navigation
-                # (persistent context may open with blank about:blank page)
-                logger.info("Creating new page...")
                 page = await context.new_page()
-                logger.info(f"New page created with URL: {page.url}")
+                page.set_default_timeout(30000)
                 
-                # Go to Facebook (retry across canonical URLs)
+                # Navigate to Facebook
                 logger.info("Navigating to Facebook...")
-                facebook_urls = [
-                    "https://www.facebook.com/",
-                    "https://m.facebook.com/",
-                    "https://www.facebook.com/login.php",
-                ]
-                page_loaded = False
-                for fb_url in facebook_urls:
-                    try:
-                        logger.info(f"Trying {fb_url}...")
-                        await page.goto(fb_url, wait_until="domcontentloaded", timeout=60000)
-                        await page.wait_for_load_state("networkidle", timeout=30000)
-                        current_url = page.url
-                        logger.info(f"Current URL after navigation: {current_url}")
-                        if "facebook.com" in current_url:
-                            page_loaded = True
-                            logger.info(f"Successfully loaded Facebook: {current_url}")
-                            break
-                    except Exception as e:
-                        logger.warning(f"Navigation to {fb_url} failed: {e}")
-                        continue
-                
-                if not page_loaded:
-                    logger.error(f"Failed to load Facebook from any URL. Last URL: {page.url}")
-                    await context.close()
-                    return False, "Unable to load Facebook. Check your internet connection and try again."
-                
+                await page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
                 await page.wait_for_timeout(3000)
                 
-                # Check for "What's on your mind" to see if we are already logged in
-                is_logged_in = False
-                login_check_selectors = [
-                    "text=What's on your mind?",
-                    "[aria-label='Create a post']",
-                    "div[role='button']:has-text('mind')"
-                ]
+                # Check if still logged in
+                cookies = await context.cookies()
+                has_session = any(
+                    c.get("name") == "c_user" for c in cookies
+                )
                 
-                for selector in login_check_selectors:
-                    locator = page.locator(selector)
-                    if await locator.count() > 0:
-                        is_logged_in = True
-                        break
+                if not has_session:
+                    logger.warning("Session expired, need to re-authenticate")
+                    await browser.close()
+                    
+                    # Try to re-authenticate
+                    success, message = await self.session_manager.authenticate(platform, headless=False)
+                    if not success:
+                        return False, f"Session expired and re-authentication failed: {message}"
+                    
+                    # Retry posting
+                    return await self._async_post_to_facebook(content, media_paths, headless)
                 
-                if not is_logged_in:
-                    logger.info("Not logged in. Waiting up to 2 minutes for user to log in manually...")
-                    # We wait for the "What's on your mind" selector to appear
-                    try:
-                        # Find any of the create post selectors
-                        combined_selector = ", ".join(login_check_selectors)
-                        await page.wait_for_selector(combined_selector, timeout=120000)
-                        logger.info("Login detected! Proceeding...")
-                    except Exception:
-                        await context.close()
-                        return False, "Login timed out. Please log in to Facebook in the window that opens."
+                logger.info("✓ Logged in with saved session")
                 
-                # Find and click "What's on your mind" / create post button
-                logger.info("Finding create post button...")
-                
-                selectors = [
-                    "text=What's on your mind?",
-                    "div[role='button']:has-text('mind')",
-                    "[aria-label='Create a post']",
-                    "div[role='button'] >> text=What's on your mind?"
-                ]
-                
-                clicked = False
-                for selector in selectors:
-                    locator = page.locator(selector)
-                    try:
-                        if await locator.count() > 0:
-                            await locator.first.click()
-                            clicked = True
-                            logger.info(f"Clicked create post button: {selector}")
-                            break
-                    except Exception:
-                        continue
-                
-                if not clicked:
-                    await context.close()
-                    return False, "Could not find create post button"
-                
-                # Wait for post dialog to open
-                await page.wait_for_timeout(2000)
-                
-                # Upload media if media_paths provided
-                if media_paths:
-                    logger.info(f"Uploading {len(media_paths)} media file(s)...")
-                    try:
-                        # Look for the file input
-                        file_input_selectors = [
-                            "input[type='file'][accept*='image']",
-                            "input[type='file'][accept*='video']",
-                            "input[type='file']",
-                            "form input[type='file']",
-                        ]
-                        
-                        file_input = None
-                        for selector in file_input_selectors:
-                            locator = page.locator(selector).first
-                            try:
-                                if await locator.count() > 0:
-                                    # Check if it's actually visible/enabled
-                                    if await locator.is_enabled():
-                                        file_input = locator
-                                        logger.info(f"Found file input: {selector}")
-                                        break
-                            except Exception:
-                                continue
-                        
-                        if file_input:
-                            # Upload all media files
-                            await file_input.set_input_files(media_paths)
-                            logger.info(f"Media upload initiated for {len(media_paths)} file(s)")
-                            # Wait longer for upload preview to appear and stabilize
-                            await page.wait_for_timeout(6000)
-                            # Verify media preview is visible
-                            preview_selectors = [
-                                "img[alt*='preview']",
-                                "div[data-testid='media-attachment']",
-                                "div[role='img']",
-                                "img[src*='scontent']",
-                            ]
-                            preview_found = False
-                            for sel in preview_selectors:
-                                if await page.locator(sel).count() > 0:
-                                    preview_found = True
-                                    logger.info(f"Media preview confirmed: {sel}")
-                                    break
-                            if not preview_found:
-                                logger.warning("Media preview not detected, continuing anyway")
-                                # Take screenshot for debugging
-                                try:
-                                    await page.screenshot(path="media_preview_debug.png")
-                                    logger.info("Screenshot saved to media_preview_debug.png")
-                                except Exception as e:
-                                    logger.warning(f"Failed to save screenshot: {e}")
-                        else:
-                            logger.warning("Could not find file input for media upload")
-                    except Exception as e:
-                        logger.warning(f"Media upload failed: {e}")
-                
-                # Find text input area
-                logger.info("Finding text input...")
-                text_input = page.locator(
-                    "div[role='textbox'][contenteditable='true']"
-                ).first
-                
-                if await text_input.count() == 0:
-                    # Debug: dump all potential text inputs
-                    logger.info("Potential text inputs:")
-                    for selector in ["div[role='textbox']", "div[contenteditable='true']", "textarea"]:
-                        logger.info(f"  - {selector}: {await page.locator(selector).count()}")
-                    await context.close()
-                    return False, "Could not find text input area"
-                
-                # Take screenshot before typing
+                # Take screenshot of feed
                 try:
-                    await page.screenshot(path="before_typing.png")
-                    logger.info("Screenshot saved to before_typing.png")
+                    await page.screenshot(path="fb_feed.png")
+                    logger.info("Screenshot saved: fb_feed.png")
                 except Exception as e:
-                    logger.warning(f"Failed to save before screenshot: {e}")
+                    logger.warning(f"Screenshot failed: {e}")
 
-                async def fill_rich_text(target, value: str) -> bool:
-                    sanitized = value or ""
-                    logger.info(f"Attempting to type content: '{sanitized[:30]}...'")
-                    element_handle = await target.element_handle()
-                    if element_handle is None:
-                        logger.error("Could not obtain element handle for text editor")
-                        return False
-                    for attempt in range(3):
-                        try:
-                            logger.info(f"Typing attempt {attempt + 1}")
-                            await element_handle.evaluate(
-                                "(el) => {\n"
-                                "  el.scrollIntoView({behavior: 'auto', block: 'center'});\n"
-                                "  el.focus();\n"
-                                "  const selection = window.getSelection();\n"
-                                "  if (selection) {\n"
-                                "    selection.removeAllRanges();\n"
-                                "    const range = document.createRange();\n"
-                                "    range.selectNodeContents(el);\n"
-                                "    selection.addRange(range);\n"
-                                "  }\n"
-                                "}"
-                            )
-                            await page.wait_for_timeout(200)
-                            await page.keyboard.press("Backspace")
-                            await page.wait_for_timeout(100)
-                            await page.keyboard.type(sanitized, delay=10)
-                            await page.wait_for_timeout(500)
-                            current = (await target.evaluate("node => node.innerText || node.textContent || ''")).strip()
-                            logger.info(f"Editor content after typing: '{current[:50]}...'")
-                            logger.info(f"Expected content: '{sanitized[:50]}...'")
-                            expected_len = len(sanitized)
-                            current_len = len(current)
-                            logger.info(f"Content lengths -> current: {current_len}, expected: {expected_len}")
-                            normalized_current = current.replace('\u200b', '').strip()
-                            normalized_expected = sanitized.replace('\u200b', '').strip()
-                            content_entered = (
-                                normalized_current and
-                                current_len >= max(1, expected_len * 0.8) and
-                                normalized_expected.lower() in normalized_current.lower()
-                            )
-                            if content_entered:
-                                logger.info(f"Content verification passed for attempt {attempt + 1}")
-                                try:
-                                    await page.screenshot(path="after_typing.png")
-                                    logger.info("Screenshot saved to after_typing.png")
-                                except Exception as e:
-                                    logger.warning(f"Failed to save after screenshot: {e}")
-                                await element_handle.dispose()
-                                return True
-                            else:
-                                logger.warning(
-                                    "Typed content did not match expectation (len current=%s, expected=%s)",
-                                    len(current), len(sanitized)
-                                )
-                        except Exception as exc:
-                            logger.warning(f"Typing attempt {attempt + 1} failed: {exc}")
-                            await page.wait_for_timeout(300)
-                    await element_handle.dispose()
-                    logger.error("All typing attempts failed")
-                    return False
-
-                logger.info("Typing content...")
-                typed = await fill_rich_text(text_input, content)
-                if not typed:
-                    await context.close()
-                    return False, "Could not type content in Facebook composer"
+                # Open composer - try multiple approaches
+                logger.info("Looking for composer trigger...")
+                composer_clicked = False
                 
-                # Verify content is actually there before proceeding
-                final_content = (await text_input.evaluate("node => node.innerText || node.textContent || ''")).strip()
-                logger.info(f"Final content in editor: '{final_content[:60]}...'")
-                if not final_content:
-                    logger.error("Editor is empty after typing!")
-                    await context.close()
-                    return False, "Failed to enter text in Facebook composer"
-                
-                await page.wait_for_timeout(1000)
-                
-                async def click_with_retries(locator, label: str) -> bool:
-                    for attempt in range(5):
-                        try:
-                            await locator.scroll_into_view_if_needed()
-                            # Skip if button is disabled
-                            aria_disabled = await locator.get_attribute("aria-disabled")
-                            if aria_disabled and aria_disabled.lower() == "true":
-                                logger.info(f"{label} disabled, waiting...")
-                                await page.wait_for_timeout(800)
-                                continue
-                            await locator.click(force=True, delay=50)
-                            return True
-                        except Exception as exc:
-                            logger.warning(f"{label} click attempt {attempt + 1} failed: {exc}")
-                            await page.wait_for_timeout(500 * (attempt + 1))
-                    return False
-                
-                # Step 1: Click Next button to proceed to post settings
-                logger.info("Finding Next button...")
-                next_button_selectors = [
-                    "div[aria-label='Next'][role='button']",
-                    "button:has-text('Next')",
-                    "div[role='button']:has-text('Next')",
-                    "span:has-text('Next')",
+                # Try "What's on your mind" button
+                composer_selectors = [
+                    "div[role='button']:has-text('mind')",
+                    "div[role='button']:has-text('post')",
+                    "[aria-label*='Create a post']",
+                    "[aria-label*='composer']",
+                    "div[role='button'][class*='composer']",
+                    "div[role='button'][class*='create']",
                 ]
                 
-                next_btn = None
-                for selector in next_button_selectors:
-                    locator = page.locator(selector).first
+                for selector in composer_selectors:
                     try:
+                        locator = page.locator(selector).first
                         if await locator.count() > 0 and await locator.is_visible():
-                            next_btn = locator
-                            logger.info(f"Found Next button: {selector}")
+                            logger.info(f"Found composer trigger: {selector}")
+                            await locator.click()
+                            await page.wait_for_timeout(3000)
+                            composer_clicked = True
                             break
-                    except Exception:
+                    except Exception as e:
+                        logger.debug(f"Selector {selector} failed: {e}")
                         continue
                 
-                if next_btn:
-                    logger.info("Clicking Next...")
-                    clicked_next = await click_with_retries(next_btn, "Next button")
-                    if not clicked_next:
-                        await context.close()
-                        return False, "Could not click Next button"
-                    await page.wait_for_timeout(2000)  # Wait for Post settings dialog
-                
-                # Step 2: Click Post button in settings dialog
-                logger.info("Finding Post button...")
-                post_button_selectors = [
-                    "div[aria-label='Post'][role='button']",
-                    "button:has-text('Post')",
-                    "[data-testid='post_button']",
-                    "div[role='button'] span:has-text('Post')",
-                    "button[aria-label='Post']",
-                    "div[role='button']:has-text('Post')",
-                ]
-                
+                if not composer_clicked:
+                    logger.warning("Could not find composer trigger, looking for text input directly...")
+
+                # Take screenshot after attempting to open composer
+                try:
+                    await page.screenshot(path="fb_composer.png")
+                    logger.info("Screenshot saved: fb_composer.png")
+                except Exception as e:
+                    logger.warning(f"Screenshot failed: {e}")
+
+                # Find text input
+                text_input = await self.element_finder.find_text_input_intelligent(page)
+                if not text_input:
+                    await browser.close()
+                    return False, "Could not find text input"
+
+                # Enter text
+                logger.info("Entering text...")
+                text_entered = await self._enter_text(page, text_input, content)
+                if not text_entered:
+                    await browser.close()
+                    return False, "Failed to enter text"
+
+                # Upload media
+                if media_paths:
+                    logger.info(f"Uploading {len(media_paths)} media files...")
+                    await self._upload_media(page, media_paths)
+                    
+                    # Wait for media processing - check multiple indicators
+                    logger.info("Waiting for media processing...")
+                    for attempt in range(60):  # Wait up to 60 seconds
+                        # Check various processing states
+                        processing = await page.locator("text=Processing").count()
+                        uploading = await page.locator("text=Uploading").count()
+                        loading = await page.locator("text=Loading").count()
+                        
+                        if processing == 0 and uploading == 0 and loading == 0:
+                            # Extra wait to ensure button is ready
+                            await page.wait_for_timeout(2000)
+                            logger.info("Media processing complete")
+                            break
+                        
+                        if attempt % 5 == 0:  # Log every 5 seconds
+                            logger.info(f"Media still processing... {attempt + 1}/60")
+                        await page.wait_for_timeout(1000)
+                    else:
+                        logger.warning("Media processing timeout - continuing anyway")
+
+                # DEBUG: Screenshot before looking for buttons
+                try:
+                    await page.screenshot(path="fb_before_buttons.png")
+                    logger.info("Screenshot saved: fb_before_buttons.png")
+                except:
+                    pass
+
+                # Find and click Post - with smart waiting
+                logger.info("Looking for Post/Next button...")
                 post_btn = None
-                for selector in post_button_selectors:
-                    locator = page.locator(selector).first
-                    try:
-                        if await locator.count() > 0 and await locator.is_visible():
-                            post_btn = locator
-                            logger.info(f"Found Post button: {selector}")
-                            break
-                    except Exception:
-                        continue
+                
+                # Wait up to 30 seconds for buttons to appear and be enabled
+                for attempt in range(30):
+                    # Try Post button - must be visible AND not disabled
+                    post_locator = page.locator("div[aria-label='Post'][role='button']").first
+                    if await post_locator.count() > 0:
+                        is_visible = await post_locator.is_visible()
+                        if is_visible:
+                            # Check if disabled
+                            try:
+                                aria_disabled = await post_locator.get_attribute("aria-disabled")
+                                if aria_disabled and aria_disabled.lower() == "true":
+                                    logger.debug(f"Post button disabled, waiting... ({attempt + 1}/30)")
+                                else:
+                                    post_btn = post_locator
+                                    logger.info("✓ Found enabled Post button")
+                                    break
+                            except:
+                                post_btn = post_locator
+                                logger.info("✓ Found Post button")
+                                break
+                    
+                    # Try Next button - must be visible AND not disabled
+                    next_locator = page.locator("div[aria-label='Next'][role='button']").first
+                    if await next_locator.count() > 0:
+                        is_visible = await next_locator.is_visible()
+                        if is_visible:
+                            try:
+                                aria_disabled = await next_locator.get_attribute("aria-disabled")
+                                if aria_disabled and aria_disabled.lower() == "true":
+                                    logger.debug(f"Next button disabled, waiting... ({attempt + 1}/30)")
+                                else:
+                                    logger.info("Found Next button, clicking...")
+                                    await next_locator.click()
+                                    await page.wait_for_timeout(3000)
+                                    # Now look for Post button again
+                                    continue  # Go to next iteration to find Post
+                            except:
+                                logger.info("Found Next button, clicking...")
+                                await next_locator.click()
+                                await page.wait_for_timeout(3000)
+                                continue
+                    
+                    if attempt % 5 == 0:
+                        logger.info(f"Waiting for buttons to appear... {attempt + 1}/30")
+                    await page.wait_for_timeout(1000)
                 
                 if not post_btn:
-                    await context.close()
-                    return False, "Could not find Post button (content was typed)"
-                
-                # Click Post
+                    logger.error("Could not find Post button after extended wait")
+                    try:
+                        await page.screenshot(path="fb_no_post_button.png")
+                        logger.info("Debug screenshot: fb_no_post_button.png")
+                    except:
+                        pass
+                    await browser.close()
+                    return False, "Could not find Post button - media may still be processing"
+
                 logger.info("Clicking Post...")
-                clicked_post = await click_with_retries(post_btn, "Post button")
-                if not clicked_post:
-                    await context.close()
-                    return False, "Could not click Post button"
+                await post_btn.click()
                 
                 # Wait longer for post to actually publish
                 logger.info("Waiting for post to publish...")
-                await page.wait_for_timeout(8000)
+                await page.wait_for_timeout(5000)
                 
-                # Verify post was published by checking URL change or success indicators
-                current_url = page.url
-                logger.info(f"URL after posting: {current_url}")
+                # Verify with screenshot
+                try:
+                    await page.screenshot(path="fb_after_post.png")
+                    logger.info("Screenshot saved: fb_after_post.png")
+                except Exception as e:
+                    logger.warning(f"Screenshot failed: {e}")
+
+                # Verify
+                success = await self._verify_post(page, content)
                 
-                # Check if we're back on feed or post was published
-                if "facebook.com" in current_url:
-                    # Additional check: see if the post dialog closed
-                    try:
-                        # Check if post dialog is still open
-                        dialog_check = await page.locator("div[role='dialog']").count()
-                        if dialog_check > 0:
-                            logger.warning("Post dialog still open, post may not have completed")
-                            # Try to find and click Post button again
-                            post_btn_retry = page.locator("div[aria-label='Post'][role='button']").first
-                            if await post_btn_retry.count() > 0 and await post_btn_retry.is_visible():
-                                logger.info("Retrying Post button click...")
-                                await post_btn_retry.click(force=True)
-                                await page.wait_for_timeout(5000)
-                    except Exception as e:
-                        logger.debug(f"Dialog check failed: {e}")
-                
+                # Close browser
                 logger.info("Closing browser...")
-                await context.close()
+                await browser.close()
                 
-                logger.info("Facebook post successful!")
-                return True, "Posted to Facebook successfully!"
+                if success:
+                    return True, "Posted successfully!"
+                return False, "Post verification failed - post may not have been published"
                 
             except Exception as e:
-                logger.error(f"Playwright error: {e}")
+                logger.error(f"Error: {e}")
                 try:
-                    if 'context' in locals():
-                        await context.close()
-                    elif 'browser' in locals():
+                    if 'browser' in locals() and browser:
                         await browser.close()
                 except:
                     pass
+                return False, f"Error: {e}"
+    
+    async def _enter_text(self, page: Page, text_input: Locator, content: str) -> bool:
+        """Enter text using multiple strategies."""
+        strategies = [
+            lambda: text_input.fill(content),
+            lambda: self._force_type(page, text_input, content),
+            lambda: self._javascript_type(page, text_input, content),
+        ]
+        
+        for strategy in strategies:
+            try:
+                await strategy()
+                await page.wait_for_timeout(500)
+                text = await text_input.inner_text()
+                if text.strip():
+                    return True
+            except Exception:
+                continue
+        
+        return False
+    
+    async def _force_type(self, page: Page, text_input: Locator, content: str):
+        """Force click and type."""
+        await text_input.click(force=True)
+        await page.wait_for_timeout(300)
+        await page.keyboard.type(content, delay=20)
+    
+    async def _javascript_type(self, page: Page, text_input: Locator, content: str):
+        """Use JavaScript to set text."""
+        handle = await text_input.element_handle()
+        if handle:
+            await handle.evaluate("""
+                (el, text) => {
+                    el.focus();
+                    el.textContent = text;
+                    el.dispatchEvent(new Event('input', { bubbles: true }));
+                }
+            """, content)
+    
+    async def _upload_media(self, page: Page, media_paths: list[str]):
+        """Upload media files."""
+        try:
+            # Find photo/video button
+            photo_btn = await self.element_finder.find_button_by_text(page, "Photo/video")
+            if photo_btn:
+                await photo_btn.click()
+                await page.wait_for_timeout(1500)
+            
+            # Find file input
+            file_input = page.locator("input[type='file']").first
+            if await file_input.count() > 0:
+                for path in media_paths:
+                    if Path(path).exists():
+                        await file_input.set_input_files(path)
+                        await page.wait_for_timeout(1000)
+        except Exception as e:
+            logger.error(f"Media upload error: {e}")
+    
+    async def _verify_post(self, page: Page, expected_content: str = "") -> bool:
+        """Verify post was actually published successfully."""
+        try:
+            # Wait a moment for any navigation/state changes
+            await page.wait_for_timeout(2000)
+            
+            # Check 1: Look for success toast/notification
+            success_indicators = [
+                "text=Posted",
+                "text=Your post has been shared",
+                "text=Posting",
+                "[role='alert']:has-text('Posted')",
+            ]
+            
+            for indicator in success_indicators:
+                try:
+                    if await page.locator(indicator).count() > 0:
+                        logger.info(f"✓ Found success indicator: {indicator}")
+                        return True
+                except:
+                    continue
+            
+            # Check 2: Check if we're back on feed (but dialog is closed)
+            current_url = page.url
+            dialogs = await page.locator("div[role='dialog']").count()
+            
+            logger.info(f"URL after post: {current_url}, Dialogs: {dialogs}")
+            
+            # Must have no dialog AND be on feed
+            if dialogs == 0 and ("feed" in current_url or current_url.rstrip('/').endswith("facebook.com")):
+                # Additional check: look for the post content on the page
+                if expected_content:
+                    # Try to find the posted content
+                    short_content = expected_content[:30]
+                    try:
+                        # Look for post content in feed
+                        post_locator = page.locator(f"text={short_content}").first
+                        if await post_locator.count() > 0 and await post_locator.is_visible():
+                            logger.info("✓ Found posted content in feed")
+                            return True
+                    except:
+                        pass
                 
-                error_msg = str(e)
-                if "already in use" in error_msg.lower() or "cannot lock" in error_msg.lower():
-                    return False, "Please close Brave browser first, then try posting again."
-                elif "not logged in" in error_msg.lower():
-                    return False, "Not logged in. Please log in to Facebook in Brave, then try again."
-                else:
-                    return False, f"Browser error: {error_msg}"
+                # If we can't verify content, at least verify dialog is closed and URL changed
+                logger.info("⚠ Dialog closed and on feed, but couldn't verify content")
+                return True  # Partial success
+            
+            # Check 3: If dialog still open, post likely failed
+            if dialogs > 0:
+                logger.warning("⚠ Post dialog still open - post may have failed")
+                return False
+                
+        except Exception as e:
+            logger.error(f"Verification error: {e}")
+        
+        return False
 
 
-_poster: BrowserDOMPoster | None = None
+_poster: Optional[BrowserDOMPoster] = None
 
 
 def get_poster() -> BrowserDOMPoster:

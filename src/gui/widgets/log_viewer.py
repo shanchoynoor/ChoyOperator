@@ -5,22 +5,22 @@ Log Viewer Widget - Display application logs in real-time.
 from datetime import datetime
 
 from PyQt5.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QPushButton,
-    QLabel, QComboBox, QCheckBox
+    QWidget, QVBoxLayout, QHBoxLayout, QListWidget, QListWidgetItem,
+    QPushButton, QLabel, QComboBox, QCheckBox
 )
 from PyQt5.QtCore import Qt, pyqtSlot
-from PyQt5.QtGui import QTextCursor, QColor
+from PyQt5.QtGui import QColor
 
 
 class LogViewerWidget(QWidget):
     """Widget for displaying application logs."""
     
     LEVEL_COLORS = {
-        "DEBUG": "#888888",
-        "INFO": "#4CAF50",
-        "WARNING": "#FF9800",
-        "ERROR": "#F44336",
-        "CRITICAL": "#9C27B0",
+        "DEBUG": "#B0BEC5",
+        "INFO": "#7CFFCB",
+        "WARNING": "#FFE57F",
+        "ERROR": "#FF8A65",
+        "CRITICAL": "#E573FF",
     }
     
     def __init__(self, parent=None):
@@ -28,6 +28,7 @@ class LogViewerWidget(QWidget):
         self._init_ui()
     
     def _init_ui(self):
+        """Initialize the UI."""
         layout = QVBoxLayout(self)
         layout.setContentsMargins(10, 10, 10, 10)
         
@@ -47,20 +48,24 @@ class LogViewerWidget(QWidget):
         
         layout.addLayout(header_layout)
         
-        # Log display
-        self.log_display = QTextEdit()
-        self.log_display.setReadOnly(True)
-        self.log_display.setFont(self.font())
+        # Log display using QListWidget
+        self.log_display = QListWidget()
         self.log_display.setStyleSheet("""
-            QTextEdit {
-                background-color: #1a1a1a;
-                color: #ddd;
-                font-family: 'Consolas', 'Courier New', monospace;
-                font-size: 12px;
-                border: 1px solid #333;
-                border-radius: 5px;
+            QListWidget {
+                background-color: #0d111a;
+                color: #f5f5f5;
+                font-family: 'SFMono-Regular', 'Consolas', 'Courier New', monospace;
+                font-size: 11px;
+                border: 1px solid #2a2f3a;
+                border-radius: 6px;
+                outline: none;
+            }
+            QListWidget::item {
+                padding: 3px 6px;
+                border-bottom: 1px solid #1e1e1e;
             }
         """)
+        self.log_display.setWordWrap(True)
         layout.addWidget(self.log_display)
         
         # Bottom controls
@@ -109,14 +114,23 @@ class LogViewerWidget(QWidget):
         }
         icon = icons.get(level, "📝")
         
-        html = f'<span style="color: {color}">{icon} {message}</span><br>'
+        # Create list item with HTML for proper color
+        item_text = f"<span style='color: {color};'>{icon} {message}</span>"
+        item = QListWidgetItem()
+        item.setText(message)
+        item.setData(Qt.UserRole, item_text)  # Store HTML
         
-        cursor = self.log_display.textCursor()
-        cursor.movePosition(QTextCursor.End)
-        self.log_display.setTextCursor(cursor)
-        self.log_display.insertHtml(html)
+        # Set foreground color explicitly
+        item.setForeground(QColor(color))
+        
+        # Ensure text is visible
+        item.setFlags(item.flags() | Qt.ItemIsEnabled)
+        
+        self.log_display.addItem(item)
+        
+        # Set item text color via stylesheet on the item
+        item.setData(Qt.ForegroundRole, QColor(color))
         
         # Auto-scroll
         if self.auto_scroll.isChecked():
-            scrollbar = self.log_display.verticalScrollBar()
-            scrollbar.setValue(scrollbar.maximum())
+            self.log_display.scrollToBottom()

@@ -41,7 +41,15 @@ class MainWindow(QMainWindow):
         self.setMinimumSize(1200, 800)
         
         # Apply dark theme
-        self.setStyleSheet(get_dark_stylesheet())
+        self.setStyleSheet(get_dark_stylesheet() + """
+            /* Override dark theme for log display */
+            QTextEdit#LogDisplay {
+                color: #f5f5f5 !important;
+            }
+            QTextEdit#LogDisplay::html {
+                color: #f5f5f5 !important;
+            }
+        """)
         
         # Initialize components
         self._init_menu_bar()
@@ -126,33 +134,34 @@ class MainWindow(QMainWindow):
         self.post_history = PostHistoryWidget()
         sidebar_layout.addWidget(self.post_history, stretch=2)
         
-        sidebar.setMaximumWidth(350)
-        sidebar.setMinimumWidth(260)
+        sidebar.setMaximumWidth(300)
+        sidebar.setMinimumWidth(240)
         splitter.addWidget(sidebar)
         
         # Center - Main content area
         center_widget = QWidget()
         center_layout = QVBoxLayout(center_widget)
         center_layout.setContentsMargins(10, 10, 10, 10)
+        center_layout.setSpacing(8)
         
         # Content editor
         self.content_editor = ContentEditorWidget()
-        center_layout.addWidget(self.content_editor, stretch=2)
+        center_layout.addWidget(self.content_editor, stretch=3)
         
         # Scheduler
         self.scheduler_widget = SchedulerWidget()
-        center_layout.addWidget(self.scheduler_widget, stretch=1)
+        center_layout.addWidget(self.scheduler_widget, stretch=2)
         
         splitter.addWidget(center_widget)
         
         # Right panel - Logs
         self.log_viewer = LogViewerWidget()
-        self.log_viewer.setMaximumWidth(400)
-        self.log_viewer.setMinimumWidth(250)
+        self.log_viewer.setMaximumWidth(350)
+        self.log_viewer.setMinimumWidth(220)
         splitter.addWidget(self.log_viewer)
         
-        # Set splitter sizes
-        splitter.setSizes([280, 650, 350])
+        # Set splitter sizes - more balanced
+        splitter.setSizes([260, 550, 300])
         
         main_layout.addWidget(splitter)
         

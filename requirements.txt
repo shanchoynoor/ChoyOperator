@@ -1,6 +1,7 @@
 # AIOperator Requirements
 
 PyQt5>=5.15.9
+playwright>=1.58.0
 selenium>=4.15.0
 webdriver-manager>=4.0.1
 openai>=1.12.0
