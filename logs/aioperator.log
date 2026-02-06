@@ -1,0 +1,1697 @@
+2026-02-06 16:32:17 - src.main - INFO - Starting AIOperator...
+2026-02-06 16:32:17 - src.main - ERROR - Failed to import GUI components: SQLAlchemyJobStore requires SQLAlchemy installed
+2026-02-06 16:32:17 - src.main - ERROR - Make sure PyQt5 is installed: pip install PyQt5
+2026-02-06 16:33:42 - src.main - INFO - Starting AIOperator...
+2026-02-06 16:33:43 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 16:33:43 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 16:33:43 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 16:33:43 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 16:33:44 - src.main - INFO - GUI initialized successfully
+2026-02-06 16:35:26 - src.gui.widgets.account_manager - INFO - Added facebook account: shanchoynoor.n@gmail.com
+2026-02-06 16:36:43 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-06 16:36:44 - src.gui.widgets.content_editor - INFO - Content generated successfully
+2026-02-06 16:37:35 - src.gui.main_window - INFO - Posting to facebook: 🌟 Your dreams don't have an expiration date! 💪 
+
+E...
+2026-02-06 16:38:18 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-06 16:38:18 - src.gui.widgets.content_editor - INFO - Added 5 hashtags
+2026-02-06 16:38:53 - src.gui.main_window - INFO - Posting to facebook: 🌟 Your dreams don't have an expiration date! 💪 
+
+E...
+2026-02-06 16:43:51 - src.gui.widgets.account_manager - INFO - Removed account 1
+2026-02-06 16:44:53 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 16:44:53 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 16:44:53 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 16:45:00 - src.main - INFO - Starting AIOperator...
+2026-02-06 16:45:00 - src.main - ERROR - Failed to import GUI components: SQLAlchemyJobStore requires SQLAlchemy installed
+2026-02-06 16:45:00 - src.main - ERROR - Make sure PyQt5 is installed: pip install PyQt5
+2026-02-06 16:45:43 - src.main - INFO - Starting AIOperator...
+2026-02-06 16:45:44 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 16:45:44 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 16:45:44 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 16:45:44 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 16:45:44 - src.main - INFO - GUI initialized successfully
+2026-02-06 16:51:14 - src.main - INFO - Starting AIOperator...
+2026-02-06 16:51:15 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 16:51:15 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 16:51:15 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 16:51:15 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 16:51:15 - src.main - INFO - GUI initialized successfully
+2026-02-06 16:52:52 - src.core.browser_connect - INFO - Starting browser login for facebook...
+2026-02-06 16:52:52 - src.core.browser_connect - ERROR - Connection failed: 'BrowserConfig' object has no attribute 'type'
+2026-02-06 16:53:27 - src.main - INFO - Starting AIOperator...
+2026-02-06 16:53:28 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 16:53:28 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 16:53:28 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 16:53:28 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 16:53:28 - src.main - INFO - GUI initialized successfully
+2026-02-06 16:53:35 - src.core.browser_connect - INFO - Starting browser login for facebook...
+2026-02-06 16:53:35 - src.core.browser_connect - ERROR - Connection failed: 'BrowserConfig' object has no attribute 'type'
+2026-02-06 16:55:57 - src.main - INFO - Starting AIOperator...
+2026-02-06 16:55:58 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 16:55:58 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 16:55:58 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 16:55:58 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 16:55:58 - src.main - INFO - GUI initialized successfully
+2026-02-06 16:58:24 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-06 17:01:13 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:01:14 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:01:14 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:01:14 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:01:14 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:01:14 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:01:44 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-06 17:01:56 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:01:56 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:01:56 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:02:03 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:02:03 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:02:03 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:02:07 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:02:08 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:02:08 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:02:08 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:02:08 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:02:08 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:02:11 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-06 17:02:16 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 17:02:16 - src.core.browser_connect - INFO - Connected facebook
+2026-02-06 17:03:54 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:03:54 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:03:55 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:03:55 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:03:55 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:03:55 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:03:55 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:04:32 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-06 17:04:36 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 17:04:36 - src.core.browser_connect - INFO - Connected facebook
+2026-02-06 17:05:54 - src.gui.main_window - INFO - Posting to SocialPlatform.FACEBOOK: A qoute from legend.....
+2026-02-06 17:09:37 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:09:38 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:09:38 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:09:38 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:09:38 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:09:38 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:09:39 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:10:56 - src.gui.main_window - INFO - Posting to facebook: Qoute from legend...
+2026-02-06 17:10:56 - src.gui.main_window - INFO - Post recorded for facebook
+2026-02-06 17:11:18 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:11:18 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:11:18 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:16:16 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:16:16 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:16:16 - src.gui.widgets.post_history - INFO - Loaded 1 post records
+2026-02-06 17:16:17 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:16:17 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:16:17 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:16:17 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:16:17 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:16:41 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:16:41 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:16:41 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:16:46 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:16:46 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:16:46 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:16:51 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:16:52 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:16:52 - src.gui.widgets.post_history - INFO - Loaded 1 post records
+2026-02-06 17:16:52 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:16:52 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:16:52 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:16:52 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:16:52 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:17:26 - src.gui.main_window - INFO - Posting to facebook: Qoute...
+2026-02-06 17:17:26 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-06 17:17:54 - src.core.social_poster - ERROR - Facebook post error: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-02-06 17:17:58 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=11554): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session/f04367bfb757065de2a0804fb781c965
+2026-02-06 17:18:02 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=11554): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")': /session/f04367bfb757065de2a0804fb781c965
+2026-02-06 17:18:18 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:18:19 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:18:19 - src.gui.widgets.post_history - INFO - Loaded 1 post records
+2026-02-06 17:18:19 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:18:19 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:18:19 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:18:19 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:18:19 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:18:52 - src.gui.main_window - INFO - Posting to facebook: Qoute...
+2026-02-06 17:18:52 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-06 17:19:26 - src.gui.main_window - ERROR - Facebook post failed: Not logged in to Facebook. Please connect your account first.
+2026-02-06 17:19:32 - src.gui.main_window - INFO - Posting to facebook: Qoute...
+2026-02-06 17:19:32 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-06 17:20:08 - src.gui.main_window - ERROR - Facebook post failed: Not logged in to Facebook. Please connect your account first.
+2026-02-06 17:22:04 - src.gui.main_window - INFO - Posting to facebook: Qoute...
+2026-02-06 17:22:04 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-06 17:22:42 - src.gui.main_window - ERROR - Facebook post failed: Not logged in to Facebook. Please connect your account first.
+2026-02-06 17:24:30 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:24:30 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:24:30 - src.gui.widgets.post_history - INFO - Loaded 4 post records
+2026-02-06 17:24:31 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:24:31 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:24:31 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:24:31 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:24:31 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:27:47 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:27:47 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:27:47 - src.gui.widgets.post_history - INFO - Loaded 4 post records
+2026-02-06 17:27:48 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:27:48 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:27:48 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:27:48 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:27:48 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:28:26 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:28:26 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:28:26 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:28:28 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:28:28 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:28:28 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:28:29 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:28:29 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:28:29 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:28:33 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:28:34 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:28:34 - src.gui.widgets.post_history - INFO - Loaded 4 post records
+2026-02-06 17:28:34 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:28:35 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:28:35 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:28:35 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:28:35 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:29:00 - src.gui.main_window - INFO - Posting to facebook: qoute...
+2026-02-06 17:29:00 - src.core.social_poster - INFO - Opening Facebook with chrome...
+2026-02-06 17:29:00 - src.core.social_poster - INFO - Using chrome profile: C:\Users\shanc\AppData\Local\Google\Chrome\User Data
+2026-02-06 17:29:00 - src.core.social_poster - INFO - Using browser executable: C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-02-06 17:29:02 - src.core.social_poster - ERROR - Facebook post error: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7f73af3d5
+	0x7ff7f73af430
+	0x7ff7f71510bd
+	0x7ff7f7191a68
+	0x7ff7f718cf99
+	0x7ff7f71e4091
+	0x7ff7f71e38f6
+	0x7ff7f719cb0c
+	0x7ff7f719da53
+	0x7ff7f768b470
+	0x7ff7f768586d
+	0x7ff7f76a621a
+	0x7ff7f73cb235
+	0x7ff7f73d3a5c
+	0x7ff7f73b8844
+	0x7ff7f73b89f6
+	0x7ff7f739eb87
+	0x7ffe6d1853e0
+	0x7ffe6dda485b
+
+2026-02-06 17:29:02 - src.gui.main_window - ERROR - Facebook post failed: Error: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7f73af3d5
+	0x7ff7f73af430
+	0x7ff7f71510bd
+	0x7ff7f7191a68
+	0x7ff7f718cf99
+	0x7ff7f71e4091
+	0x7ff7f71e38f6
+	0x7ff7f719cb0c
+	0x7ff7f719da53
+	0x7ff7f768b470
+	0x7ff7f768586d
+	0x7ff7f76a621a
+	0x7ff7f73cb235
+	0x7ff7f73d3a5c
+	0x7ff7f73b8844
+	0x7ff7f73b89f6
+	0x7ff7f739eb87
+	0x7ffe6d1853e0
+	0x7ffe6dda485b
+
+2026-02-06 17:29:15 - src.gui.widgets.settings_dialog - INFO - Settings saved
+2026-02-06 17:29:18 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:29:18 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:29:18 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:29:23 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:29:23 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:29:23 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:29:23 - src.gui.widgets.post_history - INFO - Loaded 5 post records
+2026-02-06 17:29:24 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:29:24 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:29:24 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:29:24 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:29:24 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:29:37 - src.gui.widgets.settings_dialog - INFO - Settings saved
+2026-02-06 17:29:42 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:29:42 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:29:42 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:29:46 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:29:46 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:29:46 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:29:46 - src.gui.widgets.post_history - INFO - Loaded 5 post records
+2026-02-06 17:29:47 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:29:47 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:29:47 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:29:47 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:29:47 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:31:08 - src.gui.main_window - INFO - Posting to facebook: qoute...
+2026-02-06 17:31:08 - src.core.social_poster - INFO - Opening Facebook with brave...
+2026-02-06 17:31:08 - src.core.social_poster - INFO - Using brave profile: C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data
+2026-02-06 17:31:08 - src.core.social_poster - INFO - Using browser executable: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 17:31:10 - src.core.social_poster - ERROR - Facebook post error: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7f73af3d5
+	0x7ff7f73af430
+	0x7ff7f71510bd
+	0x7ff7f7191a68
+	0x7ff7f718cf99
+	0x7ff7f71e4091
+	0x7ff7f71e38f6
+	0x7ff7f719cb0c
+	0x7ff7f719da53
+	0x7ff7f768b470
+	0x7ff7f768586d
+	0x7ff7f76a621a
+	0x7ff7f73cb235
+	0x7ff7f73d3a5c
+	0x7ff7f73b8844
+	0x7ff7f73b89f6
+	0x7ff7f739eb87
+	0x7ffe6d1853e0
+	0x7ffe6dda485b
+
+2026-02-06 17:31:10 - src.gui.main_window - ERROR - Facebook post failed: Error: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7f73af3d5
+	0x7ff7f73af430
+	0x7ff7f71510bd
+	0x7ff7f7191a68
+	0x7ff7f718cf99
+	0x7ff7f71e4091
+	0x7ff7f71e38f6
+	0x7ff7f719cb0c
+	0x7ff7f719da53
+	0x7ff7f768b470
+	0x7ff7f768586d
+	0x7ff7f76a621a
+	0x7ff7f73cb235
+	0x7ff7f73d3a5c
+	0x7ff7f73b8844
+	0x7ff7f73b89f6
+	0x7ff7f739eb87
+	0x7ffe6d1853e0
+	0x7ffe6dda485b
+
+2026-02-06 17:32:43 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:32:43 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:32:43 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:32:43 - src.gui.widgets.post_history - INFO - Loaded 6 post records
+2026-02-06 17:32:44 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:32:44 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:32:44 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:32:44 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:32:44 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:32:47 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:32:47 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:32:47 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:33:44 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:33:44 - src.core.social_poster - INFO - Copied Login Data
+2026-02-06 17:33:44 - src.core.social_poster - INFO - Copied Web Data
+2026-02-06 17:33:44 - src.core.social_poster - INFO - Opening Facebook...
+2026-02-06 17:33:44 - src.core.social_poster - INFO - Using browser: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 17:33:46 - src.core.social_poster - ERROR - Facebook post error: Message: session not created
+from disconnected: unable to connect to renderer; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7f73af3d5
+	0x7ff7f73af430
+	0x7ff7f71510bd
+	0x7ff7f7198914
+	0x7ff7f7192b4d
+	0x7ff7f718cf99
+	0x7ff7f71e4091
+	0x7ff7f71e38f6
+	0x7ff7f719cb0c
+	0x7ff7f719da53
+	0x7ff7f768b470
+	0x7ff7f768586d
+	0x7ff7f76a621a
+	0x7ff7f73cb235
+	0x7ff7f73d3a5c
+	0x7ff7f73b8844
+	0x7ff7f73b89f6
+	0x7ff7f739eb87
+	0x7ffe6d1853e0
+	0x7ffe6dda485b
+
+2026-02-06 17:33:46 - src.gui.main_window - ERROR - Facebook post failed: Error: Message: session not created
+from disconnected: unable to connect to renderer; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7f73af3d5
+	0x7ff7f73af430
+	0x7ff7f71510bd
+	0x7ff7f7198914
+	0x7ff7f7192b4d
+	0x7ff7f718cf99
+	0x7ff7f71e4091
+	0x7ff7f71e38f6
+	0x7ff7f719cb0c
+	0x7ff7f719da53
+	0x7ff7f768b470
+	0x7ff7f768586d
+	0x7ff7f76a621a
+	0x7ff7f73cb235
+	0x7ff7f73d3a5c
+	0x7ff7f73b8844
+	0x7ff7f73b89f6
+	0x7ff7f739eb87
+	0x7ffe6d1853e0
+	0x7ffe6dda485b
+
+2026-02-06 17:35:33 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:35:33 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:35:33 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:35:33 - src.gui.widgets.post_history - INFO - Loaded 7 post records
+2026-02-06 17:35:34 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:35:34 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:35:34 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:35:34 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:35:34 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:36:13 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:36:13 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:36:13 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:36:34 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:36:34 - src.core.social_poster - INFO - Opened Facebook in browser
+2026-02-06 17:36:34 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 17:44:03 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:44:03 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:44:04 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:44:04 - src.gui.widgets.post_history - INFO - Loaded 8 post records
+2026-02-06 17:44:04 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:44:05 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:44:05 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:44:05 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:44:05 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:44:54 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:44:54 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:44:54 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:44:57 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:44:57 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:44:57 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:45:17 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:45:17 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:45:18 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:45:18 - src.gui.widgets.post_history - INFO - Loaded 8 post records
+2026-02-06 17:45:18 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:45:18 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:45:18 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:45:19 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:45:19 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:45:29 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:45:29 - src.core.social_poster - INFO - Launching browser...
+2026-02-06 17:45:30 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 17:45:34 - src.gui.main_window - ERROR - Facebook post failed: Not logged in to Facebook. Please log in first in your browser.
+2026-02-06 17:47:28 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:47:28 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:47:28 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:47:28 - src.gui.widgets.post_history - INFO - Loaded 9 post records
+2026-02-06 17:47:29 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:47:29 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:47:29 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:47:29 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:47:29 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:47:31 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:47:31 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:47:31 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:47:51 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:47:51 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 17:47:51 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 17:47:52 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 17:47:56 - src.gui.main_window - ERROR - Facebook post failed: Not logged in to Facebook. Please log in first in your browser.
+2026-02-06 17:49:38 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:49:38 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:49:38 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:49:53 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:49:53 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:49:53 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:49:53 - src.gui.widgets.post_history - INFO - Loaded 10 post records
+2026-02-06 17:49:54 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:49:54 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:49:54 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:49:54 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:49:54 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:50:05 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:50:05 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 17:50:05 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 17:50:06 - src.core.social_poster - INFO - Loading profile: C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data
+2026-02-06 17:50:06 - src.core.social_poster - ERROR - Playwright error: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data --remote-debugging-pipe about:blank
+<launched> pid=15748
+Call log:
+  - <launching> C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=15748
+  - [pid=15748] <gracefully close start>
+  - [pid=15748] <kill>
+  - [pid=15748] <will force kill>
+  - [pid=15748] taskkill stderr: ERROR: The process "15748" not found.
+  - [pid=15748] <process did exit: exitCode=21, signal=null>
+  - [pid=15748] starting temporary directories cleanup
+  - [pid=15748] finished temporary directories cleanup
+  - [pid=15748] <gracefully close end>
+
+2026-02-06 17:50:06 - src.gui.main_window - ERROR - Facebook post failed: Browser error: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data --remote-debugging-pipe about:blank
+<launched> pid=15748
+Call log:
+  - <launching> C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=15748
+  - [pid=15748] <gracefully close start>
+  - [pid=15748] <kill>
+  - [pid=15748] <will force kill>
+  - [pid=15748] taskkill stderr: ERROR: The process "15748" not found.
+  - [pid=15748] <process did exit: exitCode=21, signal=null>
+  - [pid=15748] starting temporary directories cleanup
+  - [pid=15748] finished temporary directories cleanup
+  - [pid=15748] <gracefully close end>
+
+2026-02-06 17:51:01 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:51:01 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:51:01 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:51:01 - src.gui.widgets.post_history - INFO - Loaded 11 post records
+2026-02-06 17:51:02 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:51:02 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:51:02 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:51:02 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:51:02 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:51:09 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:51:09 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:51:09 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:51:57 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:51:57 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:51:58 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:51:58 - src.gui.widgets.post_history - INFO - Loaded 11 post records
+2026-02-06 17:51:58 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:51:59 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:51:59 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:51:59 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:51:59 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:52:31 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:52:31 - src.main - WARNING - Config warning: Invalid BROWSER_TYPE: brave
+2026-02-06 17:52:32 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:52:32 - src.gui.widgets.post_history - INFO - Loaded 11 post records
+2026-02-06 17:52:58 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:52:58 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:52:58 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:53:01 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:53:02 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:53:02 - src.gui.widgets.post_history - INFO - Loaded 11 post records
+2026-02-06 17:53:02 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:53:02 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:53:02 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:53:02 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:53:02 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:53:11 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:53:11 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:53:11 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:54:15 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:54:15 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:54:15 - src.gui.widgets.post_history - INFO - Loaded 11 post records
+2026-02-06 17:54:16 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:54:16 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:54:16 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:54:16 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:54:16 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:54:48 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:54:48 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:54:48 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:54:49 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:54:49 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:54:49 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:55:23 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:55:24 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:55:24 - src.gui.widgets.post_history - INFO - Loaded 11 post records
+2026-02-06 17:55:24 - src.main - ERROR - Application error: name 'PLATFORM_ICONS' is not defined
+Traceback (most recent call last):
+  File "E:\AIOperator\src\main.py", line 43, in main
+    window = MainWindow()
+  File "E:\AIOperator\src\gui\main_window.py", line 47, in __init__
+    self._init_central_widget()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\AIOperator\src\gui\main_window.py", line 125, in _init_central_widget
+    self.post_history = PostHistoryWidget()
+                        ~~~~~~~~~~~~~~~~~^^
+  File "E:\AIOperator\src\gui\widgets\post_history.py", line 162, in __init__
+    self.refresh()
+    ~~~~~~~~~~~~^^
+  File "E:\AIOperator\src\gui\widgets\post_history.py", line 218, in refresh
+    widget = PostItemWidget(record)
+  File "E:\AIOperator\src\gui\widgets\post_history.py", line 130, in __init__
+    icon = PLATFORM_ICONS.get(record.platform.lower(), "📱")
+           ^^^^^^^^^^^^^^
+NameError: name 'PLATFORM_ICONS' is not defined
+2026-02-06 17:55:42 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:55:43 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:55:43 - src.gui.widgets.post_history - INFO - Loaded 11 post records
+2026-02-06 17:55:43 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:55:44 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:55:44 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:55:44 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:55:44 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:55:59 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:55:59 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 17:55:59 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 17:56:00 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 17:56:00 - src.core.social_poster - ERROR - Playwright error: 'list' object is not callable
+2026-02-06 17:56:01 - src.gui.main_window - ERROR - Facebook post failed: Browser error: 'list' object is not callable
+2026-02-06 17:56:35 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:56:35 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:56:35 - src.gui.widgets.post_history - INFO - Loaded 12 post records
+2026-02-06 17:56:36 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:56:36 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:56:36 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:56:36 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:56:36 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:56:37 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:56:37 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:56:37 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:56:53 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:56:53 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 17:56:53 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 17:56:53 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 17:56:54 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 17:57:01 - src.gui.main_window - ERROR - Facebook post failed: Not logged in to Facebook. Please log in first in your browser.
+2026-02-06 17:57:53 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 17:57:53 - src.core.browser_connect - INFO - Disconnected facebook
+2026-02-06 17:57:53 - src.gui.widgets.account_manager - INFO - Disconnected facebook
+2026-02-06 17:57:55 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-06 17:57:59 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 17:57:59 - src.core.browser_connect - INFO - Connected facebook
+2026-02-06 17:58:10 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:58:10 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:58:10 - src.gui.widgets.post_history - INFO - Loaded 13 post records
+2026-02-06 17:58:11 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:58:11 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:58:11 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:58:11 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:58:11 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:58:24 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:58:24 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:58:24 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:58:38 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 17:58:38 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 17:58:38 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 17:58:45 - src.main - INFO - Starting AIOperator...
+2026-02-06 17:58:46 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 17:58:46 - src.gui.widgets.post_history - INFO - Loaded 13 post records
+2026-02-06 17:58:46 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 17:58:46 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 17:58:46 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 17:58:46 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 17:58:46 - src.main - INFO - GUI initialized successfully
+2026-02-06 17:58:59 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 17:59:00 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 17:59:00 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 17:59:00 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 17:59:01 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 17:59:05 - src.core.social_poster - INFO - User not logged in. Waiting for user to authenticate...
+2026-02-06 18:01:06 - src.gui.main_window - ERROR - Facebook post failed: Login timed out. Please log in to Facebook in the window that opens and try again.
+2026-02-06 18:01:58 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 18:01:58 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 18:01:58 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 18:02:20 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:02:21 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:02:21 - src.gui.widgets.post_history - INFO - Loaded 14 post records
+2026-02-06 18:02:21 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:02:22 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:02:22 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:02:22 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:02:22 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:02:40 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 18:02:40 - src.core.browser_connect - INFO - Disconnected facebook
+2026-02-06 18:02:40 - src.gui.widgets.account_manager - INFO - Disconnected facebook
+2026-02-06 18:02:43 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-06 18:02:47 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 18:02:47 - src.core.browser_connect - INFO - Connected facebook
+2026-02-06 18:03:59 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 18:03:59 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 18:03:59 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 18:04:10 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:04:11 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:04:11 - src.gui.widgets.post_history - INFO - Loaded 14 post records
+2026-02-06 18:04:11 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:04:11 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:04:11 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:04:11 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:04:11 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:04:19 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 18:04:19 - src.core.browser_connect - INFO - Disconnected facebook
+2026-02-06 18:04:19 - src.gui.widgets.account_manager - INFO - Disconnected facebook
+2026-02-06 18:04:21 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-06 18:04:25 - src.core.browser_connect - INFO - Accounts saved
+2026-02-06 18:04:25 - src.core.browser_connect - INFO - Connected facebook
+2026-02-06 18:04:39 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:04:39 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:04:39 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:04:40 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 18:05:14 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:05:15 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:05:15 - src.gui.widgets.post_history - INFO - Loaded 14 post records
+2026-02-06 18:05:15 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:05:16 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:05:16 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:05:16 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:05:16 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:06:07 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 18:06:07 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 18:06:07 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 18:06:16 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:06:16 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:06:16 - src.gui.widgets.post_history - INFO - Loaded 14 post records
+2026-02-06 18:06:17 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:06:17 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:06:17 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:06:17 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:06:17 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:06:49 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:06:49 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:06:49 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:06:50 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 18:08:55 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:08:56 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:08:56 - src.gui.widgets.post_history - INFO - Loaded 14 post records
+2026-02-06 18:08:56 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:08:57 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:08:57 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:08:57 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:08:57 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:10:18 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:10:19 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:10:19 - src.gui.widgets.post_history - INFO - Loaded 14 post records
+2026-02-06 18:10:19 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:10:19 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:10:19 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:10:19 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:10:19 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:10:29 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:10:29 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:10:29 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:10:29 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:10:29 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 18:10:31 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 18:10:35 - src.core.social_poster - INFO - Not logged in. Waiting up to 2 minutes for user to log in manually...
+2026-02-06 18:12:35 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 18:12:36 - src.gui.main_window - ERROR - Facebook post failed: Login timed out. Please log in to Facebook in the window that opens.
+2026-02-06 18:13:08 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:13:09 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:13:09 - src.gui.widgets.post_history - INFO - Loaded 15 post records
+2026-02-06 18:13:10 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:13:10 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:13:10 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:13:10 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:13:10 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:13:14 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 18:13:14 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 18:13:14 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 18:13:38 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:13:38 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:13:39 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:13:39 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:13:39 - src.core.social_poster - INFO - Using user's Brave profile: C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data
+2026-02-06 18:13:39 - src.core.social_poster - ERROR - Failed to launch persistent context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --user-data-dir=C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data --remote-debugging-pipe about:blank
+<launched> pid=18612
+Call log:
+  - <launching> C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --user-data-dir=C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=18612
+  - [pid=18612] <gracefully close start>
+  - [pid=18612] <kill>
+  - [pid=18612] <will force kill>
+  - [pid=18612] taskkill stderr: ERROR: The process "18612" not found.
+  - [pid=18612] <process did exit: exitCode=21, signal=null>
+  - [pid=18612] starting temporary directories cleanup
+  - [pid=18612] finished temporary directories cleanup
+  - [pid=18612] <gracefully close end>
+
+2026-02-06 18:13:39 - src.core.social_poster - INFO - Retrying with standard browser launch...
+2026-02-06 18:15:31 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:15:32 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:15:32 - src.gui.widgets.post_history - INFO - Loaded 15 post records
+2026-02-06 18:15:32 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:15:32 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:15:32 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:15:32 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:15:32 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:15:43 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:15:43 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:15:43 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:15:43 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:15:43 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 18:15:43 - src.core.social_poster - INFO - Using automation profile with copied sessions: E:\AIOperator\data\brave_automation
+2026-02-06 18:16:36 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:16:36 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:16:36 - src.gui.widgets.post_history - INFO - Loaded 15 post records
+2026-02-06 18:16:37 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:16:37 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:16:37 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:16:37 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:16:37 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:16:58 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:16:58 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:16:59 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:16:59 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:16:59 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 18:21:28 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:21:28 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:21:28 - src.gui.widgets.post_history - INFO - Loaded 15 post records
+2026-02-06 18:21:29 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:21:29 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:21:29 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:21:29 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:21:29 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:21:58 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:21:58 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:21:59 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:21:59 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:21:59 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 18:21:59 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 18:33:52 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:33:52 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:33:52 - src.gui.widgets.post_history - INFO - Loaded 15 post records
+2026-02-06 18:33:53 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:33:53 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:33:53 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:33:53 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:33:53 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:34:05 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:34:05 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:38:09 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:38:09 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:38:09 - src.gui.widgets.post_history - INFO - Loaded 15 post records
+2026-02-06 18:38:10 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:38:10 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:38:10 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:38:10 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:38:10 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:38:17 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:38:17 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:38:17 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:38:17 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:38:17 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 18:38:17 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 18:38:17 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 18:38:19 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 18:38:24 - src.core.social_poster - INFO - Not logged in. Waiting up to 2 minutes for user to log in manually...
+2026-02-06 18:40:24 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 18:40:24 - src.gui.main_window - ERROR - Facebook post failed: Login timed out. Please log in to Facebook in the window that opens.
+2026-02-06 18:41:23 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 18:41:23 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 18:41:23 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 18:41:32 - src.main - INFO - Starting AIOperator...
+2026-02-06 18:41:32 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 18:41:32 - src.gui.widgets.post_history - INFO - Loaded 16 post records
+2026-02-06 18:41:33 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 18:41:33 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 18:41:33 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 18:41:33 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 18:41:33 - src.main - INFO - GUI initialized successfully
+2026-02-06 18:41:41 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 18:41:41 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 18:41:42 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 18:41:42 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 18:41:42 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 18:41:42 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 18:41:42 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 18:41:42 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 18:41:42 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 18:41:45 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 18:42:45 - src.core.social_poster - WARNING - Initial navigation failed: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.facebook.com/", waiting until "networkidle"
+. Retrying simple goto...
+2026-02-06 18:42:52 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 18:42:54 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 18:42:56 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 18:42:56 - src.core.social_poster - ERROR - Playwright error: 'Locator' object can't be awaited
+2026-02-06 18:42:56 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 18:42:56 - src.gui.main_window - ERROR - Facebook post failed: Browser error: 'Locator' object can't be awaited
+2026-02-06 19:04:31 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:04:32 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:04:32 - src.gui.widgets.post_history - INFO - Loaded 17 post records
+2026-02-06 19:04:32 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:04:32 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:04:32 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:04:32 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:04:33 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:04:42 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 19:04:42 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:04:43 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:04:43 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:04:43 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:04:43 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:04:43 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:04:43 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:04:43 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:04:44 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:04:54 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:04:56 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:04:58 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:04:58 - src.core.social_poster - ERROR - Playwright error: 'Locator' object can't be awaited
+2026-02-06 19:04:58 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 19:04:58 - src.gui.main_window - ERROR - Facebook post failed: Browser error: 'Locator' object can't be awaited
+2026-02-06 19:05:14 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:05:14 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:05:14 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:07:37 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:07:38 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:07:38 - src.gui.widgets.post_history - INFO - Loaded 18 post records
+2026-02-06 19:07:38 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:07:38 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:07:38 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:07:38 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:07:38 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:07:48 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 19:07:48 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:07:48 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:07:48 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:07:48 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:07:48 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:07:48 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:07:48 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:07:48 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:07:54 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:08:03 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:08:05 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:08:07 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:08:07 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:08:10 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:08:10 - src.core.social_poster - ERROR - Playwright error: 'Locator' object can't be awaited
+2026-02-06 19:08:11 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 19:08:11 - src.gui.main_window - ERROR - Facebook post failed: Browser error: 'Locator' object can't be awaited
+2026-02-06 19:08:22 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:08:22 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:08:22 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:12:22 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:12:23 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:12:23 - src.gui.widgets.post_history - INFO - Loaded 19 post records
+2026-02-06 19:12:23 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:12:24 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:12:24 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:12:24 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:12:24 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:12:33 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 19:12:33 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:12:33 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:12:33 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:12:33 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:12:33 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:12:33 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:12:33 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:12:33 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:12:38 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:12:38 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:12:38 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:12:38 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:12:43 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:12:43 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:12:46 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:12:46 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:12:48 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:12:48 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:12:50 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:12:50 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 19:12:50 - src.gui.main_window - ERROR - Facebook post failed: Could not find Post button (content was typed)
+2026-02-06 19:14:17 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:14:17 - src.main - ERROR - Failed to import GUI components: SQLAlchemyJobStore requires SQLAlchemy installed
+2026-02-06 19:14:17 - src.main - ERROR - Make sure PyQt5 is installed: pip install PyQt5
+2026-02-06 19:14:54 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:14:54 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:14:54 - src.gui.widgets.post_history - INFO - Loaded 20 post records
+2026-02-06 19:14:55 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:14:55 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:14:55 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:14:55 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:14:55 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:15:02 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 19:15:02 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:15:03 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:15:03 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:15:03 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:15:03 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:15:03 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:15:03 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:15:03 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:15:08 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:15:08 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:15:08 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:15:08 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:15:13 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:15:13 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:15:16 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:15:16 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:15:18 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:15:18 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:15:19 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:15:19 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 19:15:19 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 19:15:25 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 19:15:25 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 19:15:25 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 19:18:36 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:18:36 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:18:36 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:18:57 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:18:58 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:18:58 - src.gui.widgets.post_history - INFO - Loaded 21 post records
+2026-02-06 19:18:58 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:18:58 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:18:58 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:18:58 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:18:58 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:19:08 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 19:19:08 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:19:08 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:19:08 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:19:08 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:19:08 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:19:08 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:19:08 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:19:08 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:19:14 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:19:14 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:19:14 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:19:14 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:19:20 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:19:20 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:19:23 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:19:23 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:19:25 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:19:25 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:19:26 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 19:19:27 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 19:19:27 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 19:19:29 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:19:29 - src.core.social_poster - INFO - Found Post button: div[aria-label='Post'][role='button']
+2026-02-06 19:19:29 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 19:19:34 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 19:19:34 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 19:19:34 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 19:23:58 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:23:58 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:23:58 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:24:10 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:24:11 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:24:11 - src.gui.widgets.post_history - INFO - Loaded 22 post records
+2026-02-06 19:24:11 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:24:11 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:24:11 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:24:11 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:24:11 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:24:31 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 19:24:31 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:24:31 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:24:31 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:24:31 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:24:31 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:24:31 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:24:31 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:24:31 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:24:37 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:24:37 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:24:37 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:24:37 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:24:42 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:24:42 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:24:45 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:24:45 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:24:47 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 19:24:47 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:24:48 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 19:24:52 - src.core.social_poster - INFO - Media upload preview should be visible now
+2026-02-06 19:24:52 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:24:52 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:25:22 - src.core.social_poster - ERROR - Playwright error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role='textbox'][contenteditable='true']").first
+    - locator resolved to <div tabindex="0" role="textbox" spellcheck="true" contenteditable="true" data-lexical-editor="true" aria-placeholder="What's on your mind, Shanchoy?" class="xzsf02u x1a2a7pz x1n2onr6 x14wi4xw x9f619 x1lliihq x5yr21d xh8yej3 notranslate">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-06 19:25:22 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 19:25:22 - src.gui.main_window - ERROR - Facebook post failed: Browser error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role='textbox'][contenteditable='true']").first
+    - locator resolved to <div tabindex="0" role="textbox" spellcheck="true" contenteditable="true" data-lexical-editor="true" aria-placeholder="What's on your mind, Shanchoy?" class="xzsf02u x1a2a7pz x1n2onr6 x14wi4xw x9f619 x1lliihq x5yr21d xh8yej3 notranslate">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-06 19:32:03 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:32:03 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:32:03 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:32:16 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:32:16 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:32:16 - src.gui.widgets.post_history - INFO - Loaded 23 post records
+2026-02-06 19:32:17 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:32:17 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:32:17 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:32:17 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:32:17 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:32:59 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-06 19:33:05 - src.gui.main_window - INFO - Posting to facebook: Q...
+2026-02-06 19:33:05 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:33:05 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:33:05 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:33:05 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:33:05 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:33:05 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:33:05 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:33:05 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:33:11 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:33:13 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:33:13 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:33:13 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:33:19 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:33:19 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:33:22 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:33:22 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:33:24 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 19:33:24 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:33:24 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 19:33:28 - src.core.social_poster - INFO - Media upload preview should be visible now
+2026-02-06 19:33:28 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:33:28 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:33:30 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 19:33:30 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 19:33:30 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 19:34:00 - src.core.social_poster - ERROR - Playwright error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[aria-label='Next'][role='button']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Next" class="x1i10hfl xjbqb8w x1ejq31n x18oe1m7 x1sy0etr xstzfhl x972fbf x10w94by x1qhh985 x14e42zd x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x16tdsg8 x1hl2dhg xggy1nq x1fmog5m xu25z0z x140muxe xo1y3bh x87ps6o x1lku1pv x1a2a7pz x9f619 x3nfvp2 xdt5ytf xl56j7k x1n2onr6 xh8yej3">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-06 19:34:00 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 19:34:00 - src.gui.main_window - ERROR - Facebook post failed: Browser error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[aria-label='Next'][role='button']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Next" class="x1i10hfl xjbqb8w x1ejq31n x18oe1m7 x1sy0etr xstzfhl x972fbf x10w94by x1qhh985 x14e42zd x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x16tdsg8 x1hl2dhg xggy1nq x1fmog5m xu25z0z x140muxe xo1y3bh x87ps6o x1lku1pv x1a2a7pz x9f619 x3nfvp2 xdt5ytf xl56j7k x1n2onr6 xh8yej3">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-06 19:36:27 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:36:27 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:36:27 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:36:37 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:36:38 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:36:38 - src.gui.widgets.post_history - INFO - Loaded 24 post records
+2026-02-06 19:36:38 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:36:38 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:36:38 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:36:38 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:36:38 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:36:58 - src.gui.main_window - INFO - Posting to facebook: Test ABCD...
+2026-02-06 19:36:58 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:36:59 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:36:59 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:36:59 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:36:59 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:36:59 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:36:59 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:36:59 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:37:04 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:37:08 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:37:08 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:37:08 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:37:13 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:37:13 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:37:16 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:37:16 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:37:18 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 19:37:18 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:37:18 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 19:37:22 - src.core.social_poster - INFO - Media upload preview should be visible now
+2026-02-06 19:37:22 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:37:22 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:37:24 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 19:37:24 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 19:37:24 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 19:37:26 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:37:26 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 19:37:26 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 19:37:32 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 19:37:32 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 19:37:32 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 19:40:59 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:40:59 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:40:59 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:41:05 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:41:05 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:41:05 - src.gui.widgets.post_history - INFO - Loaded 25 post records
+2026-02-06 19:41:06 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:41:06 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:41:06 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:41:06 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:41:06 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:41:21 - src.gui.main_window - INFO - Posting to facebook: Test ABCD...
+2026-02-06 19:41:21 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:41:21 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:41:22 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:41:22 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:41:22 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:41:22 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:41:22 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:41:22 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:41:30 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:41:32 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:41:32 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:41:32 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:41:38 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:41:38 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:41:41 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:41:42 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:41:44 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 19:41:44 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:41:44 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 19:41:48 - src.core.social_poster - INFO - Media upload preview should be visible now
+2026-02-06 19:41:48 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:41:48 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:41:49 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 19:41:49 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 19:41:49 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 19:41:51 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:41:51 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 19:41:51 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 19:41:57 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 19:41:57 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 19:41:57 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 19:42:46 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:42:46 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:42:46 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:48:25 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:48:25 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:48:25 - src.gui.widgets.post_history - INFO - Loaded 26 post records
+2026-02-06 19:48:26 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:48:26 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:48:26 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:48:26 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:48:26 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:48:54 - src.gui.main_window - INFO - Posting to facebook: Flying in the space.....
+2026-02-06 19:48:54 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:48:55 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:48:55 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:48:55 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:48:55 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:48:55 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:48:55 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:48:55 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:49:04 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:49:05 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:49:05 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:49:05 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:49:13 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:49:13 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:49:16 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:49:16 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:49:18 - src.core.social_poster - INFO - Uploading 2 media file(s)...
+2026-02-06 19:49:18 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:49:18 - src.core.social_poster - INFO - Media upload initiated for 2 file(s)
+2026-02-06 19:49:24 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-06 19:49:24 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:49:24 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:49:24 - src.core.social_poster - WARNING - Typing attempt 1 failed: Page.evaluate() takes from 2 to 3 positional arguments but 4 were given
+2026-02-06 19:49:24 - src.core.social_poster - WARNING - Typing attempt 2 failed: Page.evaluate() takes from 2 to 3 positional arguments but 4 were given
+2026-02-06 19:49:25 - src.core.social_poster - WARNING - Typing attempt 3 failed: Page.evaluate() takes from 2 to 3 positional arguments but 4 were given
+2026-02-06 19:49:26 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 19:49:26 - src.gui.main_window - ERROR - Facebook post failed: Could not type content in Facebook composer
+2026-02-06 19:51:17 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:51:17 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:51:17 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:51:26 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:51:26 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:51:26 - src.gui.widgets.post_history - INFO - Loaded 27 post records
+2026-02-06 19:51:27 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:51:27 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:51:27 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:51:27 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:51:27 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:51:54 - src.gui.main_window - INFO - Posting to facebook: Flying.....
+2026-02-06 19:51:54 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:51:54 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:51:54 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:51:54 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:51:54 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:51:54 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:51:54 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:51:54 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:52:04 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:52:04 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:52:04 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:52:04 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:52:10 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:52:10 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:52:13 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:52:13 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:52:15 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 19:52:15 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:52:15 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 19:52:21 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-06 19:52:21 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:52:21 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:52:22 - src.core.social_poster - INFO - Editor content after fill: 'Flying.....'
+2026-02-06 19:52:22 - src.core.social_poster - INFO - Final content in editor: 'Flying.....'
+2026-02-06 19:52:23 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 19:52:23 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 19:52:23 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 19:52:25 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:52:25 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 19:52:25 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 19:52:25 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-06 19:52:33 - src.core.social_poster - INFO - URL after posting: https://www.facebook.com/
+2026-02-06 19:52:33 - src.core.social_poster - WARNING - Post dialog still open, post may not have completed
+2026-02-06 19:52:33 - src.core.social_poster - INFO - Closing browser...
+2026-02-06 19:52:34 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 19:52:34 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 19:52:34 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 19:53:03 - src.gui.main_window - INFO - Posting to facebook: Flying.....
+2026-02-06 19:53:03 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:53:03 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:53:03 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:53:03 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:53:03 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:53:03 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:53:03 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:53:03 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:53:13 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:53:14 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:53:14 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:53:14 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:53:19 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:53:19 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:53:23 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:53:24 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:53:26 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 19:53:26 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:53:26 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 19:53:32 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-06 19:53:32 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:53:32 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:53:33 - src.core.social_poster - INFO - Editor content after fill: 'Flying.....'
+2026-02-06 19:53:33 - src.core.social_poster - INFO - Final content in editor: 'Flying.....'
+2026-02-06 19:53:34 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 19:53:34 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 19:53:34 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 19:53:36 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:53:36 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 19:53:36 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 19:53:36 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-06 19:53:44 - src.core.social_poster - INFO - URL after posting: https://www.facebook.com/
+2026-02-06 19:53:44 - src.core.social_poster - WARNING - Post dialog still open, post may not have completed
+2026-02-06 19:53:44 - src.core.social_poster - INFO - Closing browser...
+2026-02-06 19:53:44 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 19:53:44 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 19:53:44 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 19:53:57 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 19:53:57 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 19:53:57 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 19:55:33 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:55:34 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:55:34 - src.gui.widgets.post_history - INFO - Loaded 29 post records
+2026-02-06 19:55:34 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:55:34 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:55:34 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:55:34 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:55:34 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:56:53 - src.gui.main_window - INFO - Posting to facebook: flying.....
+2026-02-06 19:56:53 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:56:54 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:56:54 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:56:54 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:56:54 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:56:54 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:56:54 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:56:54 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:56:55 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:56:55 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:56:55 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:56:55 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 19:57:02 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 19:57:02 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 19:57:05 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 19:57:05 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 19:57:07 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 19:57:07 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 19:57:07 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 19:57:13 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-06 19:57:13 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 19:57:13 - src.core.social_poster - INFO - Typing content...
+2026-02-06 19:57:14 - src.core.social_poster - INFO - Editor content after typing: 'flying.....'
+2026-02-06 19:57:14 - src.core.social_poster - INFO - Final content in editor: 'flying.....'
+2026-02-06 19:57:15 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 19:57:15 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 19:57:15 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 19:57:17 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 19:57:17 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 19:57:17 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 19:57:18 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-06 19:57:26 - src.core.social_poster - INFO - URL after posting: https://www.facebook.com/
+2026-02-06 19:57:26 - src.core.social_poster - WARNING - Post dialog still open, post may not have completed
+2026-02-06 19:57:26 - src.core.social_poster - INFO - Closing browser...
+2026-02-06 19:57:26 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 19:57:26 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 19:57:26 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 19:59:05 - src.gui.widgets.settings_dialog - INFO - Settings saved
+2026-02-06 19:59:19 - src.main - INFO - Starting AIOperator...
+2026-02-06 19:59:19 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 19:59:19 - src.gui.widgets.post_history - INFO - Loaded 30 post records
+2026-02-06 19:59:20 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 19:59:20 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 19:59:20 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 19:59:20 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 19:59:20 - src.main - INFO - GUI initialized successfully
+2026-02-06 19:59:45 - src.gui.main_window - INFO - Posting to facebook: flying......
+2026-02-06 19:59:45 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 19:59:46 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 19:59:46 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 19:59:46 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 19:59:46 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 19:59:46 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 19:59:46 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 19:59:46 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 19:59:53 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 19:59:53 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 19:59:53 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 19:59:53 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 20:00:00 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 20:00:00 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 20:00:03 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 20:00:03 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 20:00:05 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 20:00:05 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 20:00:05 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 20:00:11 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-06 20:00:11 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 20:00:11 - src.core.social_poster - INFO - Screenshot saved to before_typing.png
+2026-02-06 20:00:11 - src.core.social_poster - INFO - Typing content...
+2026-02-06 20:00:11 - src.core.social_poster - INFO - Attempting to type content: 'flying......'
+2026-02-06 20:00:11 - src.core.social_poster - INFO - Typing attempt 1
+2026-02-06 20:00:11 - src.core.social_poster - INFO - Element visible: True, enabled: True
+2026-02-06 20:00:13 - src.core.social_poster - INFO - Editor content after typing: 'flying......'
+2026-02-06 20:00:13 - src.core.social_poster - INFO - Expected content: 'flying......'
+2026-02-06 20:00:13 - src.core.social_poster - INFO - Content verification passed for attempt 1
+2026-02-06 20:00:13 - src.core.social_poster - INFO - Screenshot saved to after_typing.png
+2026-02-06 20:00:13 - src.core.social_poster - INFO - Final content in editor: 'flying......'
+2026-02-06 20:00:14 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 20:00:14 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 20:00:14 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 20:00:16 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 20:00:16 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 20:00:16 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 20:00:16 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-06 20:00:24 - src.core.social_poster - INFO - URL after posting: https://www.facebook.com/
+2026-02-06 20:00:24 - src.core.social_poster - WARNING - Post dialog still open, post may not have completed
+2026-02-06 20:00:24 - src.core.social_poster - INFO - Closing browser...
+2026-02-06 20:00:25 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 20:00:25 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 20:00:25 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 20:03:15 - src.core.browser_connect - INFO - Opening linkedin login in browser...
+2026-02-06 20:04:12 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:04:12 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:04:12 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:04:35 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:04:36 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:04:36 - src.gui.widgets.post_history - INFO - Loaded 31 post records
+2026-02-06 20:04:36 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:04:37 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:04:37 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:04:37 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:04:37 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:04:53 - src.gui.main_window - INFO - Posting to facebook: flying.....
+2026-02-06 20:04:53 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 20:04:53 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 20:04:53 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 20:04:53 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 20:04:53 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 20:04:53 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 20:04:53 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 20:04:53 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 20:04:58 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 20:04:59 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 20:04:59 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 20:04:59 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 20:05:05 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 20:05:05 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 20:05:08 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 20:05:08 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 20:05:10 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 20:05:10 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 20:05:11 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 20:05:17 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-06 20:05:17 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 20:05:17 - src.core.social_poster - INFO - Screenshot saved to before_typing.png
+2026-02-06 20:05:17 - src.core.social_poster - INFO - Typing content...
+2026-02-06 20:05:17 - src.core.social_poster - INFO - Attempting to type content: 'flying.....'
+2026-02-06 20:05:17 - src.core.social_poster - INFO - Typing attempt 1
+2026-02-06 20:05:18 - src.core.social_poster - INFO - Editor content after typing: 'flying.....'
+2026-02-06 20:05:18 - src.core.social_poster - INFO - Expected content: 'flying.....'
+2026-02-06 20:05:18 - src.core.social_poster - WARNING - Typed content did not match expectation (len current=8, expected=8)
+2026-02-06 20:05:18 - src.core.social_poster - INFO - Typing attempt 2
+2026-02-06 20:05:19 - src.core.social_poster - INFO - Editor content after typing: 'flying.....'
+2026-02-06 20:05:19 - src.core.social_poster - INFO - Expected content: 'flying.....'
+2026-02-06 20:05:19 - src.core.social_poster - WARNING - Typed content did not match expectation (len current=8, expected=8)
+2026-02-06 20:05:19 - src.core.social_poster - INFO - Typing attempt 3
+2026-02-06 20:05:20 - src.core.social_poster - INFO - Editor content after typing: 'flying.....'
+2026-02-06 20:05:20 - src.core.social_poster - INFO - Expected content: 'flying.....'
+2026-02-06 20:05:20 - src.core.social_poster - WARNING - Typed content did not match expectation (len current=8, expected=8)
+2026-02-06 20:05:20 - src.core.social_poster - ERROR - All typing attempts failed
+2026-02-06 20:05:20 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-06 20:05:20 - src.gui.main_window - ERROR - Facebook post failed: Could not type content in Facebook composer
+2026-02-06 20:07:03 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:07:03 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:07:03 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:07:12 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:07:12 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:07:12 - src.gui.widgets.post_history - INFO - Loaded 32 post records
+2026-02-06 20:07:12 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:07:13 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:07:13 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:07:13 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:07:13 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:07:26 - src.gui.main_window - INFO - Posting to facebook: flying......
+2026-02-06 20:07:26 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-06 20:07:27 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-06 20:07:27 - src.core.social_poster - INFO - Using Brave: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+2026-02-06 20:07:27 - src.core.social_poster - INFO - Copying session data from user profile...
+2026-02-06 20:07:27 - src.core.social_poster - WARNING - Could not copy Network\Cookies: [WinError 32] The process cannot access the file because it is being used by another process
+2026-02-06 20:07:27 - src.core.social_poster - INFO - Copied session data: Login Data, Web Data, History, Favicons, Local Storage, Session Storage
+2026-02-06 20:07:27 - src.core.social_poster - INFO - Session data copied successfully
+2026-02-06 20:07:27 - src.core.social_poster - INFO - Using automation profile: E:\AIOperator\data\brave_automation
+2026-02-06 20:07:29 - src.core.social_poster - INFO - Creating new page...
+2026-02-06 20:07:29 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-06 20:07:29 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-06 20:07:29 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-06 20:07:39 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-06 20:07:39 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-06 20:07:42 - src.core.social_poster - INFO - Finding create post button...
+2026-02-06 20:07:43 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-06 20:07:45 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-06 20:07:45 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-06 20:07:45 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-06 20:07:51 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-06 20:07:51 - src.core.social_poster - INFO - Finding text input...
+2026-02-06 20:07:51 - src.core.social_poster - INFO - Screenshot saved to before_typing.png
+2026-02-06 20:07:51 - src.core.social_poster - INFO - Typing content...
+2026-02-06 20:07:51 - src.core.social_poster - INFO - Attempting to type content: 'flying......'
+2026-02-06 20:07:51 - src.core.social_poster - INFO - Typing attempt 1
+2026-02-06 20:07:52 - src.core.social_poster - INFO - Editor content after typing: 'flying......'
+2026-02-06 20:07:52 - src.core.social_poster - INFO - Expected content: 'flying......'
+2026-02-06 20:07:52 - src.core.social_poster - INFO - Content lengths -> current: 9, expected: 9
+2026-02-06 20:07:52 - src.core.social_poster - INFO - Content verification passed for attempt 1
+2026-02-06 20:07:52 - src.core.social_poster - INFO - Screenshot saved to after_typing.png
+2026-02-06 20:07:52 - src.core.social_poster - INFO - Final content in editor: 'flying......'
+2026-02-06 20:07:53 - src.core.social_poster - INFO - Finding Next button...
+2026-02-06 20:07:53 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-06 20:07:53 - src.core.social_poster - INFO - Clicking Next...
+2026-02-06 20:07:55 - src.core.social_poster - INFO - Finding Post button...
+2026-02-06 20:07:55 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-06 20:07:55 - src.core.social_poster - INFO - Clicking Post...
+2026-02-06 20:07:55 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-06 20:08:03 - src.core.social_poster - INFO - URL after posting: https://www.facebook.com/
+2026-02-06 20:08:03 - src.core.social_poster - WARNING - Post dialog still open, post may not have completed
+2026-02-06 20:08:03 - src.core.social_poster - INFO - Closing browser...
+2026-02-06 20:08:04 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-06 20:08:04 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-06 20:08:04 - src.gui.main_window - INFO - Facebook post successful
+2026-02-06 20:10:22 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:10:22 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:10:22 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:14:22 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:14:22 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:14:22 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:14:23 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:14:23 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:14:23 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:14:23 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:14:23 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:14:25 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:14:25 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:14:25 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:14:35 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:14:38 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:14:38 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:14:39 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:14:40 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:14:40 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:14:40 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:14:40 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:16:38 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:16:38 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:16:38 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:16:43 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:16:43 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:16:43 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:16:44 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:16:44 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:16:44 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:16:44 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:16:44 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:20:55 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:20:55 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:20:55 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:21:00 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:21:00 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:21:00 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:21:01 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:21:01 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:21:01 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:21:01 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:21:01 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:23:55 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:23:55 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:23:55 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:24:04 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:24:04 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:24:04 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:24:04 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:24:05 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:24:05 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:24:05 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:24:05 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:35:17 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:35:17 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:35:17 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:35:47 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:35:47 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:35:47 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:35:48 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:35:48 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:35:48 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:35:48 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:35:48 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:39:53 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:39:53 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:39:53 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:39:54 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:39:54 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:39:54 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:39:54 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:39:54 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:43:19 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:43:19 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:43:19 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-06 20:43:24 - src.main - INFO - Starting AIOperator...
+2026-02-06 20:43:24 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-06 20:43:24 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-06 20:43:25 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-06 20:43:25 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-06 20:43:25 - src.core.scheduler - INFO - Scheduler started
+2026-02-06 20:43:25 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-06 20:43:25 - src.main - INFO - GUI initialized successfully
+2026-02-06 20:43:37 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-06 20:43:37 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-06 20:43:37 - src.gui.main_window - INFO - AIOperator shutting down

@@ -1,0 +1,13 @@
+# AIOperator Requirements
+
+PyQt5>=5.15.9
+selenium>=4.15.0
+webdriver-manager>=4.0.1
+openai>=1.12.0
+apscheduler>=3.10.4
+cryptography>=41.0.0
+python-dotenv>=1.0.0
+sqlalchemy>=2.0.0
+requests>=2.31.0
+
+
