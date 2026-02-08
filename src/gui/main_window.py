@@ -231,7 +231,7 @@ class MainWindow(QMainWindow):
             self.post_worker = FacebookPostWorker(
                 content=content,
                 media_paths=media_paths,
-                headless=False
+                headless=True
             )
             
             # Connect signals

@@ -14,7 +14,7 @@ class FacebookPostWorker(QThread):
     finished = pyqtSignal(bool, str)  # (success, message)
     status_update = pyqtSignal(str)   # Status message for UI
     
-    def __init__(self, content, media_paths=None, headless=False):
+    def __init__(self, content, media_paths=None, headless=True):
         super().__init__()
         self.content = content
         self.media_paths = media_paths or []

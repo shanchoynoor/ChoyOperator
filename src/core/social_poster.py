@@ -173,7 +173,7 @@ class BrowserDOMPoster:
         self.element_finder = IntelligentElementFinder()
         self.session_manager = get_session_manager()
     
-    def post_to_facebook(self, content: str, media_paths: list[str] = None, headless: bool = False) -> tuple[bool, str]:
+    def post_to_facebook(self, content: str, media_paths: list[str] = None, headless: bool = True) -> tuple[bool, str]:
         """Public method to post to Facebook (called by worker thread)."""
         return asyncio.run(self._async_post_to_facebook(content, media_paths or [], headless))
     
@@ -184,7 +184,7 @@ class BrowserDOMPoster:
         return False, f"{platform} posting not implemented"
     
     async def _async_post_to_facebook(
-        self, content: str, media_paths: list[str], headless: bool = False
+        self, content: str, media_paths: list[str], headless: bool = True
     ) -> tuple[bool, str]:
         """Post to Facebook using saved browser session."""
         logger.info("Starting Facebook post...")
