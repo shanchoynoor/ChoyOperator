@@ -13,6 +13,7 @@ from src.core.social_poster import get_poster
 from src.data.database import get_database
 from src.data.models import Account, ScheduledPost, PostStatusEnum
 from src.data.encryption import get_encryption
+from src.utils.helpers import contains_video_media, extract_video_paths
 
 
 logger = logging.getLogger(__name__)
@@ -52,7 +53,25 @@ def execute_scheduled_post(
     try:
         if platform_key == "facebook":
             poster = get_poster()
-            success, message = poster.post_to_facebook(content, media_paths, headless=True)
+            if contains_video_media(media_paths):
+                video_paths = extract_video_paths(media_paths)
+                if not video_paths:
+                    return {
+                        "status": "failed",
+                        "message": "Reel scheduling requires at least one valid video file",
+                        "post_url": None,
+                    }
+                success, message = poster.post_to_facebook_reel(
+                    content,
+                    video_paths,
+                    headless=True,
+                )
+            else:
+                success, message = poster.post_to_facebook(
+                    content,
+                    media_paths,
+                    headless=True,
+                )
             return {
                 "status": "success" if success else "failed",
                 "message": message,

@@ -5,6 +5,7 @@ Worker threads for social media posting to prevent GUI hanging.
 import logging
 from PyQt5.QtCore import QThread, pyqtSignal
 from src.core.social_poster import get_poster
+from src.utils.helpers import extract_video_paths
 
 logger = logging.getLogger(__name__)
 
@@ -14,11 +15,12 @@ class FacebookPostWorker(QThread):
     finished = pyqtSignal(bool, str)  # (success, message)
     status_update = pyqtSignal(str)   # Status message for UI
     
-    def __init__(self, content, media_paths=None, headless=True):
+    def __init__(self, content, media_paths=None, headless=True, post_type: str = "feed"):
         super().__init__()
         self.content = content
         self.media_paths = media_paths or []
         self.headless = headless
+        self.post_type = post_type
         
     def run(self):
         """Execute posting in background thread."""
@@ -26,13 +28,26 @@ class FacebookPostWorker(QThread):
             self.status_update.emit("Starting browser...")
             logger.info("Worker thread starting social poster...")
             poster = get_poster()
-            
-            # We wrap the poster call which might wait for login
-            success, message = poster.post_to_facebook(
-                content=self.content,
-                media_paths=self.media_paths,
-                headless=self.headless
-            )
+
+            if self.post_type == "reel":
+                video_paths = extract_video_paths(self.media_paths)
+                if not video_paths:
+                    msg = "Reels require at least one video file"
+                    logger.error(msg)
+                    self.finished.emit(False, msg)
+                    return
+                success, message = poster.post_to_facebook_reel(
+                    content=self.content,
+                    media_paths=video_paths,
+                    headless=self.headless
+                )
+            else:
+                # Standard feed post
+                success, message = poster.post_to_facebook(
+                    content=self.content,
+                    media_paths=self.media_paths,
+                    headless=self.headless
+                )
             
             logger.info(f"Worker thread finished with success={success}")
             self.finished.emit(success, message)

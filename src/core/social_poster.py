@@ -6,6 +6,7 @@ with elements reliably, even when Facebook changes their DOM structure.
 
 import asyncio
 import logging
+from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Optional
 from playwright.async_api import async_playwright, Page, Locator
@@ -173,9 +174,69 @@ class BrowserDOMPoster:
         self.element_finder = IntelligentElementFinder()
         self.session_manager = get_session_manager()
     
+    @asynccontextmanager
+    async def _facebook_session(self, headless: bool = True):
+        """Provide an authenticated Facebook page inside a managed browser."""
+        platform = "facebook"
+        if not self.session_manager.has_session(platform):
+            success, message = await self.session_manager.authenticate(platform, headless=False)
+            if not success:
+                raise RuntimeError(f"Authentication required: {message}")
+            logger.info(f"Authentication successful: {message}")
+        playwright = await async_playwright().start()
+        browser = None
+        try:
+            browser_config = self.session_manager.browser_configs.get(platform)
+            if not browser_config:
+                raise RuntimeError("No browser configured")
+            session = self.session_manager.get_session(platform)
+            browser = await playwright.chromium.launch(
+                headless=headless,
+                executable_path=browser_config.executable_path,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-first-run",
+                    "--start-maximized",
+                    "--window-size=1920,1080",
+                    "--force-device-scale-factor=1",
+                ]
+            )
+            context = await browser.new_context(
+                viewport=None,
+                user_agent=session.user_agent if session else None,
+            )
+            if session and session.cookies:
+                await context.add_cookies(session.cookies)
+            page = await context.new_page()
+            page.set_default_timeout(30000)
+            await page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
+            await page.wait_for_timeout(3000)
+            cookies = await context.cookies()
+            if not any(c.get("name") == "c_user" for c in cookies):
+                logger.warning("Session expired, retrying authentication")
+                await browser.close()
+                await playwright.stop()
+                success, message = await self.session_manager.authenticate(platform, headless=False)
+                if not success:
+                    raise RuntimeError(f"Session expired and re-authentication failed: {message}")
+                async with self._facebook_session(headless=headless) as retry_page:
+                    yield retry_page
+                return
+            logger.info("✓ Logged in with saved session")
+            try:
+                yield page
+            finally:
+                await browser.close()
+        finally:
+            await playwright.stop()
+    
     def post_to_facebook(self, content: str, media_paths: list[str] = None, headless: bool = True) -> tuple[bool, str]:
         """Public method to post to Facebook (called by worker thread)."""
         return asyncio.run(self._async_post_to_facebook(content, media_paths or [], headless))
+    
+    def post_to_facebook_reel(self, content: str, media_paths: list[str], headless: bool = True) -> tuple[bool, str]:
+        """Post a Facebook Reel (videos only)."""
+        return asyncio.run(self._async_post_to_facebook_reel(content, media_paths or [], headless))
     
     def post(self, platform: str, content: str, media_paths: list[str]) -> tuple[bool, str]:
         """Post content to social media platform."""
@@ -433,6 +494,227 @@ class BrowserDOMPoster:
                 except:
                     pass
                 return False, f"Error: {e}"
+    
+    async def _async_post_to_facebook_reel(
+        self, content: str, media_paths: list[str], headless: bool = True
+    ) -> tuple[bool, str]:
+        """Post videos as a Facebook Reel following the dedicated workflow."""
+        logger.info("Starting Facebook Reel workflow...")
+        if not media_paths:
+            return False, "Reels require at least one video file"
+        try:
+            async with self._facebook_session(headless=headless) as page:
+                composer_ready = await self._open_reel_composer(page)
+                if not composer_ready:
+                    return False, "Could not open Facebook Reel composer"
+                upload_success = await self._upload_reel_media(page, media_paths)
+                if not upload_success:
+                    return False, "Failed to upload Reel video"
+                caption_success = await self._enter_reel_caption(page, content)
+                if not caption_success:
+                    return False, "Failed to enter Reel caption"
+                publish_success = await self._publish_reel(page)
+                if not publish_success:
+                    return False, "Could not find Share button for Reels"
+                verification_success = await self._verify_reel_post(page, content)
+                if not verification_success:
+                    return False, "Reel may not have been published (verification failed)"
+                return True, "Reel posted successfully!"
+        except Exception as exc:
+            logger.exception("Facebook Reel posting error: %s", exc)
+            return False, f"Error posting Reel: {exc}"
+    
+    async def _open_reel_composer(self, page: Page) -> bool:
+        """Navigate to the Reel composer and ensure the upload surface is ready."""
+        logger.info("Opening Reel composer...")
+        target_urls = [
+            "https://www.facebook.com/reels/create/",
+            "https://www.facebook.com/creatorstudio/?tab=reels",
+        ]
+        for url in target_urls:
+            try:
+                await page.goto(url, wait_until="domcontentloaded")
+                await page.wait_for_timeout(3000)
+                file_input = page.locator("input[type='file'][accept*='video']").first
+                if await file_input.count() > 0:
+                    logger.info("✓ Reel composer ready via direct URL")
+                    return True
+            except Exception as exc:
+                logger.debug("Composer URL %s failed: %s", url, exc)
+        logger.info("Direct navigation failed, trying UI navigation")
+        create_selectors = [
+            "div[role='button']:has-text('Create')",
+            "div[aria-label='Create'][role='button']",
+            "div[role='button']:has-text('Reel')",
+            "[aria-label*='Reel'][role='button']",
+        ]
+        for selector in create_selectors:
+            try:
+                trigger = page.locator(selector).first
+                if await trigger.count() == 0 or not await trigger.is_visible():
+                    continue
+                logger.info("Clicking %s to open Reel options", selector)
+                await trigger.click()
+                await page.wait_for_timeout(2000)
+                reel_option_selectors = [
+                    "div[role='menuitem']:has-text('Reel')",
+                    "div[role='button']:has-text('Reel')",
+                    "div[role='menuitem']:has-text('Create reel')",
+                ]
+                for option_selector in reel_option_selectors:
+                    option = page.locator(option_selector).first
+                    if await option.count() > 0 and await option.is_visible():
+                        await option.click()
+                        await page.wait_for_timeout(4000)
+                        file_input = page.locator("input[type='file'][accept*='video']").first
+                        if await file_input.count() > 0:
+                            logger.info("✓ Reel composer opened via UI navigation")
+                            return True
+            except Exception as exc:
+                logger.debug("Create selector %s failed: %s", selector, exc)
+        logger.error("Failed to open Reel composer")
+        return False
+    
+    async def _upload_reel_media(self, page: Page, media_paths: list[str]) -> bool:
+        """Upload Reel video files using the dedicated composer."""
+        valid_paths = [str(Path(p)) for p in media_paths if Path(p).exists()]
+        if not valid_paths:
+            logger.error("No valid video files found for Reel")
+            return False
+        logger.info("Uploading %d video file(s) for Reel", len(valid_paths))
+        uploader_selectors = [
+            "input[type='file'][accept*='video']",
+            "input[type='file'][accept*='mp4']",
+            "input[type='file'][aria-label*='video']",
+            "input[type='file']",
+        ]
+        file_input = None
+        for selector in uploader_selectors:
+            candidate = page.locator(selector).first
+            try:
+                if await candidate.count() > 0:
+                    file_input = candidate
+                    break
+            except Exception:
+                continue
+        if not file_input:
+            logger.error("Could not locate Reel video file input")
+            return False
+        try:
+            await file_input.set_input_files(valid_paths)
+            logger.info("✓ Videos queued, waiting for processing...")
+            return await self._wait_for_reel_media_ready(page)
+        except Exception as exc:
+            logger.exception("Failed to set Reel files: %s", exc)
+            return False
+    
+    async def _wait_for_reel_media_ready(self, page: Page) -> bool:
+        """Wait for Facebook to process Reel media uploads."""
+        preview_selectors = [
+            "video",
+            "[data-testid*='reel']",
+            "[data-testid*='preview']",
+            "div[role='img']",
+            "img[src*='fbcdn']",
+        ]
+        for attempt in range(60):
+            for selector in preview_selectors:
+                locator = page.locator(selector).first
+                try:
+                    if await locator.count() > 0 and await locator.is_visible():
+                        logger.info("✓ Reel media preview detected (%s)", selector)
+                        return True
+                except Exception:
+                    continue
+            status_texts = ["Uploading", "Processing", "Finishing up"]
+            for text in status_texts:
+                try:
+                    if await page.locator(f"text={text}").count() > 0:
+                        logger.info("Reel media %s... (%d/60)", text.lower(), attempt + 1)
+                        break
+                except Exception:
+                    continue
+            await page.wait_for_timeout(1000)
+        logger.error("Reel media never indicated as ready")
+        return False
+    
+    async def _enter_reel_caption(self, page: Page, content: str) -> bool:
+        """Enter caption text inside the Reel composer."""
+        if not content or not content.strip():
+            logger.info("No caption provided for Reel")
+            return True
+        caption_selectors = [
+            "div[role='textbox'][aria-label*='caption']",
+            "div[role='textbox'][aria-label*='Caption']",
+            "textarea[aria-label*='caption']",
+            "div[contenteditable='true'][data-lexical-editor='true']",
+            "div[contenteditable='true'][aria-placeholder*='caption']",
+        ]
+        for selector in caption_selectors:
+            try:
+                locator = page.locator(selector).first
+                if await locator.count() > 0 and await locator.is_visible():
+                    logger.info("Entering Reel caption using %s", selector)
+                    return await self._enter_text(page, locator, content)
+            except Exception as exc:
+                logger.debug("Caption selector %s failed: %s", selector, exc)
+                continue
+        logger.info("Falling back to intelligent text input finder for caption")
+        text_input = await self.element_finder.find_text_input_intelligent(page)
+        if text_input:
+            return await self._enter_text(page, text_input, content)
+        logger.error("Could not locate caption input")
+        return False
+    
+    async def _publish_reel(self, page: Page) -> bool:
+        """Click the Share button to publish the Reel."""
+        logger.info("Looking for Reel Share button...")
+        share_selectors = [
+            "div[role='button']:has-text('Share reel')",
+            "div[role='button']:has-text('Share now')",
+            "button:has-text('Share reel')",
+            "button:has-text('Share now')",
+            "div[aria-label='Share'][role='button']",
+        ]
+        for attempt in range(40):
+            for selector in share_selectors:
+                try:
+                    locator = page.locator(selector).first
+                    if await locator.count() == 0 or not await locator.is_visible():
+                        continue
+                    aria_disabled = await locator.get_attribute("aria-disabled")
+                    if aria_disabled and aria_disabled.lower() == "true":
+                        logger.debug("Share button disabled, waiting...")
+                        continue
+                    logger.info("Clicking Reel share button: %s", selector)
+                    await locator.click()
+                    await page.wait_for_timeout(4000)
+                    return True
+                except Exception as exc:
+                    logger.debug("Share selector %s failed: %s", selector, exc)
+            if attempt % 5 == 0:
+                logger.info("Waiting for Share button... (%d/40)", attempt + 1)
+            await page.wait_for_timeout(1000)
+        logger.error("Failed to locate enabled Share button")
+        return False
+    
+    async def _verify_reel_post(self, page: Page, expected_content: str = "") -> bool:
+        """Verify Reel publication via success indicators."""
+        success_indicators = [
+            "text=Your reel is now live",
+            "text=Reel posted",
+            "text=Your reel has been shared",
+            "text=Check it out in your profile",
+        ]
+        for indicator in success_indicators:
+            try:
+                if await page.locator(indicator).count() > 0:
+                    logger.info("✓ Reel success indicator found: %s", indicator)
+                    return True
+            except Exception:
+                continue
+        logger.info("Reel success indicators not found, falling back to generic verification")
+        return await self._verify_post(page, expected_content)
     
     async def _enter_text(self, page: Page, text_input: Locator, content: str) -> bool:
         """Enter text using robust strategies for Facebook contenteditable editor."""

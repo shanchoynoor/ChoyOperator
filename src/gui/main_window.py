@@ -28,6 +28,7 @@ from src.gui.styles.dark_theme import get_dark_stylesheet
 from src.utils.logger import get_logger, GUILogHandler, QtLogEmitter
 from src.core.scheduler import get_scheduler
 from src.data.database import get_database
+from src.utils.helpers import contains_video_media
 
 logger = get_logger(__name__)
 
@@ -228,11 +229,13 @@ class MainWindow(QMainWindow):
         
         # Use real poster for Facebook
         if platform.lower() == "facebook":
+            is_reel = contains_video_media(media_paths)
             # Create and start background worker
             self.post_worker = FacebookPostWorker(
                 content=content,
                 media_paths=media_paths,
-                headless=True
+                headless=True,
+                post_type="reel" if is_reel else "feed"
             )
             
             # Connect signals

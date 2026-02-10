@@ -6,6 +6,7 @@ import re
 import unicodedata
 from datetime import datetime
 from pathlib import Path
+from typing import Iterable
 
 from src.core.llm_client import Platform
 
@@ -118,6 +119,31 @@ def get_media_type(file_path: Path) -> str | None:
         return 'video'
     
     return None
+
+
+def contains_video_media(media_paths: Iterable[str | Path]) -> bool:
+    """Return True if any of the provided paths point to a video file."""
+    for media_path in media_paths:
+        try:
+            path = Path(media_path)
+        except TypeError:
+            continue
+        if get_media_type(path) == 'video':
+            return True
+    return False
+
+
+def extract_video_paths(media_paths: Iterable[str | Path]) -> list[str]:
+    """Return a list of absolute paths that correspond to video files."""
+    video_files: list[str] = []
+    for media_path in media_paths:
+        try:
+            path = Path(media_path)
+        except TypeError:
+            continue
+        if get_media_type(path) == 'video' and path.exists():
+            video_files.append(str(path.resolve()))
+    return video_files
 
 
 def truncate_text(text: str, max_length: int, suffix: str = "...") -> str:
