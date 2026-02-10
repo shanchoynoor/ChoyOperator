@@ -10,12 +10,13 @@ from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QPushButton,
     QLabel, QComboBox, QFileDialog, QListWidget, QListWidgetItem,
     QGroupBox, QProgressBar, QMessageBox, QLineEdit, QDateTimeEdit,
-    QDialog, QFormLayout
+    QDialog, QFormLayout, QFrame
 )
 from PyQt5.QtCore import pyqtSignal, Qt, QThread, pyqtSlot, QDateTime
 from PyQt5.QtGui import QFont, QDragEnterEvent, QDropEvent
 
 from src.core.llm_client import LLMClient, Platform, Tone
+from src.core.browser_connect import get_browser_connect
 from src.config import config
 from src.utils.logger import get_logger
 
@@ -469,12 +470,98 @@ class ContentEditorWidget(QWidget):
         """Preview the post content."""
         content = self.content_edit.toPlainText()
         platform = list(Platform)[self.platform_combo.currentIndex()]
+        account = self._get_preview_account()
+        account_name = account.display_name if account else platform.value.title()
+        avatar_text = account_name.strip()[0].upper() if account_name.strip() else platform.value[0].upper()
+        media_text = f"Media: {len(self.media_paths)} file(s)" if self.media_paths else "No media attached"
         
-        QMessageBox.information(
-            self,
-            f"Preview - {platform.value.title()}",
-            f"{content}\n\n---\nMedia: {len(self.media_paths)} file(s)"
-        )
+        dialog = QDialog(self)
+        dialog.setWindowTitle(f"Preview - {platform.value.title()}")
+        dialog.setMinimumWidth(380)
+        dialog.setStyleSheet("background-color: #0b0b0c;")
+        layout = QVBoxLayout(dialog)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(14)
+
+        card = QFrame()
+        card.setStyleSheet("""
+            QFrame {
+                background-color: #f0f2f5;
+                border: 1px solid #dbe2ef;
+                border-radius: 16px;
+            }
+        """)
+        card_layout = QVBoxLayout(card)
+        card_layout.setContentsMargins(20, 18, 20, 18)
+        card_layout.setSpacing(14)
+
+        header_layout = QHBoxLayout()
+        header_layout.setSpacing(12)
+
+        avatar = QLabel(avatar_text)
+        avatar.setFixedSize(46, 46)
+        avatar.setAlignment(Qt.AlignCenter)
+        avatar.setStyleSheet("""
+            QLabel {
+                background-color: #1877f2;
+                color: white;
+                border-radius: 23px;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        """)
+        header_layout.addWidget(avatar)
+
+        name_layout = QVBoxLayout()
+        name_layout.setSpacing(2)
+        name_label = QLabel(account_name)
+        name_label.setStyleSheet("font-weight: bold; color: #050505; font-size: 14px;")
+        sub_label = QLabel(f"Just now · {platform.value.title()}")
+        sub_label.setStyleSheet("color: #65676b; font-size: 12px;")
+        name_layout.addWidget(name_label)
+        name_layout.addWidget(sub_label)
+        header_layout.addLayout(name_layout)
+        header_layout.addStretch()
+        card_layout.addLayout(header_layout)
+
+        content_label = QLabel(content or "(No content)")
+        content_label.setWordWrap(True)
+        content_label.setStyleSheet("color: #050505; font-size: 15px; line-height: 1.35;")
+        card_layout.addWidget(content_label)
+
+        media_chip = QLabel(media_text)
+        media_chip.setAlignment(Qt.AlignLeft)
+        media_chip.setStyleSheet("""
+            QLabel {
+                color: #65676b;
+                font-size: 12px;
+                padding: 6px 10px;
+                border: 1px solid #e4e6eb;
+                border-radius: 10px;
+                background-color: #ffffff;
+            }
+        """)
+        card_layout.addWidget(media_chip)
+
+        layout.addWidget(card)
+        
+        close_btn = QPushButton("OK")
+        close_btn.setFixedHeight(32)
+        close_btn.setStyleSheet("background-color: #2563eb; color: white; border: none; border-radius: 6px; font-weight: bold;")
+        close_btn.clicked.connect(dialog.accept)
+        layout.addWidget(close_btn, alignment=Qt.AlignCenter)
+        
+        dialog.exec_()
+
+    def _get_preview_account(self):
+        """Return the currently selected connected account if available."""
+        connector = get_browser_connect()
+        accounts = connector.get_connected_accounts()
+        if not accounts:
+            return None
+        if self.current_account_id is not None and 0 <= self.current_account_id < len(accounts):
+            return accounts[self.current_account_id]
+        return accounts[0]
     
     def _request_post(self):
         """Request to post the content."""

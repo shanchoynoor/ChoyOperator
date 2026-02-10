@@ -8,6 +8,8 @@ Works with any browser (Brave, Chrome, etc.) without needing API keys.
 import json
 import logging
 import asyncio
+import os
+import sys
 from pathlib import Path
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -175,38 +177,20 @@ class BrowserSessionManager:
     def _auto_detect_browsers(self):
         """Auto-detect available browsers on the system."""
         detected = []
-        
-        # macOS browser paths
-        browser_paths = {
-            "brave": [
-                "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
-                "/Applications/Brave Browser.app/Contents/MacOS/Brave",
-            ],
-            "chrome": [
-                "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-                "/Applications/Chromium.app/Contents/MacOS/Chromium",
-            ],
-            "firefox": [
-                "/Applications/Firefox.app/Contents/MacOS/firefox",
-            ],
-            "edge": [
-                "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
-            ],
-        }
+        browser_paths = self._get_default_browser_paths()
         
         for browser_type, paths in browser_paths.items():
-            for path in paths:
-                if Path(path).exists():
+            for raw_path in paths:
+                path = Path(raw_path).expanduser()
+                if path.exists():
                     detected.append({
                         "type": browser_type,
-                        "path": path,
+                        "path": str(path),
                     })
                     break
         
-        logger.info(f"Auto-detected browsers: {[b['type'] for b in detected]}")
-        
-        # Save as default for all platforms
         if detected:
+            logger.info(f"Auto-detected browsers: {[b['type'] for b in detected]}")
             for platform in self.PLATFORM_URLS.keys():
                 self.browser_configs[platform] = BrowserConfig(
                     platform=platform,
@@ -215,6 +199,66 @@ class BrowserSessionManager:
                     is_default=True,
                 )
             self._save_browser_configs()
+        else:
+            logger.warning("No browsers auto-detected. Please set a browser path in settings.")
+
+    def _get_default_browser_paths(self) -> dict[str, list[str]]:
+        """Return common browser install paths for the current OS."""
+        if sys.platform.startswith("darwin"):
+            return {
+                "brave": [
+                    "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+                    "/Applications/Brave Browser.app/Contents/MacOS/Brave",
+                ],
+                "chrome": [
+                    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+                    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+                ],
+                "firefox": [
+                    "/Applications/Firefox.app/Contents/MacOS/firefox",
+                ],
+                "edge": [
+                    "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+                ],
+            }
+        if os.name == "nt":
+            program_files = os.environ.get("PROGRAMFILES", r"C:\\Program Files")
+            program_files_x86 = os.environ.get("PROGRAMFILES(X86)", r"C:\\Program Files (x86)")
+            return {
+                "brave": [
+                    fr"{program_files}\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+                    fr"{program_files_x86}\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+                ],
+                "chrome": [
+                    fr"{program_files}\\Google\\Chrome\\Application\\chrome.exe",
+                    fr"{program_files_x86}\\Google\\Chrome\\Application\\chrome.exe",
+                ],
+                "edge": [
+                    fr"{program_files}\\Microsoft\\Edge\\Application\\msedge.exe",
+                    fr"{program_files_x86}\\Microsoft\\Edge\\Application\\msedge.exe",
+                ],
+                "firefox": [
+                    fr"{program_files}\\Mozilla Firefox\\firefox.exe",
+                    fr"{program_files_x86}\\Mozilla Firefox\\firefox.exe",
+                ],
+            }
+        # Linux / other unix
+        return {
+            "brave": [
+                "/usr/bin/brave-browser",
+                "/snap/bin/brave",
+            ],
+            "chrome": [
+                "/usr/bin/google-chrome",
+                "/usr/bin/chromium-browser",
+            ],
+            "edge": [
+                "/usr/bin/microsoft-edge",
+            ],
+            "firefox": [
+                "/usr/bin/firefox",
+            ],
+        }
     
     def get_available_browsers(self) -> List[dict]:
         """Get list of available browsers."""

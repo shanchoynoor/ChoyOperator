@@ -17,12 +17,26 @@ from PyQt5.QtWidgets import (
     QPushButton, QLabel, QDateTimeEdit, QComboBox, QGroupBox,
     QFileDialog, QMessageBox, QHeaderView, QAbstractItemView,
     QLineEdit, QCheckBox, QSpinBox, QDialog, QFormLayout, QTextEdit,
-    QListWidget
+    QListWidget, QStackedLayout
 )
 from PyQt5.QtCore import (
     pyqtSignal, Qt, QDateTime, QTimer, QFileSystemWatcher, QMimeData
 )
 from PyQt5.QtGui import QDragEnterEvent, QDropEvent, QFont
+
+
+def _bind_calendar_button(button: QPushButton, datetime_edit: QDateTimeEdit):
+    """Connect a calendar button to show the popup with compatibility fallback."""
+    def _open_calendar():
+        if hasattr(datetime_edit, "showCalendarPopup"):
+            datetime_edit.showCalendarPopup()
+            return
+        calendar = datetime_edit.calendarWidget()
+        if calendar:
+            calendar.setWindowFlags(Qt.Popup)
+            calendar.move(datetime_edit.mapToGlobal(datetime_edit.rect().bottomLeft()))
+            calendar.show()
+    button.clicked.connect(_open_calendar)
 
 from src.data.database import get_database
 from src.data.models import ScheduledPost, PostStatusEnum
@@ -237,11 +251,37 @@ class ScheduleItemDialog(QDialog):
         schedule_group = QGroupBox("Schedule")
         schedule_layout = QFormLayout(schedule_group)
         
+        datetime_row = QWidget()
+        datetime_row_layout = QHBoxLayout(datetime_row)
+        datetime_row_layout.setContentsMargins(0, 0, 0, 0)
+        datetime_row_layout.setSpacing(6)
+        
         self.datetime_edit = QDateTimeEdit()
         self.datetime_edit.setDateTime(QDateTime.currentDateTime().addSecs(3600))  # +1 hour
         self.datetime_edit.setCalendarPopup(True)
         self.datetime_edit.setMinimumDateTime(QDateTime.currentDateTime())
-        schedule_layout.addRow("Post at:", self.datetime_edit)
+        datetime_row_layout.addWidget(self.datetime_edit)
+        
+        calendar_btn = QPushButton("📅")
+        calendar_btn.setFixedSize(34, 28)
+        calendar_btn.setCursor(Qt.PointingHandCursor)
+        calendar_btn.setToolTip("Open calendar")
+        calendar_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #1f2937;
+                color: #f8fafc;
+                border: 1px solid #334155;
+                border-radius: 6px;
+            }
+            QPushButton:hover {
+                background-color: #2563eb;
+                border-color: #2563eb;
+            }
+        """)
+        _bind_calendar_button(calendar_btn, self.datetime_edit)
+        datetime_row_layout.addWidget(calendar_btn)
+        
+        schedule_layout.addRow("Post at:", datetime_row)
         
         # Quick schedule buttons
         quick_layout = QHBoxLayout()
@@ -477,14 +517,15 @@ class SchedulerWidget(QWidget):
         
         # Scheduled posts table container
         self.table_container = QWidget()
-        table_container_layout = QVBoxLayout(self.table_container)
+        table_container_layout = QStackedLayout(self.table_container)
+        table_container_layout.setStackingMode(QStackedLayout.StackAll)
         table_container_layout.setContentsMargins(0, 0, 0, 0)
         
         # Modern styled table
         self.schedule_table = QTableWidget()
         self.schedule_table.setColumnCount(6)
         self.schedule_table.setHorizontalHeaderLabels([
-            "Platform", "Content", "Scheduled Time", "Status", "Media", "Actions"
+            "", "Content", "Scheduled Time", "Status", "Media", "Actions"
         ])
         
         # Table styling - Refined for "Premium" look
@@ -549,8 +590,8 @@ class SchedulerWidget(QWidget):
         header.setSectionResizeMode(4, QHeaderView.Fixed)  # Media
         header.setSectionResizeMode(5, QHeaderView.Fixed)  # Actions
         
-        self.schedule_table.setColumnWidth(0, 110)  # Platform
-        self.schedule_table.setColumnWidth(2, 150)  # Time
+        self.schedule_table.setColumnWidth(0, 70)   # Platform
+        self.schedule_table.setColumnWidth(2, 190)  # Time
         self.schedule_table.setColumnWidth(3, 90)   # Status
         self.schedule_table.setColumnWidth(4, 70)   # Media
         self.schedule_table.setColumnWidth(5, 140)  # Actions
@@ -570,7 +611,7 @@ class SchedulerWidget(QWidget):
         table_container_layout.addWidget(self.schedule_table)
         
         # Watermark label for empty state
-        self.watermark_label = QLabel("📁 Drop files here to schedule\nor use the Content Editor")
+        self.watermark_label = QLabel("+ Add files")
         self.watermark_label.setAlignment(Qt.AlignCenter)
         self.watermark_label.setStyleSheet("""
             QLabel {
@@ -580,8 +621,14 @@ class SchedulerWidget(QWidget):
                 background: transparent;
             }
         """)
-        self.watermark_label.setAttribute(Qt.WA_TransparentForMouseEvents)
+        self.watermark_label.setAttribute(Qt.WA_TransparentForMouseEvents, False)
+        self.watermark_label.setCursor(Qt.PointingHandCursor)
+        self.watermark_label.setAcceptDrops(True)
+        self.watermark_label.mousePressEvent = self._watermark_click
+        self.watermark_label.dragEnterEvent = self._watermark_drag_enter
+        self.watermark_label.dropEvent = self._watermark_drop
         table_container_layout.addWidget(self.watermark_label)
+        table_container_layout.setAlignment(self.watermark_label, Qt.AlignCenter)
         
         layout.addWidget(self.table_container, stretch=1)
         
@@ -595,10 +642,10 @@ class SchedulerWidget(QWidget):
                 background-color: #1e40af;
                 color: #f8fafc;
                 border: none;
-                border-radius: 8px;
-                padding: 10px 20px;
-                font-weight: bold;
-                font-size: 13px;
+                border-radius: 6px;
+                padding: 6px 14px;
+                font-weight: 600;
+                font-size: 12px;
             }
             QPushButton:hover {
                 background-color: #1d4ed8;
@@ -619,10 +666,10 @@ class SchedulerWidget(QWidget):
                 background-color: #0f766e;
                 color: #f8fafc;
                 border: none;
-                border-radius: 8px;
-                padding: 10px 20px;
-                font-weight: bold;
-                font-size: 13px;
+                border-radius: 6px;
+                padding: 6px 14px;
+                font-weight: 600;
+                font-size: 12px;
             }
             QPushButton:hover {
                 background-color: #14b8a6;
@@ -640,10 +687,10 @@ class SchedulerWidget(QWidget):
                 background-color: #b91c1c;
                 color: #f8fafc;
                 border: none;
-                border-radius: 8px;
-                padding: 10px 20px;
-                font-weight: bold;
-                font-size: 13px;
+                border-radius: 6px;
+                padding: 6px 14px;
+                font-weight: 600;
+                font-size: 12px;
             }
             QPushButton:hover {
                 background-color: #dc2626;
@@ -685,6 +732,35 @@ class SchedulerWidget(QWidget):
         if files:
             self._on_files_dropped(files)
             logger.info(f"Dropped {len(files)} file(s) on table")
+        event.acceptProposedAction()
+
+    def _watermark_click(self, event):
+        """Open file dialog when watermark CTA is clicked."""
+        files, _ = QFileDialog.getOpenFileNames(
+            self,
+            "Select Media Files",
+            "",
+            "Media Files (*.jpg *.jpeg *.png *.gif *.mp4 *.mov *.avi)"
+        )
+        if files:
+            self._on_files_dropped([Path(f) for f in files])
+
+    def _watermark_drag_enter(self, event):
+        """Allow drag-over on watermark area."""
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+
+    def _watermark_drop(self, event):
+        """Handle drop on watermark area."""
+        files = []
+        for url in event.mimeData().urls():
+            file_path = url.toLocalFile()
+            if file_path:
+                files.append(Path(file_path))
+        
+        if files:
+            self._on_files_dropped(files)
+            logger.info(f"Dropped {len(files)} file(s) on watermark")
         event.acceptProposedAction()
     
     def _select_watch_folder(self):
@@ -832,8 +908,10 @@ class SchedulerWidget(QWidget):
             platform_name = account.platform.title() if account else "Unknown"
             
             # Platform cell with icon
-            platform_item = QTableWidgetItem(f"  {platform_name}")
+            platform_item = QTableWidgetItem("")
             platform_item.setIcon(get_platform_icon(platform_name, 20))
+            platform_item.setToolTip(platform_name)
+            platform_item.setTextAlignment(Qt.AlignCenter)
             self.schedule_table.setItem(row, 0, platform_item)
             
             # Content preview
@@ -861,31 +939,36 @@ class SchedulerWidget(QWidget):
             
             # Media count
             media_count = len(post.media_paths) if post.media_paths else 0
-            media_text = f"📎 {media_count}" if media_count > 0 else "—"
-            media_item = QTableWidgetItem(media_text)
+            has_media = media_count > 0
+            media_symbol = "✔" if has_media else "✕"
+            media_item = QTableWidgetItem(media_symbol)
+            media_item.setToolTip(
+                f"{media_count} file(s) attached" if has_media else "No media attached"
+            )
             media_item.setTextAlignment(Qt.AlignCenter)
+            media_item.setForeground(Qt.green if has_media else Qt.red)
             self.schedule_table.setItem(row, 4, media_item)
             
             # Actions - Edit and Delete button widget
             actions_widget = QWidget()
+            actions_widget.setStyleSheet("background: transparent;")
             actions_layout = QHBoxLayout(actions_widget)
-            actions_layout.setContentsMargins(4, 4, 4, 4)
-            actions_layout.setSpacing(6)
+            actions_layout.setContentsMargins(0, 0, 0, 0)
+            actions_layout.setSpacing(2)
             
             # Inline Edit button
             edit_btn = QPushButton("✏️")
             edit_btn.setToolTip("Edit Post")
             edit_btn.setStyleSheet("""
                 QPushButton {
-                    background-color: #0f766e;
-                    color: white;
+                    background-color: transparent;
+                    color: #14b8a6;
                     border: none;
-                    border-radius: 4px;
-                    padding: 4px 8px;
-                    font-weight: bold;
+                    padding: 0;
+                    font-size: 16px;
                 }
                 QPushButton:hover {
-                    background-color: #14b8a6;
+                    color: #2dd4bf;
                 }
             """)
             edit_btn.clicked.connect(lambda checked, pid=post.id: self._edit_post(pid))
@@ -896,15 +979,14 @@ class SchedulerWidget(QWidget):
             del_btn.setToolTip("Delete Post")
             del_btn.setStyleSheet("""
                 QPushButton {
-                    background-color: #991b1b;
-                    color: white;
+                    background-color: transparent;
+                    color: #f87171;
                     border: none;
-                    border-radius: 4px;
-                    padding: 4px 8px;
-                    font-weight: bold;
+                    padding: 0;
+                    font-size: 16px;
                 }
                 QPushButton:hover {
-                    background-color: #dc2626;
+                    color: #fca5a5;
                 }
             """)
             del_btn.clicked.connect(lambda checked, pid=post.id: self._delete_post_by_id(pid))
@@ -1133,7 +1215,11 @@ class EditPostDialog(QDialog):
         schedule_layout = QVBoxLayout(schedule_group)
         schedule_layout.setContentsMargins(15, 25, 15, 15)
         
-        # DateTime picker
+        datetime_row = QWidget()
+        datetime_row_layout = QHBoxLayout(datetime_row)
+        datetime_row_layout.setContentsMargins(0, 0, 0, 0)
+        datetime_row_layout.setSpacing(6)
+        
         self.datetime_edit = QDateTimeEdit()
         self.datetime_edit.setDateTime(QDateTime(
             self.post.scheduled_time.year,
@@ -1158,14 +1244,32 @@ class EditPostDialog(QDialog):
                 border-color: #3b82f6;
             }
             QDateTimeEdit::drop-down {
+                width: 0px;
                 border: none;
-                background-color: #27272a;
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
-                width: 35px;
             }
         """)
-        schedule_layout.addWidget(self.datetime_edit)
+        datetime_row_layout.addWidget(self.datetime_edit)
+        
+        calendar_btn = QPushButton("📅")
+        calendar_btn.setFixedSize(36, 32)
+        calendar_btn.setCursor(Qt.PointingHandCursor)
+        calendar_btn.setToolTip("Open calendar")
+        calendar_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #1f2937;
+                color: #f8fafc;
+                border: 1px solid #334155;
+                border-radius: 6px;
+            }
+            QPushButton:hover {
+                background-color: #2563eb;
+                border-color: #2563eb;
+            }
+        """)
+        _bind_calendar_button(calendar_btn, self.datetime_edit)
+        datetime_row_layout.addWidget(calendar_btn)
+        
+        schedule_layout.addWidget(datetime_row)
         
         # Quick time buttons
         quick_layout = QHBoxLayout()
