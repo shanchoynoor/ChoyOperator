@@ -12,10 +12,11 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QFont
 
-from src.core.browser_connect import (
-    get_browser_connect, SocialPlatform, ConnectedAccount, PLATFORM_CONFIG
-)
+from src.data.database import get_database
+from src.data.models import Account
+from src.core.browser_connect import get_browser_connect, SocialPlatform
 from src.gui.widgets.toast_notifications import toast_success, toast_error
+from src.gui.widgets.platform_icons import get_platform_icon
 
 
 class SimpleConnectDialog(QDialog):
@@ -76,7 +77,7 @@ class SimpleConnectDialog(QDialog):
         self.platform_combo = QComboBox()
         self.platform_combo.setMinimumHeight(36)
         self.platform_combo.addItem("📘 Facebook", SocialPlatform.FACEBOOK)
-        self.platform_combo.addItem("🐦 Twitter / X", SocialPlatform.TWITTER)
+        self.platform_combo.addItem("🐦 X", SocialPlatform.X)
         self.platform_combo.addItem("💼 LinkedIn", SocialPlatform.LINKEDIN)
         self.platform_combo.addItem("🎬 YouTube", SocialPlatform.YOUTUBE)
         
@@ -144,7 +145,7 @@ class SimpleConnectDialog(QDialog):
         layout.addWidget(close_btn)
     
     def _load_accounts(self):
-        """Load and display connected accounts."""
+        """Load and display connected accounts with platform icons."""
         self.accounts_list.clear()
         
         accounts = self.connector.get_connected_accounts()
@@ -156,11 +157,8 @@ class SimpleConnectDialog(QDialog):
             self.accounts_list.addItem(item)
         else:
             for account in accounts:
-                icon = "📘" if account.platform == SocialPlatform.FACEBOOK else \
-                       "🐦" if account.platform == SocialPlatform.TWITTER else \
-                       "💼" if account.platform == SocialPlatform.LINKEDIN else "🎬"
-                
-                item = QListWidgetItem(f"{icon} {account.display_name}")
+                item = QListWidgetItem(account.display_name)
+                item.setIcon(get_platform_icon(account.platform.value, 20))
                 item.setData(Qt.UserRole, account.platform)
                 self.accounts_list.addItem(item)
     
@@ -232,6 +230,21 @@ class SimpleConnectDialog(QDialog):
             platform=self.pending_platform,
             display_name=display_name,
         )
+        
+        # Also create database account record for scheduling
+        db = get_database()
+        db_account = Account(
+            id=None,  # Auto-generated
+            platform=self.pending_platform.value,
+            username=account.display_name,
+            is_active=True,
+        )
+        try:
+            db.add_account(db_account)
+        except Exception as e:
+            # Handle UNIQUE constraint violation - account may already exist
+            # This is fine, the account is already in the database
+            pass
         
         # Reset state
         self.pending_platform = None

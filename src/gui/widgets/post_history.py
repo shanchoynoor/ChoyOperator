@@ -142,14 +142,23 @@ class PostItemWidget(QWidget):
         layout.addWidget(icon_label)
         
         # Content (truncated)
-        content_preview = record.content[:12] + ("..." if len(record.content) > 12 else "")
+        content_preview = record.content[:20] + ("..." if len(record.content) > 20 else "")
         content_label = QLabel(content_preview)
         content_label.setStyleSheet("font-weight: bold; color: #f8fafc; font-size: 10px; background: transparent;")
         content_label.setWordWrap(False)
         layout.addWidget(content_label, stretch=1)
         
-        # Time (compact)
-        time_str = record.posted_at.strftime("%H:%M")
+        # Time and date (12hr format with AM/PM and date)
+        today = datetime.now().date()
+        post_date = record.posted_at.date()
+        
+        if post_date == today:
+            # Show only time for today's posts
+            time_str = record.posted_at.strftime("%I:%M %p")
+        else:
+            # Show date and time for older posts
+            time_str = record.posted_at.strftime("%b %d, %Y")
+        
         time_label = QLabel(time_str)
         time_label.setStyleSheet("font-size: 9px; color: #64748b; background: transparent;")
         layout.addWidget(time_label)

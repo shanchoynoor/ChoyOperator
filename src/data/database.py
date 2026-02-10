@@ -269,6 +269,28 @@ class Database:
         )
         self.connection.commit()
     
+    def update_scheduled_post(self, post: ScheduledPost) -> bool:
+        """Update a scheduled post content and time."""
+        if post.id is None:
+            return False
+        
+        cursor = self.connection.cursor()
+        cursor.execute(
+            """
+            UPDATE scheduled_posts 
+            SET content = ?, scheduled_time = ?, media_paths = ?
+            WHERE id = ?
+            """,
+            (
+                post.content,
+                post.scheduled_time.isoformat(),
+                json.dumps(post.media_paths) if post.media_paths else "[]",
+                post.id,
+            )
+        )
+        self.connection.commit()
+        return cursor.rowcount > 0
+    
     def delete_scheduled_post(self, post_id: int) -> bool:
         """Delete a scheduled post."""
         cursor = self.connection.cursor()

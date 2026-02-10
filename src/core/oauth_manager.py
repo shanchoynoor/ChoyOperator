@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 class OAuthPlatform(Enum):
     """Supported OAuth platforms."""
     FACEBOOK = "facebook"
-    TWITTER = "twitter"
+    X = "x"
     LINKEDIN = "linkedin"
     YOUTUBE = "youtube"
 
@@ -199,7 +199,7 @@ class OAuthManager:
             "client_id_env": "FACEBOOK_APP_ID",
             "client_secret_env": "FACEBOOK_APP_SECRET",
         },
-        OAuthPlatform.TWITTER: {
+        OAuthPlatform.X: {
             "auth_url": "https://twitter.com/i/oauth2/authorize",
             "token_url": "https://api.twitter.com/2/oauth2/token",
             "scope": "tweet.read tweet.write users.read offline.access",

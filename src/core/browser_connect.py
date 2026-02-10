@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 class SocialPlatform(Enum):
     """Supported social media platforms."""
     FACEBOOK = "facebook"
-    TWITTER = "twitter"
+    X = "x"
     LINKEDIN = "linkedin"
     YOUTUBE = "youtube"
 
@@ -56,8 +56,8 @@ PLATFORM_CONFIG = {
         "login_url": "https://www.facebook.com/",
         "color": "#1877f2",
     },
-    SocialPlatform.TWITTER: {
-        "name": "Twitter / X",
+    SocialPlatform.X: {
+        "name": "X",
         "login_url": "https://twitter.com/login",
         "color": "#1da1f2",
     },

@@ -1,3 +1,3 @@
-2026/02/06-20:07:27.224 4e68 Reusing MANIFEST E:\AIOperator\data\brave_automation\Default\Local Storage\leveldb/MANIFEST-000001
-2026/02/06-20:07:27.231 4e68 Recovering log #1303
-2026/02/06-20:07:27.232 4e68 Reusing old log E:\AIOperator\data\brave_automation\Default\Local Storage\leveldb/001303.log 
+2026/02/07-01:10:43.504 844ca Reusing MANIFEST /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation/Default/Local Storage/leveldb/MANIFEST-000001
+2026/02/07-01:10:43.513 844ca Recovering log #1307
+2026/02/07-01:10:43.523 844ca Reusing old log /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation/Default/Local Storage/leveldb/001307.log 

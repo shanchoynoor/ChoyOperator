@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import (
     QDialog, QFormLayout
 )
 from PyQt5.QtCore import pyqtSignal, Qt, QThread, pyqtSlot, QDateTime
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QDragEnterEvent, QDropEvent
 
 from src.core.llm_client import LLMClient, Platform, Tone
 from src.config import config
@@ -80,65 +80,34 @@ class ContentEditorWidget(QWidget):
         
         layout.addLayout(header_layout)
         
-        # Title input (for YouTube and other platforms that need separate title)
-        self.title_edit = QLineEdit()
-        self.title_edit.setPlaceholderText("Post title (optional, for YouTube, etc.)...")
-        self.title_edit.setStyleSheet("""
-            QLineEdit {
-                background-color: #1e1e1e;
-                color: #e0e0e0;
-                border: 1px solid #333;
-                border-radius: 5px;
-                padding: 8px;
-                font-size: 12px;
-            }
-        """)
-        layout.addWidget(self.title_edit)
-        
-        # Content text area (description)
-        self.content_edit = QTextEdit()
-        self.content_edit.setPlaceholderText("Write your post description here...")
-        self.content_edit.setFont(QFont("Segoe UI", 11))
-        self.content_edit.textChanged.connect(self._update_char_count)
-        self.content_edit.setMinimumHeight(80)
-        self.content_edit.setMaximumHeight(140)
-        layout.addWidget(self.content_edit)
-        
-        # AI Generation controls
+        # AI Generation controls - compact
         ai_group = QGroupBox("AI Content Generation")
         ai_layout = QVBoxLayout(ai_group)
-        ai_layout.setContentsMargins(8, 10, 8, 8)
-        ai_layout.setSpacing(6)
+        ai_layout.setContentsMargins(6, 8, 6, 6)
+        ai_layout.setSpacing(4)
         
-        # Topic input
-        topic_layout = QHBoxLayout()
-        topic_layout.addWidget(QLabel("Topic:"))
+        # Topic + Tone + Platform in one row
+        top_row = QHBoxLayout()
+        top_row.addWidget(QLabel("Topic:"))
         self.topic_input = QLineEdit()
-        self.topic_input.setPlaceholderText("Enter topic/keywords for AI to generate content...")
-        topic_layout.addWidget(self.topic_input)
-        ai_layout.addLayout(topic_layout)
+        self.topic_input.setPlaceholderText("Enter topic...")
+        top_row.addWidget(self.topic_input, stretch=1)
         
-        # Tone and platform
-        options_layout = QHBoxLayout()
-        
-        options_layout.addWidget(QLabel("Tone:"))
+        top_row.addWidget(QLabel("Tone:"))
         self.tone_combo = QComboBox()
         self.tone_combo.addItems([t.value.title() for t in Tone])
-        self.tone_combo.setCurrentIndex(2)  # Engaging
-        options_layout.addWidget(self.tone_combo)
+        self.tone_combo.setCurrentIndex(2)
+        top_row.addWidget(self.tone_combo)
         
-        options_layout.addWidget(QLabel("Platform:"))
+        top_row.addWidget(QLabel("Platform:"))
         self.platform_combo = QComboBox()
         self.platform_combo.addItems([p.value.title() for p in Platform])
         self.platform_combo.currentIndexChanged.connect(self._on_platform_changed)
-        options_layout.addWidget(self.platform_combo)
+        top_row.addWidget(self.platform_combo)
+        ai_layout.addLayout(top_row)
         
-        options_layout.addStretch()
-        ai_layout.addLayout(options_layout)
-        
-        # Generate buttons
+        # Generate buttons row
         gen_buttons_layout = QHBoxLayout()
-        
         self.generate_btn = QPushButton("🤖 Generate")
         self.generate_btn.clicked.connect(self._generate_content)
         gen_buttons_layout.addWidget(self.generate_btn)
@@ -147,16 +116,17 @@ class ContentEditorWidget(QWidget):
         self.improve_btn.clicked.connect(self._improve_content)
         gen_buttons_layout.addWidget(self.improve_btn)
         
-        self.hashtag_btn = QPushButton("#️⃣ Add Hashtags")
+        self.hashtag_btn = QPushButton("Hashtag")
         self.hashtag_btn.clicked.connect(self._add_hashtags)
         gen_buttons_layout.addWidget(self.hashtag_btn)
         
         gen_buttons_layout.addStretch()
         ai_layout.addLayout(gen_buttons_layout)
         
-        # Progress bar
+        # Progress bar (compact)
         self.progress = QProgressBar()
         self.progress.setVisible(False)
+        self.progress.setMaximumHeight(12)
         ai_layout.addWidget(self.progress)
         
         layout.addWidget(ai_group)
@@ -181,6 +151,29 @@ class ContentEditorWidget(QWidget):
         
         media_layout.addLayout(media_btn_layout)
         layout.addWidget(media_group)
+        
+        # Title input (for YouTube and other platforms that need separate title)
+        self.title_edit = QLineEdit()
+        self.title_edit.setPlaceholderText("Post title (optional, for YouTube, etc.)...")
+        self.title_edit.setStyleSheet("""
+            QLineEdit {
+                background-color: #1e1e1e;
+                color: #e0e0e0;
+                border: 1px solid #333;
+                border-radius: 5px;
+                padding: 8px;
+                font-size: 12px;
+            }
+        """)
+        layout.addWidget(self.title_edit)
+        
+        # Content text area (description) - flexible height
+        self.content_edit = QTextEdit()
+        self.content_edit.setPlaceholderText("Write your post description here...")
+        self.content_edit.setFont(QFont("Segoe UI", 11))
+        self.content_edit.textChanged.connect(self._update_char_count)
+        self.content_edit.setMinimumHeight(60)
+        layout.addWidget(self.content_edit, stretch=1)
         
         # Action buttons
         action_layout = QHBoxLayout()
@@ -315,7 +308,18 @@ class ContentEditorWidget(QWidget):
             QMessageBox.warning(self, "LLM Not Configured", "Please set your OpenRouter API key.")
             return
         
+        # Check if content indicates gibberish filenames (No caption)
         content = self.content_edit.toPlainText().strip()
+        if content == "No caption" or content == "No caption\nNo title":
+            logger.info("Skipping hashtags - gibberish filenames detected")
+            QMessageBox.information(
+                self,
+                "Hashtags Skipped",
+                "Hashtags not generated because the media files have gibberish filenames.\n"
+                "Rename your files with meaningful names to get AI-generated content."
+            )
+            return
+        
         if not content:
             QMessageBox.warning(self, "No Content", "Please write some content first.")
             return
@@ -330,8 +334,89 @@ class ContentEditorWidget(QWidget):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Failed to generate hashtags:\n{e}")
     
+    def _is_meaningful_filename(self, filename: str) -> bool:
+        """
+        Check if filename is meaningful (not gibberish/random).
+        
+        Returns True if filename contains actual words, False if random chars/numbers.
+        """
+        import re
+        
+        # Remove extension
+        name = Path(filename).stem
+        
+        # Check for common gibberish patterns
+        # Pattern 1: Only numbers or mostly numbers (e.g., "123456", "IMG_2024_01")
+        if re.match(r'^[0-9_\-\.]+$', name):
+            return False
+        
+        # Pattern 2: Random alphanumeric strings without vowels (e.g., "xkcdjq", "btrfs")
+        vowels = set('aeiouAEIOU')
+        letters_only = re.sub(r'[^a-zA-Z]', '', name)
+        if len(letters_only) >= 4 and not any(v in letters_only for v in vowels):
+            return False
+        
+        # Pattern 3: Long random strings (10+ chars with no recognizable words)
+        if len(name) >= 10:
+            # Check if it looks like a hash or random ID
+            if re.match(r'^[a-f0-9]{8,}$', name, re.IGNORECASE):  # hex-like
+                return False
+            if re.match(r'^[a-z0-9]{12,}$', name, re.IGNORECASE):  # random alphanumeric
+                # Check for common camera patterns
+                if re.match(r'^(IMG|DSC|PANO|VID)_[0-9]+', name, re.IGNORECASE):
+                    return False
+                return False
+        
+        # Pattern 4: Very short names (1-2 chars)
+        if len(name) <= 2:
+            return False
+        
+        # Pattern 5: Common default camera names
+        camera_patterns = [
+            r'^IMG_?[0-9]+',
+            r'^DSC_?[0-9]+',
+            r'^PANO_?[0-9]+',
+            r'^VID_?[0-9]+',
+            r'^PHOTO_?[0-9]+',
+            r'^SCREENSHOT',
+            r'^Capture',
+            r'^image-[0-9]+',
+        ]
+        for pattern in camera_patterns:
+            if re.match(pattern, name, re.IGNORECASE):
+                return False
+        
+        return True
+    
+    def _generate_from_filename(self, filename: str) -> tuple[str, str]:
+        """
+        Generate title and description from meaningful filename.
+        
+        Returns (title, description) where:
+        - title: max 1 line
+        - description: max 2 lines
+        """
+        name = Path(filename).stem
+        
+        # Clean up the filename
+        clean_name = name.replace('_', ' ').replace('-', ' ').replace('.', ' ')
+        clean_name = ' '.join(clean_name.split())  # Remove extra spaces
+        
+        # Capitalize properly
+        clean_name = clean_name.title()
+        
+        # Generate title (1 line, max 60 chars)
+        title = clean_name[:60] if len(clean_name) > 60 else clean_name
+        
+        # Generate description (2 lines max, ~100 chars)
+        description = f"Sharing: {clean_name}"
+        if len(description) > 100:
+            description = description[:97] + "..."
+        
+        return title, description
+    
     def _add_media(self):
-        """Add media files."""
+        """Add media files and auto-generate content if filenames are meaningful."""
         files, _ = QFileDialog.getOpenFileNames(
             self,
             "Select Media",
@@ -339,10 +424,39 @@ class ContentEditorWidget(QWidget):
             "Images & Videos (*.jpg *.jpeg *.png *.gif *.mp4 *.mov)"
         )
         
+        meaningful_files = []
+        gibberish_files = []
+        
         for file_path in files:
             path = Path(file_path)
             self.media_paths.append(path)
             self.media_list.addItem(path.name)
+            
+            # Check if filename is meaningful
+            if self._is_meaningful_filename(path.name):
+                meaningful_files.append(path)
+            else:
+                gibberish_files.append(path)
+        
+        # Auto-generate content for meaningful files
+        if meaningful_files and self.llm_client:
+            # Use the first meaningful file for content generation
+            first_file = meaningful_files[0]
+            title, description = self._generate_from_filename(first_file.name)
+            
+            # Set the title and description
+            self.title_edit.setText(title)
+            self.content_edit.setPlainText(description)
+            
+            # Update topic input for AI context
+            self.topic_input.setText(Path(first_file.name).stem.replace('_', ' ').replace('-', ' '))
+            
+            logger.info(f"Auto-generated content from: {first_file.name}")
+        elif gibberish_files:
+            # Set defaults for gibberish filenames
+            self.title_edit.setText("No title")
+            self.content_edit.setPlainText("No caption")
+            logger.info(f"Gibberish filenames detected, set defaults for {len(gibberish_files)} files")
     
     def _remove_media(self):
         """Remove selected media."""
@@ -374,6 +488,8 @@ class ContentEditorWidget(QWidget):
     def _show_schedule_dialog(self):
         """Show schedule dialog with calendar for date/time selection."""
         content = self.content_edit.toPlainText().strip()
+        
+        # Allow scheduling with just content (no media required)
         if not content:
             QMessageBox.warning(self, "No Content", "Please write some content to schedule.")
             return
@@ -381,47 +497,219 @@ class ContentEditorWidget(QWidget):
         # Create dialog - keep reference to prevent GC
         self._schedule_dialog = QDialog(self)
         dialog = self._schedule_dialog
-        dialog.setWindowTitle("Schedule Post")
-        dialog.setMinimumWidth(400)
+        dialog.setWindowTitle("📅 Schedule Post")
+        dialog.setMinimumWidth(420)
+        dialog.setMinimumHeight(200)
         
         layout = QVBoxLayout(dialog)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(15)
+        
+        # Header with info
+        header_layout = QHBoxLayout()
+        
+        info_icon = QLabel("📅")
+        info_icon.setStyleSheet("font-size: 24px;")
+        header_layout.addWidget(info_icon)
+        
+        info_text = QLabel("Schedule Your Post")
+        info_text.setStyleSheet("""
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a73e8;
+        """)
+        header_layout.addWidget(info_text)
+        
+        header_layout.addStretch()
+        layout.addLayout(header_layout)
         
         # Info label
-        info_label = QLabel("Select when to post:")
+        info_label = QLabel("Select when to automatically publish your post:")
+        info_label.setStyleSheet("color: #666; margin-bottom: 10px;")
         layout.addWidget(info_label)
         
-        # DateTime picker
-        form_layout = QFormLayout()
+        # DateTime picker section
+        datetime_group = QGroupBox("Post Date & Time")
+        datetime_group.setStyleSheet("""
+            QGroupBox {
+                font-weight: bold;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-top: 10px;
+                padding-top: 10px;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                left: 10px;
+                padding: 0 5px 0 5px;
+            }
+        """)
+        datetime_layout = QVBoxLayout(datetime_group)
+        datetime_layout.setContentsMargins(15, 20, 15, 15)
         
+        # DateTime edit
         datetime_edit = QDateTimeEdit()
         datetime_edit.setDateTime(QDateTime.currentDateTime().addSecs(3600))  # Default: 1 hour from now
         datetime_edit.setCalendarPopup(True)
         datetime_edit.setMinimumDateTime(QDateTime.currentDateTime())
-        datetime_edit.setDisplayFormat("yyyy-MM-dd HH:mm")
-        form_layout.addRow("Post at:", datetime_edit)
+        datetime_edit.setDisplayFormat("ddd, MMM d, yyyy 'at' h:mm AP")
+        datetime_edit.setStyleSheet("""
+            QDateTimeEdit {
+                font-size: 14px;
+                padding: 10px;
+                border: 2px solid #38bdf8;
+                border-radius: 8px;
+                background-color: #0f172a;
+                color: #f8fafc;
+                min-height: 20px;
+            }
+            QDateTimeEdit:focus {
+                border-color: #0ea5e9;
+                background-color: #1e293b;
+            }
+            QDateTimeEdit::drop-down {
+                border: none;
+                background-color: #1d4ed8;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+            }
+            QDateTimeEdit::down-arrow {
+                image: none;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 6px solid #f8fafc;
+                margin-top: 2px;
+            }
+            QDateTimeEdit QAbstractItemView {
+                background-color: #0f172a;
+                color: #e2e8f0;
+                border: 1px solid #38bdf8;
+                selection-background-color: #1d4ed8;
+                selection-color: #f8fafc;
+            }
+            QCalendarWidget QWidget {
+                alternate-background-color: #111827;
+            }
+            QCalendarWidget QToolButton {
+                color: #f8fafc;
+                background-color: transparent;
+            }
+            QCalendarWidget QMenu {
+                background-color: #111827;
+                color: #f8fafc;
+            }
+            QCalendarWidget QSpinBox {
+                background-color: #111827;
+                color: #f8fafc;
+            }
+            QCalendarWidget QTableView {
+                background-color: #0f172a;
+                color: #e2e8f0;
+                selection-background-color: #1d4ed8;
+                selection-color: #f8fafc;
+                gridline-color: #1e293b;
+            }
+            QCalendarWidget QTableView::item:hover {
+                background-color: #1e293b;
+            }
+        """)
+        datetime_layout.addWidget(datetime_edit)
         
-        layout.addLayout(form_layout)
+        layout.addWidget(datetime_group)
         
         # Quick schedule buttons
-        quick_layout = QHBoxLayout()
-        for label, hours in [("In 1 hour", 1), ("In 3 hours", 3), ("Tomorrow 9AM", 24)]:
-            btn = QPushButton(label)
+        quick_group = QGroupBox("Quick Schedule")
+        quick_group.setStyleSheet("""
+            QGroupBox {
+                font-weight: bold;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-top: 10px;
+                padding-top: 10px;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                left: 10px;
+                padding: 0 5px 0 5px;
+            }
+        """)
+        quick_layout = QHBoxLayout(quick_group)
+        quick_layout.setContentsMargins(15, 20, 15, 15)
+        quick_layout.setSpacing(10)
+        
+        for label, hours, icon in [
+            ("In 1 hour", 1, "⏰"),
+            ("In 3 hours", 3, "🕒"),
+            ("Tomorrow 9AM", 24, "🌅")
+        ]:
+            btn = QPushButton(f"{icon} {label}")
+            btn.setMinimumHeight(40)
+            btn.setStyleSheet("""
+                QPushButton {
+                    background-color: #f8f9fa;
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    color: #333;
+                    font-weight: 500;
+                    padding: 8px 12px;
+                }
+                QPushButton:hover {
+                    background-color: #e3f2fd;
+                    border-color: #1a73e8;
+                }
+                QPushButton:pressed {
+                    background-color: #bbdefb;
+                }
+            """)
             # Use functools.partial to properly capture variables
             from functools import partial
             btn.clicked.connect(partial(self._set_quick_schedule_time, datetime_edit, hours))
             quick_layout.addWidget(btn)
-        layout.addLayout(quick_layout)
+        
+        layout.addWidget(quick_group)
         
         # Buttons
         btn_layout = QHBoxLayout()
         btn_layout.addStretch()
         
-        cancel_btn = QPushButton("Cancel")
+        cancel_btn = QPushButton("❌ Cancel")
+        cancel_btn.setMinimumHeight(40)
+        cancel_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                color: #666;
+                font-weight: 500;
+                padding: 10px 20px;
+                min-width: 100px;
+            }
+            QPushButton:hover {
+                background-color: #e8e8e8;
+            }
+        """)
         cancel_btn.clicked.connect(dialog.reject)
         btn_layout.addWidget(cancel_btn)
         
-        schedule_btn = QPushButton("📅 Schedule")
-        schedule_btn.setStyleSheet("background-color: #1a73e8; color: white;")
+        schedule_btn = QPushButton("📅 Schedule Post")
+        schedule_btn.setMinimumHeight(40)
+        schedule_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #1a73e8;
+                border: none;
+                border-radius: 6px;
+                color: white;
+                font-weight: bold;
+                padding: 10px 20px;
+                min-width: 140px;
+            }
+            QPushButton:hover {
+                background-color: #1565c0;
+            }
+            QPushButton:pressed {
+                background-color: #0d47a1;
+            }
+        """)
         schedule_btn.clicked.connect(dialog.accept)
         btn_layout.addWidget(schedule_btn)
         

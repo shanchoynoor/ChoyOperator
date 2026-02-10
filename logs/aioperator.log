@@ -1695,3 +1695,1607 @@ Call log:
 2026-02-06 20:43:37 - apscheduler.scheduler - INFO - Scheduler has been shut down
 2026-02-06 20:43:37 - src.core.scheduler - INFO - Scheduler stopped
 2026-02-06 20:43:37 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 00:00:58 - src.main - INFO - Starting AIOperator...
+2026-02-07 00:01:04 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 00:01:04 - src.gui.widgets.post_history - INFO - Loaded 33 post records
+2026-02-07 00:01:05 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 00:01:06 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 00:01:06 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 00:01:06 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 00:01:06 - src.main - INFO - GUI initialized successfully
+2026-02-07 00:03:44 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 00:03:44 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 00:03:44 - src.core.social_poster - ERROR - Facebook posting error: No module named 'playwright'
+2026-02-07 00:03:44 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 00:03:44 - src.gui.main_window - ERROR - Facebook post failed: Error: No module named 'playwright'
+2026-02-07 00:11:57 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 00:11:57 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 00:12:00 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-07 00:12:00 - src.core.social_poster - WARNING - Brave not found, falling back to Chromium
+2026-02-07 00:12:00 - src.core.social_poster - WARNING - User Brave profile not found
+2026-02-07 00:12:00 - src.core.social_poster - INFO - Using automation profile: /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation
+2026-02-07 00:12:13 - src.core.social_poster - INFO - Creating new page...
+2026-02-07 00:12:13 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-07 00:12:13 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 00:12:13 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-07 00:12:16 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-07 00:12:16 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-07 00:12:19 - src.core.social_poster - INFO - Not logged in. Waiting up to 2 minutes for user to log in manually...
+2026-02-07 00:14:19 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 00:14:19 - src.gui.main_window - ERROR - Facebook post failed: Login timed out. Please log in to Facebook in the window that opens.
+2026-02-07 00:14:30 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 00:14:30 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 00:14:31 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-07 00:14:31 - src.core.social_poster - WARNING - Brave not found, falling back to Chromium
+2026-02-07 00:14:31 - src.core.social_poster - WARNING - User Brave profile not found
+2026-02-07 00:14:31 - src.core.social_poster - INFO - Using automation profile: /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation
+2026-02-07 00:14:33 - src.core.social_poster - INFO - Creating new page...
+2026-02-07 00:14:33 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-07 00:14:33 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 00:14:33 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-07 00:15:07 - src.core.social_poster - WARNING - Navigation to https://www.facebook.com/ failed: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+2026-02-07 00:15:07 - src.core.social_poster - INFO - Trying https://m.facebook.com/...
+2026-02-07 00:15:41 - src.core.social_poster - WARNING - Navigation to https://m.facebook.com/ failed: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+2026-02-07 00:15:41 - src.core.social_poster - INFO - Trying https://www.facebook.com/login.php...
+2026-02-07 00:16:15 - src.core.social_poster - WARNING - Navigation to https://www.facebook.com/login.php failed: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+============================================================
+2026-02-07 00:16:15 - src.core.social_poster - ERROR - Failed to load Facebook from any URL. Last URL: https://www.facebook.com/
+2026-02-07 00:16:15 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 00:16:15 - src.gui.main_window - ERROR - Facebook post failed: Unable to load Facebook. Check your internet connection and try again.
+2026-02-07 00:19:59 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 00:19:59 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 00:19:59 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 00:21:37 - src.main - INFO - Starting AIOperator...
+2026-02-07 00:21:39 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 00:21:39 - src.gui.widgets.post_history - INFO - Loaded 36 post records
+2026-02-07 00:21:40 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 00:21:41 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 00:21:41 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 00:21:41 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 00:21:41 - src.main - INFO - GUI initialized successfully
+2026-02-07 00:23:01 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 00:23:01 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 00:23:01 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 00:23:22 - src.main - INFO - Starting AIOperator...
+2026-02-07 00:23:38 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 00:23:38 - src.gui.widgets.post_history - INFO - Loaded 36 post records
+2026-02-07 00:23:38 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 00:23:39 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 00:23:39 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 00:23:39 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 00:23:39 - src.main - INFO - GUI initialized successfully
+2026-02-07 00:31:24 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 00:31:24 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 00:31:24 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 00:31:41 - src.main - INFO - Starting AIOperator...
+2026-02-07 00:31:43 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 00:31:43 - src.gui.widgets.post_history - INFO - Loaded 36 post records
+2026-02-07 00:31:43 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 00:31:44 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 00:31:44 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 00:31:44 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 00:31:44 - src.main - INFO - GUI initialized successfully
+2026-02-07 00:42:49 - src.main - INFO - Starting AIOperator...
+2026-02-07 00:42:50 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 00:42:50 - src.gui.widgets.post_history - INFO - Loaded 36 post records
+2026-02-07 00:42:51 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 00:42:52 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 00:42:52 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 00:42:52 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 00:42:52 - src.main - INFO - GUI initialized successfully
+2026-02-07 00:47:28 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 00:47:28 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 00:47:28 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 00:47:35 - src.main - INFO - Starting AIOperator...
+2026-02-07 00:47:37 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 00:47:37 - src.gui.widgets.post_history - INFO - Loaded 36 post records
+2026-02-07 00:47:38 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 00:47:39 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 00:47:39 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 00:47:39 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 00:47:39 - src.main - INFO - GUI initialized successfully
+2026-02-07 00:48:06 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 00:48:06 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 00:48:09 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-07 00:48:09 - src.core.social_poster - WARNING - Brave not found, falling back to Chromium
+2026-02-07 00:48:09 - src.core.social_poster - WARNING - User Brave profile not found
+2026-02-07 00:48:09 - src.core.social_poster - INFO - Using automation profile: /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation
+2026-02-07 00:48:14 - src.core.social_poster - INFO - Creating new page...
+2026-02-07 00:48:15 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-07 00:48:15 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 00:48:15 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-07 00:48:34 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-07 00:48:34 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-07 00:48:37 - src.core.social_poster - INFO - Finding create post button...
+2026-02-07 00:48:38 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-07 00:48:40 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-07 00:48:40 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-07 00:48:40 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-07 00:48:46 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-07 00:48:46 - src.core.social_poster - INFO - Finding text input...
+2026-02-07 00:48:47 - src.core.social_poster - INFO - Screenshot saved to before_typing.png
+2026-02-07 00:48:47 - src.core.social_poster - INFO - Typing content...
+2026-02-07 00:48:47 - src.core.social_poster - INFO - Attempting to type content: 'test...'
+2026-02-07 00:48:47 - src.core.social_poster - INFO - Typing attempt 1
+2026-02-07 00:48:48 - src.core.social_poster - INFO - Editor content after typing: 'test...'
+2026-02-07 00:48:48 - src.core.social_poster - INFO - Expected content: 'test...'
+2026-02-07 00:48:48 - src.core.social_poster - INFO - Content lengths -> current: 4, expected: 4
+2026-02-07 00:48:48 - src.core.social_poster - INFO - Content verification passed for attempt 1
+2026-02-07 00:48:48 - src.core.social_poster - INFO - Screenshot saved to after_typing.png
+2026-02-07 00:48:48 - src.core.social_poster - INFO - Final content in editor: 'test...'
+2026-02-07 00:48:49 - src.core.social_poster - INFO - Finding Next button...
+2026-02-07 00:48:49 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-07 00:48:49 - src.core.social_poster - INFO - Clicking Next...
+2026-02-07 00:48:51 - src.core.social_poster - INFO - Finding Post button...
+2026-02-07 00:48:52 - src.core.social_poster - INFO - Found Post button: div[role='button'] span:has-text('Post')
+2026-02-07 00:48:52 - src.core.social_poster - INFO - Clicking Post...
+2026-02-07 00:48:52 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-07 00:49:00 - src.core.social_poster - INFO - URL after posting: https://www.facebook.com/
+2026-02-07 00:49:00 - src.core.social_poster - WARNING - Post dialog still open, post may not have completed
+2026-02-07 00:49:00 - src.core.social_poster - INFO - Closing browser...
+2026-02-07 00:49:00 - src.core.social_poster - INFO - Facebook post successful!
+2026-02-07 00:49:00 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-07 00:49:01 - src.gui.main_window - INFO - Facebook post successful
+2026-02-07 01:02:39 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:02:41 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:02:41 - src.gui.widgets.post_history - INFO - Loaded 37 post records
+2026-02-07 01:02:42 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:02:42 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:02:42 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:02:42 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:02:42 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:05:08 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:05:08 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:05:08 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:05:52 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:05:52 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:05:52 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:06:05 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:06:06 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:06:06 - src.gui.widgets.post_history - INFO - Loaded 37 post records
+2026-02-07 01:06:07 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:06:08 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:06:08 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:06:08 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:06:08 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:07:43 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:07:43 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:07:43 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:07:57 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:08:00 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:08:00 - src.gui.widgets.post_history - INFO - Loaded 37 post records
+2026-02-07 01:08:00 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:08:01 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:08:01 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:08:01 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:08:01 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:08:37 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:08:37 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:08:37 - src.core.social_poster - ERROR - Facebook posting error: No module named 'playwright'
+2026-02-07 01:08:37 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:08:37 - src.gui.main_window - ERROR - Facebook post failed: Error: No module named 'playwright'
+2026-02-07 01:10:07 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:10:07 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:10:07 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:10:13 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:10:16 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:10:16 - src.gui.widgets.post_history - INFO - Loaded 38 post records
+2026-02-07 01:10:17 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:10:17 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:10:17 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:10:17 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:10:17 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:10:39 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:10:39 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:10:40 - src.core.social_poster - INFO - Launching brave browser...
+2026-02-07 01:10:40 - src.core.social_poster - WARNING - Brave not found, falling back to Chromium
+2026-02-07 01:10:40 - src.core.social_poster - WARNING - User Brave profile not found
+2026-02-07 01:10:40 - src.core.social_poster - INFO - Using automation profile: /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation
+2026-02-07 01:10:47 - src.core.social_poster - INFO - Creating new page...
+2026-02-07 01:10:47 - src.core.social_poster - INFO - New page created with URL: about:blank
+2026-02-07 01:10:47 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:10:47 - src.core.social_poster - INFO - Trying https://www.facebook.com/...
+2026-02-07 01:11:07 - src.core.social_poster - INFO - Current URL after navigation: https://www.facebook.com/
+2026-02-07 01:11:07 - src.core.social_poster - INFO - Successfully loaded Facebook: https://www.facebook.com/
+2026-02-07 01:11:10 - src.core.social_poster - INFO - Finding create post button...
+2026-02-07 01:11:10 - src.core.social_poster - INFO - Clicked create post button: div[role='button']:has-text('mind')
+2026-02-07 01:11:12 - src.core.social_poster - INFO - Uploading 1 media file(s)...
+2026-02-07 01:11:12 - src.core.social_poster - INFO - Found file input: input[type='file'][accept*='image']
+2026-02-07 01:11:12 - src.core.social_poster - INFO - Media upload initiated for 1 file(s)
+2026-02-07 01:11:18 - src.core.social_poster - INFO - Media preview confirmed: img[src*='scontent']
+2026-02-07 01:11:18 - src.core.social_poster - INFO - Finding text input...
+2026-02-07 01:11:18 - src.core.social_poster - INFO - Found text input with selector: div[role='textbox'][contenteditable='true']
+2026-02-07 01:11:19 - src.core.social_poster - INFO - Screenshot saved to before_typing.png
+2026-02-07 01:11:19 - src.core.social_poster - INFO - Typing content...
+2026-02-07 01:11:49 - src.core.social_poster - ERROR - Text typing failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role='textbox'][contenteditable='true']").first
+    - locator resolved to <div tabindex="0" role="textbox" spellcheck="true" contenteditable="true" data-lexical-editor="true" aria-placeholder="What's on your mind, Shanchoy?" class="xzsf02u x1a2a7pz x1n2onr6 x14wi4xw x9f619 x1lliihq x5yr21d xh8yej3 notranslate">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    54 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="x1o0tod xz9dl7a x10l6tqk x13vifvy xh8yej3 x1loc9ma x5yr21d x67bb7w x1hc1fzr">…</div> from <div class="__fb-dark-mode x1n2onr6 xzkaem6">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+
+2026-02-07 01:11:50 - src.core.social_poster - INFO - Finding Next button...
+2026-02-07 01:11:50 - src.core.social_poster - INFO - Found Next button: div[aria-label='Next'][role='button']
+2026-02-07 01:11:50 - src.core.social_poster - INFO - Clicking Next...
+2026-02-07 01:11:50 - src.core.social_poster - INFO - Next button disabled, waiting...
+2026-02-07 01:11:51 - src.core.social_poster - INFO - Next button disabled, waiting...
+2026-02-07 01:11:52 - src.core.social_poster - INFO - Next button disabled, waiting...
+2026-02-07 01:11:53 - src.core.social_poster - INFO - Next button disabled, waiting...
+2026-02-07 01:11:53 - src.core.social_poster - INFO - Next button disabled, waiting...
+2026-02-07 01:11:55 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:11:55 - src.gui.main_window - ERROR - Facebook post failed: Could not click Next button
+2026-02-07 01:22:03 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:22:03 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:22:03 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:22:09 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:22:11 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:22:11 - src.gui.widgets.post_history - INFO - Loaded 39 post records
+2026-02-07 01:22:11 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:22:12 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:22:12 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:22:12 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:22:12 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:23:03 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:23:03 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:23:03 - src.gui.threads.post_thread - ERROR - CRITICAL Worker error: 'BrowserDOMPoster' object has no attribute 'post_to_facebook'
+Traceback (most recent call last):
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/gui/threads/post_thread.py", line 31, in run
+    success, message = poster.post_to_facebook(
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BrowserDOMPoster' object has no attribute 'post_to_facebook'. Did you mean: '_async_post_to_facebook'?
+2026-02-07 01:23:03 - src.gui.main_window - ERROR - Facebook post failed: Internal Error: 'BrowserDOMPoster' object has no attribute 'post_to_facebook'
+2026-02-07 01:24:43 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:24:43 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:24:43 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:24:48 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:24:49 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:24:49 - src.gui.widgets.post_history - INFO - Loaded 40 post records
+2026-02-07 01:24:50 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:24:50 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:24:50 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:24:50 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:24:50 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:25:20 - src.gui.main_window - INFO - Posting to facebook: test post...
+2026-02-07 01:25:20 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:25:20 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:25:44 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:25:49 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:25:49 - src.gui.main_window - ERROR - Facebook post failed: Not logged in to Facebook.
+2026-02-07 01:32:16 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:32:18 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:32:18 - src.gui.widgets.post_history - INFO - Loaded 41 post records
+2026-02-07 01:32:19 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:32:20 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:32:20 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:32:20 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:32:20 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:33:10 - src.gui.main_window - INFO - Posting to facebook: test post...
+2026-02-07 01:33:10 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:33:10 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:33:11 - src.core.social_poster - INFO - Opening browser...
+2026-02-07 01:33:15 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:33:22 - src.core.social_poster - INFO - Login required - please log in manually
+2026-02-07 01:33:58 - src.core.social_poster - INFO - Login detected
+2026-02-07 01:33:58 - src.core.social_poster - INFO - Logged in - proceeding to post
+2026-02-07 01:33:58 - src.core.social_poster - INFO - Searching for button: 'What's on your mind'
+2026-02-07 01:33:58 - src.core.social_poster - INFO - Searching for text input...
+2026-02-07 01:33:59 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:33:59 - src.gui.main_window - ERROR - Facebook post failed: Could not find text input
+2026-02-07 01:35:02 - src.gui.widgets.settings_dialog - INFO - Settings saved
+2026-02-07 01:35:08 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:35:08 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:35:08 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:38:29 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:38:31 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:38:31 - src.gui.widgets.post_history - INFO - Loaded 42 post records
+2026-02-07 01:38:32 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:38:33 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:38:33 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:38:33 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:38:33 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:38:48 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:38:48 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:38:48 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:38:51 - src.core.social_poster - INFO - Opening browser...
+2026-02-07 01:38:55 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:38:59 - src.core.social_poster - INFO - Login required - please log in manually
+2026-02-07 01:39:11 - src.core.social_poster - ERROR - Error: Page.wait_for_timeout: Target page, context or browser has been closed
+2026-02-07 01:39:11 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:39:11 - src.gui.main_window - ERROR - Facebook post failed: Error: Page.wait_for_timeout: Target page, context or browser has been closed
+2026-02-07 01:41:13 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:41:13 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:41:13 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:41:20 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:41:21 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:41:21 - src.gui.widgets.post_history - INFO - Loaded 43 post records
+2026-02-07 01:41:22 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:41:22 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:41:22 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:41:22 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:41:22 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:41:42 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:41:42 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:41:42 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:41:44 - src.core.social_poster - INFO - Opening Brave browser...
+2026-02-07 01:41:50 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:41:55 - src.core.social_poster - INFO - Login required - please log in manually
+2026-02-07 01:42:18 - src.core.browser_connect - INFO - Accounts saved
+2026-02-07 01:42:18 - src.core.browser_connect - INFO - Disconnected facebook
+2026-02-07 01:42:18 - src.gui.widgets.account_manager - INFO - Disconnected facebook
+2026-02-07 01:42:21 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-07 01:42:34 - src.core.browser_connect - INFO - Accounts saved
+2026-02-07 01:42:34 - src.core.browser_connect - INFO - Connected facebook
+2026-02-07 01:43:24 - src.gui.main_window - INFO - Scheduling post for 2026-02-07 02:44:00
+2026-02-07 01:44:09 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:44:09 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:44:09 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:44:28 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:44:30 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:44:30 - src.gui.widgets.post_history - INFO - Loaded 43 post records
+2026-02-07 01:44:31 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:44:32 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:44:32 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:44:32 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:44:32 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:44:57 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:44:57 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:44:57 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:44:59 - src.core.social_poster - INFO - Opening Brave browser with your login...
+2026-02-07 01:45:16 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:45:20 - src.core.social_poster - INFO - Login required - please log in manually
+2026-02-07 01:46:32 - src.core.social_poster - INFO - Login detected
+2026-02-07 01:46:32 - src.core.social_poster - INFO - Logged in - proceeding to post
+2026-02-07 01:46:32 - src.core.social_poster - INFO - Searching for button: 'What's on your mind'
+2026-02-07 01:46:32 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 01:46:34 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 01:46:35 - src.core.social_poster - INFO - 🔍 Deep scan: looking for any contenteditable element...
+2026-02-07 01:46:35 - src.core.social_poster - INFO - Found 0 contenteditable elements total
+2026-02-07 01:46:35 - src.core.social_poster - ERROR - ❌ Could not find any text input element
+2026-02-07 01:46:36 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:46:36 - src.gui.main_window - ERROR - Facebook post failed: Could not find text input
+2026-02-07 01:46:51 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:46:51 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:46:51 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:46:52 - src.core.social_poster - INFO - Opening Brave browser with your login...
+2026-02-07 01:46:55 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:46:58 - src.core.social_poster - INFO - Login required - please log in manually
+2026-02-07 01:48:05 - src.gui.widgets.settings_dialog - INFO - Settings saved
+2026-02-07 01:48:18 - src.core.social_poster - ERROR - Error: Page.wait_for_timeout: Target page, context or browser has been closed
+2026-02-07 01:48:19 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:48:19 - src.gui.main_window - ERROR - Facebook post failed: Error: Page.wait_for_timeout: Target page, context or browser has been closed
+2026-02-07 01:48:46 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:48:46 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:48:46 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:48:53 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:48:55 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:48:55 - src.gui.widgets.post_history - INFO - Loaded 45 post records
+2026-02-07 01:48:55 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:48:56 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:48:56 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:48:56 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:48:56 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:49:11 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:49:11 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:49:11 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:49:13 - src.core.social_poster - INFO - Opening Brave browser...
+2026-02-07 01:49:13 - src.core.social_poster - INFO - Found Brave at: /Applications/Brave Browser.app/Contents/MacOS/Brave Browser
+2026-02-07 01:49:13 - src.core.social_poster - ERROR - Error: BrowserType.launch_persistent_context: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.
+Call log:
+  - <launching> /Applications/Brave Browser.app/Contents/MacOS/Brave Browser --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --no-first-run --user-data-dir=/Users/macbookpr0/Library/Application Support/BraveSoftware/Brave-Browser --remote-debugging-pipe about:blank
+  - <launched> pid=27380
+  - [pid=27380][err] [27380:583117:0207/014913.742741:ERROR:chrome/browser/process_singleton_posix.cc:345] Failed to create /Users/macbookpr0/Library/Application Support/BraveSoftware/Brave-Browser/SingletonLock: File exists (17)
+  - [pid=27380][err] [27380:583117:0207/014913.743460:ERROR:chrome/app/chrome_main_delegate.cc:510] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+  - [pid=27380] <gracefully close start>
+  - [pid=27380] <kill>
+  - [pid=27380] <will force kill>
+  - [pid=27380] exception while trying to kill process: Error: kill ESRCH
+  - [pid=27380] <process did exit: exitCode=21, signal=null>
+  - [pid=27380] starting temporary directories cleanup
+  - [pid=27380] finished temporary directories cleanup
+  - [pid=27380] <gracefully close end>
+
+2026-02-07 01:49:13 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:49:13 - src.gui.main_window - ERROR - Facebook post failed: Error: BrowserType.launch_persistent_context: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.
+Call log:
+  - <launching> /Applications/Brave Browser.app/Contents/MacOS/Brave Browser --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --disable-blink-features=AutomationControlled --no-first-run --user-data-dir=/Users/macbookpr0/Library/Application Support/BraveSoftware/Brave-Browser --remote-debugging-pipe about:blank
+  - <launched> pid=27380
+  - [pid=27380][err] [27380:583117:0207/014913.742741:ERROR:chrome/browser/process_singleton_posix.cc:345] Failed to create /Users/macbookpr0/Library/Application Support/BraveSoftware/Brave-Browser/SingletonLock: File exists (17)
+  - [pid=27380][err] [27380:583117:0207/014913.743460:ERROR:chrome/app/chrome_main_delegate.cc:510] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+  - [pid=27380] <gracefully close start>
+  - [pid=27380] <kill>
+  - [pid=27380] <will force kill>
+  - [pid=27380] exception while trying to kill process: Error: kill ESRCH
+  - [pid=27380] <process did exit: exitCode=21, signal=null>
+  - [pid=27380] starting temporary directories cleanup
+  - [pid=27380] finished temporary directories cleanup
+  - [pid=27380] <gracefully close end>
+
+2026-02-07 01:51:46 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:51:46 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:51:46 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:51:52 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:51:55 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:51:55 - src.gui.widgets.post_history - INFO - Loaded 46 post records
+2026-02-07 01:51:55 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:51:56 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:51:56 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:51:56 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:51:56 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:52:06 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 01:52:06 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:52:06 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:52:07 - src.core.social_poster - INFO - Opening Brave browser...
+2026-02-07 01:52:07 - src.core.social_poster - INFO - Found Brave at: /Applications/Brave Browser.app/Contents/MacOS/Brave Browser
+2026-02-07 01:52:07 - src.core.social_poster - INFO - Using temp profile: /var/folders/kw/nz_8r4ls3y5_47w3x_ky6n4c0000gn/T/brave_profile_6n_qzlxx
+2026-02-07 01:52:07 - src.core.social_poster - ERROR - Error: BrowserType.launch: Pass user_data_dir parameter to 'browser_type.launch_persistent_context(user_data_dir, **kwargs)' instead of specifying '--user-data-dir' argument
+2026-02-07 01:52:07 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:52:07 - src.gui.main_window - ERROR - Facebook post failed: Error: BrowserType.launch: Pass user_data_dir parameter to 'browser_type.launch_persistent_context(user_data_dir, **kwargs)' instead of specifying '--user-data-dir' argument
+2026-02-07 01:53:28 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 01:53:28 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 01:53:28 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 01:53:35 - src.main - INFO - Starting AIOperator...
+2026-02-07 01:53:36 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 01:53:36 - src.gui.widgets.post_history - INFO - Loaded 47 post records
+2026-02-07 01:53:36 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 01:53:37 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 01:53:37 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 01:53:37 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 01:53:37 - src.main - INFO - GUI initialized successfully
+2026-02-07 01:53:45 - src.gui.main_window - INFO - Posting to facebook: abcd...
+2026-02-07 01:53:45 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:53:45 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:53:47 - src.core.social_poster - INFO - Opening Brave browser...
+2026-02-07 01:53:47 - src.core.social_poster - INFO - Found Brave at: /Applications/Brave Browser.app/Contents/MacOS/Brave Browser
+2026-02-07 01:53:50 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:53:55 - src.core.social_poster - INFO - Login required - please log in manually
+2026-02-07 01:54:31 - src.core.social_poster - INFO - Login detected
+2026-02-07 01:54:31 - src.core.social_poster - INFO - Logged in - proceeding to post
+2026-02-07 01:54:31 - src.core.social_poster - INFO - Searching for button: 'What's on your mind'
+2026-02-07 01:54:31 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 01:54:33 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 01:54:33 - src.core.social_poster - INFO - 🔍 Deep scan: looking for any contenteditable element...
+2026-02-07 01:54:33 - src.core.social_poster - INFO - Found 0 contenteditable elements total
+2026-02-07 01:54:33 - src.core.social_poster - ERROR - ❌ Could not find any text input element
+2026-02-07 01:54:34 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:54:34 - src.gui.main_window - ERROR - Facebook post failed: Could not find text input
+2026-02-07 01:54:52 - src.gui.main_window - INFO - Posting to facebook: abcd...
+2026-02-07 01:54:52 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 01:54:52 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 01:54:54 - src.core.social_poster - INFO - Opening Brave browser...
+2026-02-07 01:54:54 - src.core.social_poster - INFO - Found Brave at: /Applications/Brave Browser.app/Contents/MacOS/Brave Browser
+2026-02-07 01:54:56 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 01:55:04 - src.core.social_poster - INFO - Login required - please log in manually
+2026-02-07 01:57:05 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 01:57:06 - src.gui.main_window - ERROR - Facebook post failed: Login timeout - please try again and log in faster
+2026-02-07 02:04:08 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 02:04:08 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 02:04:08 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 02:04:14 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:04:15 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:04:15 - src.gui.widgets.post_history - INFO - Loaded 49 post records
+2026-02-07 02:04:16 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 02:04:16 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:04:16 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:04:16 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:04:16 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:04:22 - src.core.browser_connect - INFO - Accounts saved
+2026-02-07 02:04:22 - src.core.browser_connect - INFO - Disconnected facebook
+2026-02-07 02:04:22 - src.gui.widgets.account_manager - INFO - Disconnected facebook
+2026-02-07 02:04:25 - src.core.browser_connect - INFO - Opening facebook login in browser...
+2026-02-07 02:04:33 - src.core.browser_connect - INFO - Accounts saved
+2026-02-07 02:04:33 - src.core.browser_connect - INFO - Connected facebook
+2026-02-07 02:04:53 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 02:04:53 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 02:04:53 - src.core.browser_session_manager - INFO - Auto-detected browsers: ['brave', 'chrome']
+2026-02-07 02:04:53 - src.core.browser_session_manager - INFO - Browser configs saved
+2026-02-07 02:04:53 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 02:04:53 - src.core.social_poster - INFO - No saved session found. Need to authenticate first.
+2026-02-07 02:04:53 - src.core.browser_session_manager - INFO - Starting authentication for facebook using brave
+2026-02-07 02:04:58 - src.core.browser_session_manager - INFO - Opening facebook login page...
+2026-02-07 02:05:00 - src.core.browser_session_manager - INFO - Waiting for login... (max 3 minutes)
+2026-02-07 02:05:45 - src.core.browser_session_manager - INFO - ✓ Login detected for facebook!
+2026-02-07 02:06:02 - src.core.browser_session_manager - INFO - Browser sessions saved
+2026-02-07 02:06:04 - src.core.social_poster - INFO - Authentication successful: Successfully authenticated with Facebook as Shanchoy Noor
+2026-02-07 02:06:07 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 02:06:09 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 02:06:21 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 02:06:21 - src.core.social_poster - INFO - Searching for button: 'What's on your mind'
+2026-02-07 02:06:21 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 02:06:23 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 02:06:24 - src.core.social_poster - INFO - 🔍 Deep scan: looking for any contenteditable element...
+2026-02-07 02:06:24 - src.core.social_poster - INFO - Found 0 contenteditable elements total
+2026-02-07 02:06:24 - src.core.social_poster - ERROR - ❌ Could not find any text input element
+2026-02-07 02:06:26 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 02:06:27 - src.gui.main_window - ERROR - Facebook post failed: Could not find text input
+2026-02-07 02:08:10 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 02:08:10 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 02:08:10 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 02:08:16 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:08:18 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:08:18 - src.gui.widgets.post_history - INFO - Loaded 50 post records
+2026-02-07 02:08:19 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 02:08:19 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:08:19 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:08:19 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:08:19 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:08:33 - src.gui.main_window - INFO - Posting to facebook: abcd...
+2026-02-07 02:08:33 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 02:08:33 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-07 02:08:33 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-07 02:08:33 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 02:08:37 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 02:08:38 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 02:08:46 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 02:08:53 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-07 02:08:53 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-07 02:08:53 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-07 02:09:02 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-07 02:09:02 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 02:09:04 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 02:09:04 - src.core.social_poster - INFO - ✓ Found element: div[contenteditable='true'][data-lexical-editor='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-07 02:09:04 - src.core.social_poster - INFO - ✓ Confirmed text input: div[contenteditable='true'][data-lexical-editor='true']
+2026-02-07 02:09:04 - src.core.social_poster - INFO - Entering text...
+2026-02-07 02:09:04 - src.core.social_poster - INFO - Searching for button: 'Post'
+2026-02-07 02:09:04 - src.core.social_poster - INFO - Clicking Post...
+2026-02-07 02:09:08 - src.core.social_poster - INFO - Closing browser...
+2026-02-07 02:09:08 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-07 02:09:08 - src.gui.main_window - INFO - Facebook post successful
+2026-02-07 02:12:08 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 02:12:08 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 02:12:08 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 02:13:24 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:13:27 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:13:27 - src.gui.widgets.post_history - INFO - Loaded 51 post records
+2026-02-07 02:13:27 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 02:13:28 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:13:28 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:13:28 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:13:28 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:13:47 - src.gui.main_window - INFO - Posting to facebook: test post...
+2026-02-07 02:13:47 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 02:13:47 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-07 02:13:47 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-07 02:13:47 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 02:13:50 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 02:13:52 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 02:14:00 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 02:14:04 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-07 02:14:04 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-07 02:14:04 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-07 02:14:14 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-07 02:14:14 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 02:14:16 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 02:14:16 - src.core.social_poster - INFO - ✓ Found element: div[contenteditable='true'][data-lexical-editor='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-07 02:14:16 - src.core.social_poster - INFO - ✓ Confirmed text input: div[contenteditable='true'][data-lexical-editor='true']
+2026-02-07 02:14:16 - src.core.social_poster - INFO - Entering text...
+2026-02-07 02:14:16 - src.core.social_poster - INFO - Searching for button: 'Post'
+2026-02-07 02:14:16 - src.core.social_poster - INFO - Clicking Post...
+2026-02-07 02:14:16 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-07 02:14:22 - src.core.social_poster - INFO - Screenshot saved: fb_after_post.png
+2026-02-07 02:14:24 - src.core.social_poster - INFO - URL after post: https://www.facebook.com/, Dialogs: 3
+2026-02-07 02:14:24 - src.core.social_poster - WARNING - ⚠ Post dialog still open - post may have failed
+2026-02-07 02:14:24 - src.core.social_poster - INFO - Closing browser...
+2026-02-07 02:14:25 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 02:14:25 - src.gui.main_window - ERROR - Facebook post failed: Post verification failed - post may not have been published
+2026-02-07 02:16:46 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:16:49 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:16:49 - src.gui.widgets.post_history - INFO - Loaded 52 post records
+2026-02-07 02:16:50 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 02:16:51 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:16:51 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:16:51 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:16:51 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:17:29 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:17:31 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:17:31 - src.gui.widgets.post_history - INFO - Loaded 52 post records
+2026-02-07 02:17:32 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 02:17:33 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:17:33 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:17:33 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:17:33 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:17:55 - src.gui.main_window - INFO - Posting to facebook: test abcd...
+2026-02-07 02:17:55 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 02:17:55 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-07 02:17:55 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-07 02:17:55 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 02:17:58 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 02:17:59 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 02:18:07 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 02:18:14 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-07 02:18:14 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-07 02:18:14 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-07 02:18:19 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-07 02:18:19 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 02:18:21 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 02:18:21 - src.core.social_poster - INFO - ✓ Found element: div[contenteditable='true'][data-lexical-editor='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-07 02:18:21 - src.core.social_poster - INFO - ✓ Confirmed text input: div[contenteditable='true'][data-lexical-editor='true']
+2026-02-07 02:18:21 - src.core.social_poster - INFO - Entering text...
+2026-02-07 02:18:21 - src.core.social_poster - INFO - Looking for Post button...
+2026-02-07 02:18:21 - src.core.social_poster - INFO - Searching for button: 'Post'
+2026-02-07 02:18:21 - src.core.social_poster - INFO - Found Post button
+2026-02-07 02:18:21 - src.core.social_poster - INFO - Clicking Post...
+2026-02-07 02:18:21 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-07 02:18:27 - src.core.social_poster - INFO - Screenshot saved: fb_after_post.png
+2026-02-07 02:18:29 - src.core.social_poster - INFO - URL after post: https://www.facebook.com/, Dialogs: 3
+2026-02-07 02:18:29 - src.core.social_poster - WARNING - ⚠ Post dialog still open - post may have failed
+2026-02-07 02:18:29 - src.core.social_poster - INFO - Closing browser...
+2026-02-07 02:18:30 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 02:18:30 - src.gui.main_window - ERROR - Facebook post failed: Post verification failed - post may not have been published
+2026-02-07 02:22:00 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 02:22:00 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 02:22:00 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 02:22:08 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:22:10 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:22:10 - src.gui.widgets.post_history - INFO - Loaded 53 post records
+2026-02-07 02:22:10 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-07 02:22:11 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:22:11 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:22:11 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:22:11 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:22:21 - src.gui.main_window - INFO - Posting to facebook: abcd...
+2026-02-07 02:22:21 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 02:22:21 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-07 02:22:21 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-07 02:22:21 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 02:22:25 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 02:22:27 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 02:22:36 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 02:22:42 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-07 02:22:42 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-07 02:22:43 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-07 02:22:50 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-07 02:22:50 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 02:22:52 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 02:22:52 - src.core.social_poster - INFO - ✓ Found element: div[contenteditable='true'][data-lexical-editor='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-07 02:22:52 - src.core.social_poster - INFO - ✓ Confirmed text input: div[contenteditable='true'][data-lexical-editor='true']
+2026-02-07 02:22:52 - src.core.social_poster - INFO - Entering text...
+2026-02-07 02:22:53 - src.core.social_poster - INFO - Screenshot saved: fb_before_buttons.png
+2026-02-07 02:22:53 - src.core.social_poster - INFO - Looking for Post/Next button...
+2026-02-07 02:22:54 - src.core.social_poster - INFO - Found Next button, clicking...
+2026-02-07 02:22:58 - src.core.social_poster - INFO - ✓ Found enabled Post button
+2026-02-07 02:22:58 - src.core.social_poster - INFO - Clicking Post...
+2026-02-07 02:22:58 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-07 02:23:04 - src.core.social_poster - INFO - Screenshot saved: fb_after_post.png
+2026-02-07 02:23:06 - src.core.social_poster - INFO - URL after post: https://www.facebook.com/, Dialogs: 0
+2026-02-07 02:23:06 - src.core.social_poster - INFO - ✓ Found posted content in feed
+2026-02-07 02:23:06 - src.core.social_poster - INFO - Closing browser...
+2026-02-07 02:23:07 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-07 02:23:07 - src.gui.main_window - INFO - Facebook post successful
+2026-02-07 02:41:49 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:41:49 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-07 02:41:51 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:41:51 - src.gui.widgets.post_history - INFO - Loaded 55 post records
+2026-02-07 02:41:52 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:41:52 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:41:52 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:41:52 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:42:13 - src.gui.main_window - INFO - Posting to facebook: by nano banana...
+2026-02-07 02:42:13 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 02:42:13 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-07 02:42:13 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-07 02:42:13 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 02:42:17 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 02:42:19 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 02:42:26 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 02:42:33 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-07 02:42:33 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-07 02:42:33 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-07 02:42:41 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-07 02:42:41 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 02:42:43 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 02:42:43 - src.core.social_poster - INFO - ✓ Found element: div[contenteditable='true'][data-lexical-editor='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-07 02:42:43 - src.core.social_poster - INFO - ✓ Confirmed text input: div[contenteditable='true'][data-lexical-editor='true']
+2026-02-07 02:42:43 - src.core.social_poster - INFO - Entering text...
+2026-02-07 02:42:43 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-07 02:42:44 - src.core.social_poster - INFO - Found photo/video button: [aria-label*='Photo']
+2026-02-07 02:43:17 - src.core.social_poster - ERROR - Media upload error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[aria-label*='Photo']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Photo/video" class="x1i10hfl xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x1obq294 x5a5i1n xde0f50 x15x8krk x78zum5 x1r8uery x1iyjqo2 xs83m0k xl56j7k x1pshirs x1y1aw1k xf159sx xwib8y2 xmzvs34">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    54 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-07 02:43:17 - src.core.social_poster - ERROR - Media upload failed - cannot proceed with post
+2026-02-07 02:43:19 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 02:43:20 - src.gui.main_window - ERROR - Facebook post failed: Media upload failed - please check your media files and try again
+2026-02-07 02:47:32 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 02:47:32 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 02:47:32 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 02:47:42 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:47:42 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-07 02:47:46 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:47:46 - src.gui.widgets.post_history - INFO - Loaded 56 post records
+2026-02-07 02:47:48 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:47:48 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:47:48 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:47:48 - src.main - INFO - GUI initialized successfully
+2026-02-07 02:48:01 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 02:48:01 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 02:48:01 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-07 02:48:01 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-07 02:48:01 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 02:48:05 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 02:48:07 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 02:48:19 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 02:48:32 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-07 02:48:32 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-07 02:48:33 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-07 02:48:46 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-07 02:48:46 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 02:48:48 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 02:48:48 - src.core.social_poster - INFO - ✓ Found element: div[contenteditable='true'][data-lexical-editor='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-07 02:48:48 - src.core.social_poster - INFO - ✓ Confirmed text input: div[contenteditable='true'][data-lexical-editor='true']
+2026-02-07 02:48:48 - src.core.social_poster - INFO - Entering text...
+2026-02-07 02:48:49 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-07 02:48:51 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-07 02:48:51 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/Pictures/choyai_anime_20260111_182448.png
+2026-02-07 02:48:51 - src.core.social_poster - INFO - Found photo/video button: [aria-label*='Photo']
+2026-02-07 02:48:51 - src.core.social_poster - INFO - Clicking photo/video button...
+2026-02-07 02:49:21 - src.core.social_poster - ERROR - Media upload error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[aria-label*='Photo']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Photo/video" class="x1i10hfl xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x1obq294 x5a5i1n xde0f50 x15x8krk x78zum5 x1r8uery x1iyjqo2 xs83m0k xl56j7k x1pshirs x1y1aw1k xf159sx xwib8y2 xmzvs34">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    47 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+Traceback (most recent call last):
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/core/social_poster.py", line 541, in _upload_media
+    await photo_btn.click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/async_api/_generated.py", line 15603, in click
+    await self._impl_obj.click(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[aria-label*='Photo']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Photo/video" class="x1i10hfl xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x1obq294 x5a5i1n xde0f50 x15x8krk x78zum5 x1r8uery x1iyjqo2 xs83m0k xl56j7k x1pshirs x1y1aw1k xf159sx xwib8y2 xmzvs34">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    47 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-07 02:49:21 - src.core.social_poster - ERROR - Media upload failed - cannot proceed with post
+2026-02-07 02:49:23 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 02:49:23 - src.gui.main_window - ERROR - Facebook post failed: Media upload failed - please check your media files and try again
+2026-02-07 02:59:06 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-07 02:59:06 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-07 02:59:06 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-07 02:59:13 - src.main - INFO - Starting AIOperator...
+2026-02-07 02:59:13 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-07 02:59:15 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 02:59:15 - src.gui.widgets.post_history - INFO - Loaded 57 post records
+2026-02-07 02:59:17 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 02:59:17 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 02:59:17 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 02:59:17 - src.main - INFO - GUI initialized successfully
+2026-02-07 03:02:17 - src.main - INFO - Starting AIOperator...
+2026-02-07 03:02:17 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-07 03:02:19 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-07 03:02:19 - src.gui.widgets.post_history - INFO - Loaded 57 post records
+2026-02-07 03:02:20 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-07 03:02:20 - src.core.scheduler - INFO - Scheduler started
+2026-02-07 03:02:20 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-07 03:02:20 - src.main - INFO - GUI initialized successfully
+2026-02-07 03:02:33 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-07 03:02:33 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-07 03:02:33 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-07 03:02:33 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-07 03:02:33 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-07 03:02:37 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-07 03:02:39 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-07 03:02:47 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-07 03:02:52 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-07 03:02:52 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-07 03:02:53 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-07 03:03:01 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-07 03:03:01 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-07 03:03:02 - src.core.social_poster - INFO - Trying 20 selectors...
+2026-02-07 03:03:02 - src.core.social_poster - INFO - ✓ Found element: div[contenteditable='true'][data-lexical-editor='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-07 03:03:02 - src.core.social_poster - INFO - ✓ Confirmed text input: div[contenteditable='true'][data-lexical-editor='true']
+2026-02-07 03:03:02 - src.core.social_poster - INFO - Entering text...
+2026-02-07 03:03:03 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-07 03:03:05 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-07 03:03:05 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/Pictures/choyai_anime_20260111_182448.png
+2026-02-07 03:03:05 - src.core.social_poster - INFO - Found photo/video button: [aria-label*='Photo']
+2026-02-07 03:03:05 - src.core.social_poster - INFO - Clicking photo/video button...
+2026-02-07 03:03:36 - src.core.social_poster - ERROR - Media upload error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[aria-label*='Photo']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Photo/video" class="x1i10hfl xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x1obq294 x5a5i1n xde0f50 x15x8krk x78zum5 x1r8uery x1iyjqo2 xs83m0k xl56j7k x1pshirs x1y1aw1k xf159sx xwib8y2 xmzvs34">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    44 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+Traceback (most recent call last):
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/core/social_poster.py", line 600, in _upload_media
+    await photo_btn.click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/async_api/_generated.py", line 15603, in click
+    await self._impl_obj.click(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[aria-label*='Photo']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Photo/video" class="x1i10hfl xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x1obq294 x5a5i1n xde0f50 x15x8krk x78zum5 x1r8uery x1iyjqo2 xs83m0k xl56j7k x1pshirs x1y1aw1k xf159sx xwib8y2 xmzvs34">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    44 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-07 03:03:36 - src.core.social_poster - ERROR - Media upload failed - cannot proceed with post
+2026-02-07 03:03:37 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-07 03:03:37 - src.gui.main_window - ERROR - Facebook post failed: Media upload failed - please check your media files and try again
+2026-02-09 00:26:09 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 00:26:10 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 00:26:10 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 00:26:35 - src.main - INFO - Starting AIOperator...
+2026-02-09 00:26:35 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 00:26:40 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 00:26:40 - src.gui.widgets.post_history - INFO - Loaded 58 post records
+2026-02-09 00:26:41 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 00:26:41 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 00:26:41 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 00:26:41 - src.main - INFO - GUI initialized successfully
+2026-02-09 00:28:28 - src.gui.main_window - INFO - Posting to facebook: testfeb8...
+2026-02-09 00:28:28 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-09 00:28:28 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-09 00:28:28 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-09 00:28:28 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-09 00:28:54 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-09 00:28:56 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-09 00:29:08 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-09 00:29:22 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-09 00:29:22 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-09 00:29:22 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-09 00:29:35 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-09 00:29:35 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-09 00:29:37 - src.core.social_poster - INFO - Checking for iframes...
+2026-02-09 00:29:37 - src.core.social_poster - INFO - Found 2 frame(s)
+2026-02-09 00:29:37 - src.core.social_poster - INFO - Trying 17 selectors...
+2026-02-09 00:29:37 - src.core.social_poster - INFO -   Selector div[role='textbox'][contenteditable='true']: count=1, visible=True, editable=True, enabled=True
+2026-02-09 00:29:37 - src.core.social_poster - INFO - ✓ Confirmed text input: div[role='textbox'][contenteditable='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-09 00:29:37 - src.core.social_poster - INFO - Entering text...
+2026-02-09 00:29:37 - src.core.social_poster - INFO - Attempting to enter text (length: 8 chars)...
+2026-02-09 00:29:37 - src.core.social_poster - INFO - Text input state: count=1, visible=True, editable=True
+2026-02-09 00:29:37 - src.core.social_poster - INFO - Strategy 1: Focus + pressSequentially...
+2026-02-09 00:29:41 - src.core.social_poster - INFO - ✓ Text entered successfully with pressSequentially
+2026-02-09 00:29:41 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-09 00:29:43 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-09 00:29:43 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/SN Mac Drive/6-NEW/image-1767905637566.png
+2026-02-09 00:29:44 - src.core.social_poster - INFO - Found photo/video button: [aria-label*='Photo']
+2026-02-09 00:29:44 - src.core.social_poster - INFO - Clicking photo/video button...
+2026-02-09 00:30:14 - src.core.social_poster - ERROR - Media upload error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[aria-label*='Photo']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Photo/video" class="x1i10hfl xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x1obq294 x5a5i1n xde0f50 x15x8krk x78zum5 x1r8uery x1iyjqo2 xs83m0k xl56j7k x1pshirs x1y1aw1k xf159sx xwib8y2 xmzvs34">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    48 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+Traceback (most recent call last):
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/core/social_poster.py", line 690, in _upload_media
+    await photo_btn.click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/async_api/_generated.py", line 15603, in click
+    await self._impl_obj.click(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[aria-label*='Photo']").first
+    - locator resolved to <div tabindex="0" role="button" aria-label="Photo/video" class="x1i10hfl xjbqb8w xjqpnuy xc5r6h4 xqeqjp1 x1phubyo x13fuv20 x18b5jzi x1q0q8m5 x1t7ytsu x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak x2lwn1j x1n2onr6 x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 x1obq294 x5a5i1n xde0f50 x15x8krk x78zum5 x1r8uery x1iyjqo2 xs83m0k xl56j7k x1pshirs x1y1aw1k xf159sx xwib8y2 xmzvs34">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    48 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div class="__fb-dark-mode x1qjc9v5 x9f619 x78zum5 xdt5ytf xl56j7k x1c4vz4f xg6iff7">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-02-09 00:30:14 - src.core.social_poster - ERROR - Media upload failed - cannot proceed with post
+2026-02-09 00:30:15 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-09 00:30:16 - src.gui.main_window - ERROR - Facebook post failed: Media upload failed - please check your media files and try again
+2026-02-09 00:37:18 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 00:37:18 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 00:37:18 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 00:37:51 - src.main - INFO - Starting AIOperator...
+2026-02-09 00:37:51 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 00:37:52 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 00:37:53 - src.gui.widgets.post_history - INFO - Loaded 59 post records
+2026-02-09 00:37:53 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 00:37:53 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 00:37:53 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 00:37:53 - src.main - INFO - GUI initialized successfully
+2026-02-09 00:38:36 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-09 00:38:36 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-09 00:38:36 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-09 00:38:36 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-09 00:38:36 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-09 00:38:38 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-09 00:38:39 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-09 00:38:47 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-09 00:38:53 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-09 00:38:53 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-09 00:38:53 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-09 00:38:59 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-09 00:38:59 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-09 00:39:01 - src.core.social_poster - INFO - Checking for iframes...
+2026-02-09 00:39:01 - src.core.social_poster - INFO - Found 2 frame(s)
+2026-02-09 00:39:01 - src.core.social_poster - INFO - Trying 17 selectors...
+2026-02-09 00:39:01 - src.core.social_poster - INFO -   Selector div[role='textbox'][contenteditable='true']: count=1, visible=True, editable=True, enabled=True
+2026-02-09 00:39:01 - src.core.social_poster - INFO - ✓ Confirmed text input: div[role='textbox'][contenteditable='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-09 00:39:01 - src.core.social_poster - INFO - Entering text...
+2026-02-09 00:39:01 - src.core.social_poster - INFO - Attempting to enter text (length: 4 chars)...
+2026-02-09 00:39:01 - src.core.social_poster - INFO - Text input state: count=1, visible=True, editable=True
+2026-02-09 00:39:01 - src.core.social_poster - INFO - Strategy 1: Focus + pressSequentially...
+2026-02-09 00:39:03 - src.core.social_poster - INFO - ✓ Text entered successfully with pressSequentially
+2026-02-09 00:39:03 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-09 00:39:04 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-09 00:39:04 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/SN Mac Drive/6-NEW/image-1767905637566.png
+2026-02-09 00:39:04 - src.core.social_poster - INFO - Getting dialog context...
+2026-02-09 00:39:04 - src.core.social_poster - INFO - ✓ Found dialog, scoping search to dialog context
+2026-02-09 00:39:04 - src.core.social_poster - INFO - Scrolling within dialog to find media options...
+2026-02-09 00:39:05 - src.core.social_poster - INFO - Found photo/video button in dialog: [aria-label*='Photo']
+2026-02-09 00:39:05 - src.core.social_poster - INFO - Clicking photo/video button...
+2026-02-09 00:39:12 - src.core.social_poster - INFO - Debug screenshot: fb_after_click.png
+2026-02-09 00:39:12 - src.core.social_poster - INFO - Looking for file input within dialog...
+2026-02-09 00:39:12 - src.core.social_poster - INFO - Found file input in dialog
+2026-02-09 00:39:12 - src.core.social_poster - INFO - Uploading 1 files...
+2026-02-09 00:39:12 - src.core.social_poster - INFO - ✓ Uploaded: image-1767905637566.png
+2026-02-09 00:39:14 - src.core.social_poster - INFO - ✓ Uploaded 1 files, waiting for them to appear...
+2026-02-09 00:39:17 - src.core.social_poster - INFO - Debug screenshot: fb_after_upload.png
+2026-02-09 00:39:17 - src.core.social_poster - INFO - Waiting for media to appear in composer...
+2026-02-09 00:39:17 - src.core.social_poster - INFO - Waiting for media... 1/30 (processing: 0, uploading: 0)
+2026-02-09 00:39:23 - src.core.social_poster - INFO - Waiting for media... 6/30 (processing: 0, uploading: 0)
+2026-02-09 00:39:28 - src.core.social_poster - INFO - Waiting for media... 11/30 (processing: 0, uploading: 0)
+2026-02-09 00:39:33 - src.core.social_poster - INFO - Waiting for media... 16/30 (processing: 0, uploading: 0)
+2026-02-09 00:39:38 - src.core.social_poster - INFO - Waiting for media... 21/30 (processing: 0, uploading: 0)
+2026-02-09 00:39:44 - src.core.social_poster - INFO - Waiting for media... 26/30 (processing: 0, uploading: 0)
+2026-02-09 00:39:51 - src.core.social_poster - INFO - Debug screenshot: fb_upload_failed.png
+2026-02-09 00:39:51 - src.core.social_poster - ERROR - Media upload failed - no media detected in composer after 30 seconds
+2026-02-09 00:39:51 - src.core.social_poster - ERROR - Media upload failed - cannot proceed with post
+2026-02-09 00:39:53 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-09 00:39:54 - src.gui.main_window - ERROR - Facebook post failed: Media upload failed - please check your media files and try again
+2026-02-09 00:46:22 - src.main - INFO - Starting AIOperator...
+2026-02-09 00:46:22 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 00:46:25 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 00:46:25 - src.gui.widgets.post_history - INFO - Loaded 60 post records
+2026-02-09 00:46:25 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 00:46:25 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 00:46:25 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 00:46:25 - src.main - INFO - GUI initialized successfully
+2026-02-09 00:46:45 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-09 00:46:45 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-09 00:46:45 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-09 00:46:45 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-09 00:46:45 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-09 00:46:48 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-09 00:46:49 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-09 00:46:58 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-09 00:47:04 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-09 00:47:04 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-09 00:47:04 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-09 00:47:10 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-09 00:47:10 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-09 00:47:12 - src.core.social_poster - INFO - Checking for iframes...
+2026-02-09 00:47:12 - src.core.social_poster - INFO - Found 2 frame(s)
+2026-02-09 00:47:12 - src.core.social_poster - INFO - Trying 17 selectors...
+2026-02-09 00:47:12 - src.core.social_poster - INFO -   Selector div[role='textbox'][contenteditable='true']: count=1, visible=True, editable=True, enabled=True
+2026-02-09 00:47:12 - src.core.social_poster - INFO - ✓ Confirmed text input: div[role='textbox'][contenteditable='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-09 00:47:12 - src.core.social_poster - INFO - Entering text...
+2026-02-09 00:47:12 - src.core.social_poster - INFO - Attempting to enter text (length: 4 chars)...
+2026-02-09 00:47:12 - src.core.social_poster - INFO - Text input state: count=1, visible=True, editable=True
+2026-02-09 00:47:12 - src.core.social_poster - INFO - Strategy 1: Focus + pressSequentially...
+2026-02-09 00:47:13 - src.core.social_poster - INFO - ✓ Text entered successfully with pressSequentially
+2026-02-09 00:47:13 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-09 00:47:14 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-09 00:47:14 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/SN Mac Drive/6-NEW/image-1767905637566.png
+2026-02-09 00:47:14 - src.core.social_poster - INFO - Getting dialog context...
+2026-02-09 00:47:14 - src.core.social_poster - INFO - ✓ Found dialog, ready for direct file upload
+2026-02-09 00:47:14 - src.core.social_poster - INFO - Looking for hidden file input in dialog...
+2026-02-09 00:47:14 - src.core.social_poster - INFO - ✓ Found existing file input in dialog
+2026-02-09 00:47:14 - src.core.social_poster - INFO - Uploading 1 files directly...
+2026-02-09 00:47:15 - src.core.social_poster - INFO - ✓ Set file: image-1767905637566.png
+2026-02-09 00:47:17 - src.core.social_poster - INFO - ✓ Set 1 files, waiting for them to appear...
+2026-02-09 00:47:19 - src.core.social_poster - INFO - Debug screenshot: fb_after_upload.png
+2026-02-09 00:47:19 - src.core.social_poster - INFO - Waiting for media to appear in composer...
+2026-02-09 00:47:19 - src.core.social_poster - INFO - Waiting for media... 1/30 (processing: 0, uploading: 0)
+2026-02-09 00:47:24 - src.core.social_poster - INFO - Waiting for media... 6/30 (processing: 0, uploading: 0)
+2026-02-09 00:47:29 - src.core.social_poster - INFO - Waiting for media... 11/30 (processing: 0, uploading: 0)
+2026-02-09 00:47:35 - src.core.social_poster - INFO - Waiting for media... 16/30 (processing: 0, uploading: 0)
+2026-02-09 00:47:40 - src.core.social_poster - INFO - Waiting for media... 21/30 (processing: 0, uploading: 0)
+2026-02-09 00:47:46 - src.core.social_poster - INFO - Waiting for media... 26/30 (processing: 0, uploading: 0)
+2026-02-09 00:47:52 - src.core.social_poster - INFO - Debug screenshot: fb_upload_failed.png
+2026-02-09 00:47:52 - src.core.social_poster - ERROR - Media upload failed - no media detected after 30 seconds
+2026-02-09 00:47:52 - src.core.social_poster - ERROR - Media upload failed - cannot proceed with post
+2026-02-09 00:47:55 - src.gui.threads.post_thread - INFO - Worker thread finished with success=False
+2026-02-09 00:47:55 - src.gui.main_window - ERROR - Facebook post failed: Media upload failed - please check your media files and try again
+2026-02-09 00:53:19 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 00:53:19 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 00:53:19 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 00:53:35 - src.main - INFO - Starting AIOperator...
+2026-02-09 00:53:35 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 00:53:36 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 00:53:36 - src.gui.widgets.post_history - INFO - Loaded 61 post records
+2026-02-09 00:53:36 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 00:53:36 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 00:53:36 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 00:53:37 - src.main - INFO - GUI initialized successfully
+2026-02-09 00:53:55 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-09 00:53:55 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-09 00:53:55 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-09 00:53:55 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-09 00:53:55 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-09 00:53:58 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-09 00:54:00 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-09 00:54:07 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-09 00:54:08 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-09 00:54:08 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-09 00:54:08 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-09 00:54:13 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-09 00:54:13 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-09 00:54:14 - src.core.social_poster - INFO - Checking for iframes...
+2026-02-09 00:54:14 - src.core.social_poster - INFO - Found 2 frame(s)
+2026-02-09 00:54:14 - src.core.social_poster - INFO - Trying 17 selectors...
+2026-02-09 00:54:14 - src.core.social_poster - INFO -   Selector div[role='textbox'][contenteditable='true']: count=1, visible=True, editable=True, enabled=True
+2026-02-09 00:54:14 - src.core.social_poster - INFO - ✓ Confirmed text input: div[role='textbox'][contenteditable='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-09 00:54:14 - src.core.social_poster - INFO - Entering text...
+2026-02-09 00:54:14 - src.core.social_poster - INFO - Attempting to enter text (length: 4 chars)...
+2026-02-09 00:54:14 - src.core.social_poster - INFO - Text input state: count=1, visible=True, editable=True
+2026-02-09 00:54:14 - src.core.social_poster - INFO - Strategy 1: Focus + pressSequentially...
+2026-02-09 00:54:16 - src.core.social_poster - INFO - ✓ Text entered successfully with pressSequentially
+2026-02-09 00:54:16 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-09 00:54:16 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-09 00:54:16 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/SN Mac Drive/6-NEW/image-1767905637566.png
+2026-02-09 00:54:16 - src.core.social_poster - INFO - Getting dialog context...
+2026-02-09 00:54:16 - src.core.social_poster - INFO - ✓ Found dialog, ready for direct file upload
+2026-02-09 00:54:16 - src.core.social_poster - INFO - Looking for hidden file input in dialog...
+2026-02-09 00:54:16 - src.core.social_poster - INFO - ✓ Found existing file input in dialog
+2026-02-09 00:54:16 - src.core.social_poster - INFO - Uploading 1 files directly...
+2026-02-09 00:54:16 - src.core.social_poster - INFO - ✓ Set file: image-1767905637566.png
+2026-02-09 00:54:19 - src.core.social_poster - INFO - ✓ Set 1 files, waiting for them to appear...
+2026-02-09 00:54:19 - src.core.social_poster - INFO - Debug screenshot: fb_after_upload.png
+2026-02-09 00:54:19 - src.core.social_poster - INFO - Waiting for media to appear in composer...
+2026-02-09 00:54:19 - src.core.social_poster - INFO - ✓ Media detected: img[src*='fbcdn']
+2026-02-09 00:54:19 - src.core.social_poster - INFO - ✓ Media successfully attached after 1 seconds
+2026-02-09 00:54:19 - src.core.social_poster - INFO - ✓ Media upload completed
+2026-02-09 00:54:23 - src.core.social_poster - INFO - Screenshot saved: fb_before_buttons.png
+2026-02-09 00:54:23 - src.core.social_poster - INFO - Looking for Post/Next button...
+2026-02-09 00:54:23 - src.core.social_poster - INFO - Found Next button, clicking...
+2026-02-09 00:54:26 - src.core.social_poster - INFO - ✓ Found enabled Post button
+2026-02-09 00:54:26 - src.core.social_poster - INFO - Clicking Post...
+2026-02-09 00:54:26 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-09 00:54:31 - src.core.social_poster - INFO - Screenshot saved: fb_after_post.png
+2026-02-09 00:54:33 - src.core.social_poster - INFO - URL after post: https://www.facebook.com/, Dialogs: 0
+2026-02-09 00:54:33 - src.core.social_poster - INFO - ✓ Found posted content in feed
+2026-02-09 00:54:33 - src.core.social_poster - INFO - Closing browser...
+2026-02-09 00:54:34 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-09 00:54:34 - src.gui.main_window - INFO - Facebook post successful
+2026-02-09 00:58:16 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 00:58:16 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 00:58:16 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 00:59:04 - src.main - INFO - Starting AIOperator...
+2026-02-09 00:59:04 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 00:59:07 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 00:59:07 - src.gui.widgets.post_history - INFO - Loaded 62 post records
+2026-02-09 00:59:08 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 00:59:08 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 00:59:08 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 00:59:08 - src.main - INFO - GUI initialized successfully
+2026-02-09 00:59:42 - src.gui.main_window - INFO - Posting to facebook: test2...
+2026-02-09 00:59:42 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-09 00:59:42 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-09 00:59:42 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-09 00:59:42 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-09 00:59:44 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-09 00:59:46 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-09 00:59:53 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-09 00:59:54 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-09 00:59:54 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-09 00:59:54 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-09 01:00:03 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-09 01:00:03 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-09 01:00:05 - src.core.social_poster - INFO - Checking for iframes...
+2026-02-09 01:00:05 - src.core.social_poster - INFO - Found 2 frame(s)
+2026-02-09 01:00:05 - src.core.social_poster - INFO - Trying 17 selectors...
+2026-02-09 01:00:05 - src.core.social_poster - INFO -   Selector div[role='textbox'][contenteditable='true']: count=1, visible=True, editable=True, enabled=True
+2026-02-09 01:00:05 - src.core.social_poster - INFO - ✓ Confirmed text input: div[role='textbox'][contenteditable='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-09 01:00:05 - src.core.social_poster - INFO - Entering text...
+2026-02-09 01:00:05 - src.core.social_poster - INFO - Attempting to enter text (length: 5 chars)...
+2026-02-09 01:00:05 - src.core.social_poster - INFO - Text input state: count=1, visible=True, editable=True
+2026-02-09 01:00:05 - src.core.social_poster - INFO - Strategy 1: Focus + pressSequentially...
+2026-02-09 01:00:06 - src.core.social_poster - INFO - ✓ Text entered successfully with pressSequentially
+2026-02-09 01:00:06 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-09 01:00:06 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-09 01:00:06 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/SN Mac Drive/6-NEW/new2.png
+2026-02-09 01:00:06 - src.core.social_poster - INFO - Getting dialog context...
+2026-02-09 01:00:06 - src.core.social_poster - INFO - ✓ Found dialog, ready for direct file upload
+2026-02-09 01:00:06 - src.core.social_poster - INFO - Looking for hidden file input in dialog...
+2026-02-09 01:00:06 - src.core.social_poster - INFO - ✓ Found existing file input in dialog
+2026-02-09 01:00:06 - src.core.social_poster - INFO - Uploading 1 files directly...
+2026-02-09 01:00:06 - src.core.social_poster - INFO - ✓ Set file: new2.png
+2026-02-09 01:00:09 - src.core.social_poster - INFO - ✓ Set 1 files, waiting for them to appear...
+2026-02-09 01:00:10 - src.core.social_poster - INFO - Debug screenshot: fb_after_upload.png
+2026-02-09 01:00:10 - src.core.social_poster - INFO - Waiting for media to appear in composer...
+2026-02-09 01:00:10 - src.core.social_poster - INFO - ✓ Media detected: img[src*='fbcdn']
+2026-02-09 01:00:10 - src.core.social_poster - INFO - ✓ Media successfully attached after 1 seconds
+2026-02-09 01:00:10 - src.core.social_poster - INFO - ✓ Media upload completed
+2026-02-09 01:00:13 - src.core.social_poster - INFO - Screenshot saved: fb_before_buttons.png
+2026-02-09 01:00:13 - src.core.social_poster - INFO - Looking for Post/Next button...
+2026-02-09 01:00:13 - src.core.social_poster - INFO - Found Next button, clicking...
+2026-02-09 01:00:16 - src.core.social_poster - INFO - ✓ Found enabled Post button
+2026-02-09 01:00:16 - src.core.social_poster - INFO - Clicking Post...
+2026-02-09 01:00:16 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-09 01:00:21 - src.core.social_poster - INFO - Screenshot saved: fb_after_post.png
+2026-02-09 01:00:24 - src.core.social_poster - INFO - URL after post: https://www.facebook.com/, Dialogs: 0
+2026-02-09 01:00:24 - src.core.social_poster - INFO - ✓ Found posted content in feed
+2026-02-09 01:00:24 - src.core.social_poster - INFO - Closing browser...
+2026-02-09 01:00:24 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-09 01:00:24 - src.gui.main_window - INFO - Facebook post successful
+2026-02-09 01:04:50 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 01:04:50 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 01:04:50 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 01:05:04 - src.main - INFO - Starting AIOperator...
+2026-02-09 01:05:04 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 01:05:05 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 01:05:05 - src.gui.widgets.post_history - INFO - Loaded 63 post records
+2026-02-09 01:05:06 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 01:05:06 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 01:05:06 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 01:05:06 - src.main - INFO - GUI initialized successfully
+2026-02-09 01:05:26 - src.gui.main_window - INFO - Posting to facebook: test...
+2026-02-09 01:05:26 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-09 01:05:26 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-09 01:05:26 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-09 01:05:26 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-09 01:05:29 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-09 01:05:30 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-09 01:05:38 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-09 01:05:39 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-09 01:05:39 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-09 01:05:39 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-09 01:05:43 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-09 01:05:43 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-09 01:05:44 - src.core.social_poster - INFO - Checking for iframes...
+2026-02-09 01:05:44 - src.core.social_poster - INFO - Found 2 frame(s)
+2026-02-09 01:05:44 - src.core.social_poster - INFO - Trying 17 selectors...
+2026-02-09 01:05:44 - src.core.social_poster - INFO -   Selector div[role='textbox'][contenteditable='true']: count=1, visible=True, editable=True, enabled=True
+2026-02-09 01:05:44 - src.core.social_poster - INFO - ✓ Confirmed text input: div[role='textbox'][contenteditable='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-09 01:05:44 - src.core.social_poster - INFO - Entering text...
+2026-02-09 01:05:44 - src.core.social_poster - INFO - Attempting to enter text (length: 4 chars)...
+2026-02-09 01:05:44 - src.core.social_poster - INFO - Text input state: count=1, visible=True, editable=True
+2026-02-09 01:05:44 - src.core.social_poster - INFO - Strategy 1: Focus + pressSequentially...
+2026-02-09 01:05:46 - src.core.social_poster - INFO - ✓ Text entered successfully with pressSequentially
+2026-02-09 01:05:46 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-09 01:05:46 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-09 01:05:46 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/SN Mac Drive/6-NEW/image-1767905637566.png
+2026-02-09 01:05:46 - src.core.social_poster - INFO - Getting dialog context...
+2026-02-09 01:05:46 - src.core.social_poster - INFO - ✓ Found dialog, ready for direct file upload
+2026-02-09 01:05:46 - src.core.social_poster - INFO - Looking for hidden file input in dialog...
+2026-02-09 01:05:46 - src.core.social_poster - INFO - ✓ Found existing file input in dialog
+2026-02-09 01:05:46 - src.core.social_poster - INFO - Uploading 1 files directly...
+2026-02-09 01:05:46 - src.core.social_poster - INFO - ✓ Set file: image-1767905637566.png
+2026-02-09 01:05:49 - src.core.social_poster - INFO - ✓ Set 1 files, waiting for them to appear...
+2026-02-09 01:05:49 - src.core.social_poster - INFO - Debug screenshot: fb_after_upload.png
+2026-02-09 01:05:49 - src.core.social_poster - INFO - Waiting for media to appear in composer...
+2026-02-09 01:05:49 - src.core.social_poster - INFO - ✓ Media detected: img[src*='fbcdn']
+2026-02-09 01:05:49 - src.core.social_poster - INFO - ✓ Media successfully attached after 1 seconds
+2026-02-09 01:05:49 - src.core.social_poster - INFO - ✓ Media upload completed
+2026-02-09 01:05:53 - src.core.social_poster - INFO - Screenshot saved: fb_before_buttons.png
+2026-02-09 01:05:53 - src.core.social_poster - INFO - Looking for Post/Next button...
+2026-02-09 01:05:53 - src.core.social_poster - INFO - Found Next button, clicking...
+2026-02-09 01:05:56 - src.core.social_poster - INFO - ✓ Found enabled Post button
+2026-02-09 01:05:56 - src.core.social_poster - INFO - Clicking Post...
+2026-02-09 01:05:56 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-09 01:06:01 - src.core.social_poster - INFO - Screenshot saved: fb_after_post.png
+2026-02-09 01:06:03 - src.core.social_poster - INFO - URL after post: https://www.facebook.com/, Dialogs: 0
+2026-02-09 01:06:03 - src.core.social_poster - INFO - ⚠ Dialog closed and on feed, but couldn't verify content
+2026-02-09 01:06:03 - src.core.social_poster - INFO - Closing browser...
+2026-02-09 01:06:04 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-09 01:06:04 - src.gui.main_window - INFO - Facebook post successful
+2026-02-09 01:09:40 - src.gui.widgets.scheduler_widget - INFO - Dropped 1 file(s)
+2026-02-09 01:13:49 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 01:13:49 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 01:13:49 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 01:14:00 - src.main - INFO - Starting AIOperator...
+2026-02-09 01:14:00 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 01:14:02 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 01:14:02 - src.gui.widgets.post_history - INFO - Loaded 64 post records
+2026-02-09 01:14:03 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 01:14:03 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 01:14:03 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 01:14:03 - src.main - INFO - GUI initialized successfully
+2026-02-09 01:14:11 - apscheduler.scheduler - INFO - Added job "execute_scheduled_post" to job store "default"
+2026-02-09 01:14:11 - src.core.scheduler - INFO - Scheduled post post_1 for 2026-02-09 02:14:11.820357
+2026-02-09 01:14:11 - src.gui.widgets.scheduler_widget - INFO - Scheduled post for 2026-02-09 02:14:11.820357
+2026-02-09 01:14:11 - src.gui.widgets.scheduler_widget - INFO - Auto-scheduled 1 file(s)
+2026-02-09 01:15:17 - apscheduler.scheduler - INFO - Removed job post_1
+2026-02-09 01:15:17 - src.core.scheduler - INFO - Cancelled job post_1
+2026-02-09 01:22:00 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 01:22:00 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 01:22:00 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 01:22:28 - src.main - INFO - Starting AIOperator...
+2026-02-09 01:22:28 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 01:22:31 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 01:22:31 - src.gui.widgets.post_history - INFO - Loaded 64 post records
+2026-02-09 01:22:32 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 01:22:32 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 01:22:32 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 01:22:32 - src.main - INFO - GUI initialized successfully
+2026-02-09 01:29:50 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 01:29:50 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 01:29:50 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 01:30:12 - src.main - INFO - Starting AIOperator...
+2026-02-09 01:30:12 - src.main - WARNING - Config warning: OPENROUTER_API_KEY is not set
+2026-02-09 01:30:14 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 01:30:14 - src.gui.widgets.post_history - INFO - Loaded 64 post records
+2026-02-09 01:30:15 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 01:30:15 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 01:30:15 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 01:30:15 - src.main - INFO - GUI initialized successfully
+2026-02-09 01:33:29 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 01:33:29 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 01:33:29 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 01:44:33 - src.main - INFO - Starting AIOperator...
+2026-02-09 01:44:34 - src.main - ERROR - Failed to import GUI components: cannot import name 'QSvgRenderer' from 'PyQt5.QtGui' (/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/PyQt5/QtGui.abi3.so)
+2026-02-09 01:44:34 - src.main - ERROR - Make sure PyQt5 is installed: pip install PyQt5
+2026-02-09 01:44:51 - src.main - INFO - Starting AIOperator...
+2026-02-09 01:44:51 - src.main - ERROR - Failed to import GUI components: cannot import name 'QSvgRenderer' from 'PyQt5.QtGui' (/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/PyQt5/QtGui.abi3.so)
+2026-02-09 01:44:51 - src.main - ERROR - Make sure PyQt5 is installed: pip install PyQt5
+2026-02-09 01:46:20 - src.main - INFO - Starting AIOperator...
+2026-02-09 01:46:22 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 01:46:22 - src.gui.widgets.post_history - INFO - Loaded 64 post records
+2026-02-09 01:46:23 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-09 01:46:23 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 01:46:23 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 01:46:23 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 01:46:24 - src.main - INFO - GUI initialized successfully
+2026-02-09 01:47:33 - src.gui.widgets.content_editor - INFO - Auto-generated content from: train-journey.png
+2026-02-09 01:47:59 - src.gui.main_window - INFO - Posting to facebook: Sharing: Train Journey...
+2026-02-09 01:48:00 - src.gui.threads.post_thread - INFO - Worker thread starting social poster...
+2026-02-09 01:48:00 - src.core.browser_session_manager - INFO - Loaded 1 browser sessions
+2026-02-09 01:48:00 - src.core.browser_session_manager - INFO - Loaded browser configs for 3 platforms
+2026-02-09 01:48:00 - src.core.social_poster - INFO - Starting Facebook post...
+2026-02-09 01:48:03 - src.core.social_poster - INFO - Loaded 10 cookies from saved session
+2026-02-09 01:48:03 - src.core.social_poster - INFO - Navigating to Facebook...
+2026-02-09 01:48:13 - src.core.social_poster - INFO - ✓ Logged in with saved session
+2026-02-09 01:48:15 - src.core.social_poster - INFO - Screenshot saved: fb_feed.png
+2026-02-09 01:48:15 - src.core.social_poster - INFO - Looking for composer trigger...
+2026-02-09 01:48:16 - src.core.social_poster - INFO - Found composer trigger: div[role='button']:has-text('mind')
+2026-02-09 01:48:21 - src.core.social_poster - INFO - Screenshot saved: fb_composer.png
+2026-02-09 01:48:21 - src.core.social_poster - INFO - 🔍 Searching for text input...
+2026-02-09 01:48:23 - src.core.social_poster - INFO - Checking for iframes...
+2026-02-09 01:48:23 - src.core.social_poster - INFO - Found 2 frame(s)
+2026-02-09 01:48:23 - src.core.social_poster - INFO - Trying 17 selectors...
+2026-02-09 01:48:23 - src.core.social_poster - INFO -   Selector div[role='textbox'][contenteditable='true']: count=1, visible=True, editable=True, enabled=True
+2026-02-09 01:48:23 - src.core.social_poster - INFO - ✓ Confirmed text input: div[role='textbox'][contenteditable='true'] (contenteditable=true, role=textbox, placeholder=What's on your mind, Shanchoy?)
+2026-02-09 01:48:23 - src.core.social_poster - INFO - Entering text...
+2026-02-09 01:48:23 - src.core.social_poster - INFO - Attempting to enter text (length: 22 chars)...
+2026-02-09 01:48:23 - src.core.social_poster - INFO - Text input state: count=1, visible=True, editable=True
+2026-02-09 01:48:23 - src.core.social_poster - INFO - Strategy 1: Focus + pressSequentially...
+2026-02-09 01:48:26 - src.core.social_poster - INFO - ✓ Text entered successfully with pressSequentially
+2026-02-09 01:48:26 - src.core.social_poster - INFO - Uploading 1 media files...
+2026-02-09 01:48:26 - src.core.social_poster - INFO - Debug screenshot: fb_before_upload.png
+2026-02-09 01:48:26 - src.core.social_poster - INFO - Found media file: /Users/macbookpr0/SN Mac Drive/6-NEW/train-journey.png
+2026-02-09 01:48:26 - src.core.social_poster - INFO - Getting dialog context...
+2026-02-09 01:48:27 - src.core.social_poster - INFO - ✓ Found dialog, ready for direct file upload
+2026-02-09 01:48:27 - src.core.social_poster - INFO - Looking for hidden file input in dialog...
+2026-02-09 01:48:27 - src.core.social_poster - INFO - ✓ Found existing file input in dialog
+2026-02-09 01:48:27 - src.core.social_poster - INFO - Uploading 1 files directly...
+2026-02-09 01:48:27 - src.core.social_poster - INFO - ✓ Set file: train-journey.png
+2026-02-09 01:48:30 - src.core.social_poster - INFO - ✓ Set 1 files, waiting for them to appear...
+2026-02-09 01:48:31 - src.core.social_poster - INFO - Debug screenshot: fb_after_upload.png
+2026-02-09 01:48:31 - src.core.social_poster - INFO - Waiting for media to appear in composer...
+2026-02-09 01:48:31 - src.core.social_poster - INFO - ✓ Media detected: img[src*='fbcdn']
+2026-02-09 01:48:31 - src.core.social_poster - INFO - ✓ Media successfully attached after 1 seconds
+2026-02-09 01:48:31 - src.core.social_poster - INFO - ✓ Media upload completed
+2026-02-09 01:48:34 - src.core.social_poster - INFO - Screenshot saved: fb_before_buttons.png
+2026-02-09 01:48:34 - src.core.social_poster - INFO - Looking for Post/Next button...
+2026-02-09 01:48:34 - src.core.social_poster - INFO - Found Next button, clicking...
+2026-02-09 01:48:37 - src.core.social_poster - INFO - ✓ Found enabled Post button
+2026-02-09 01:48:37 - src.core.social_poster - INFO - Clicking Post...
+2026-02-09 01:48:37 - src.core.social_poster - INFO - Waiting for post to publish...
+2026-02-09 01:48:43 - src.core.social_poster - INFO - Screenshot saved: fb_after_post.png
+2026-02-09 01:48:45 - src.core.social_poster - INFO - URL after post: https://www.facebook.com/, Dialogs: 0
+2026-02-09 01:48:45 - src.core.social_poster - INFO - ✓ Found posted content in feed
+2026-02-09 01:48:45 - src.core.social_poster - INFO - Closing browser...
+2026-02-09 01:48:45 - src.gui.threads.post_thread - INFO - Worker thread finished with success=True
+2026-02-09 01:48:45 - src.gui.main_window - INFO - Facebook post successful
+2026-02-09 01:52:32 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 01:52:33 - src.gui.widgets.content_editor - INFO - Added 5 hashtags
+2026-02-09 01:52:49 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 01:52:51 - src.gui.widgets.content_editor - INFO - Content improved successfully
+2026-02-09 01:55:52 - src.gui.main_window - INFO - Scheduling post for 2026-02-09 02:55:00
+2026-02-09 02:01:22 - src.main - INFO - Starting AIOperator...
+2026-02-09 02:01:23 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 02:01:23 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 02:01:23 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 02:01:26 - src.main - ERROR - Application error: 'MainWindow' object has no attribute '_show_settings'
+Traceback (most recent call last):
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/main.py", line 43, in main
+    window = MainWindow()
+             ^^^^^^^^^^^^
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/gui/main_window.py", line 55, in __init__
+    self._init_menu_bar()
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/gui/main_window.py", line 75, in _init_menu_bar
+    settings_action.triggered.connect(self._show_settings)
+                                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute '_show_settings'
+2026-02-09 02:02:09 - src.main - INFO - Starting AIOperator...
+2026-02-09 02:02:13 - src.main - ERROR - Application error: 'MainWindow' object has no attribute '_show_settings'
+Traceback (most recent call last):
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/main.py", line 43, in main
+    window = MainWindow()
+             ^^^^^^^^^^^^
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/gui/main_window.py", line 55, in __init__
+    self._init_menu_bar()
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/gui/main_window.py", line 75, in _init_menu_bar
+    settings_action.triggered.connect(self._show_settings)
+                                      ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute '_show_settings'
+2026-02-09 02:03:16 - src.main - INFO - Starting AIOperator...
+2026-02-09 02:03:20 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 02:03:20 - src.gui.widgets.post_history - INFO - Loaded 65 post records
+2026-02-09 02:03:22 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-09 02:03:22 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 02:03:22 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 02:03:22 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 02:03:22 - src.main - INFO - GUI initialized successfully
+2026-02-09 02:09:40 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 02:09:40 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 02:09:40 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 02:09:51 - src.main - INFO - Starting AIOperator...
+2026-02-09 02:09:53 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 02:09:53 - src.gui.widgets.post_history - INFO - Loaded 65 post records
+2026-02-09 02:09:54 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-09 02:09:54 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 02:09:54 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 02:09:54 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 02:09:54 - src.main - INFO - GUI initialized successfully
+2026-02-09 02:13:06 - src.gui.main_window - INFO - Scheduling post for 2026-02-09 03:00:00
+2026-02-09 02:13:06 - src.gui.main_window - ERROR - Failed to schedule post: 'ConnectedAccount' object has no attribute 'id'
+2026-02-09 02:48:42 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 02:48:42 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 02:48:42 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 02:48:52 - src.main - INFO - Starting AIOperator...
+2026-02-09 02:48:54 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 02:48:54 - src.gui.widgets.post_history - INFO - Loaded 65 post records
+2026-02-09 02:48:54 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-09 02:48:55 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 02:48:55 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 02:48:55 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 02:48:55 - src.main - INFO - GUI initialized successfully
+2026-02-09 02:49:40 - src.gui.main_window - INFO - Scheduling post for 2026-02-09 03:00:00
+2026-02-09 02:49:40 - src.gui.main_window - ERROR - Failed to schedule post: name 'get_database' is not defined
+2026-02-09 02:56:19 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 02:56:19 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 02:56:19 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 02:56:32 - src.main - INFO - Starting AIOperator...
+2026-02-09 02:56:33 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 02:56:33 - src.gui.widgets.post_history - INFO - Loaded 65 post records
+2026-02-09 02:56:34 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-09 02:56:34 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 02:56:34 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 02:56:34 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 02:56:34 - src.main - INFO - GUI initialized successfully
+2026-02-09 02:57:24 - src.gui.main_window - INFO - Scheduling post for 2026-02-09 03:00:00
+2026-02-09 03:04:03 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 03:04:03 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 03:04:03 - src.gui.main_window - INFO - AIOperator shutting down
+2026-02-09 03:06:59 - src.main - INFO - Starting AIOperator...
+2026-02-09 03:07:02 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 03:07:02 - src.gui.widgets.post_history - INFO - Loaded 65 post records
+2026-02-09 03:07:03 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-09 03:07:03 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 03:07:03 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 03:07:03 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 03:07:04 - src.main - INFO - GUI initialized successfully
+2026-02-09 03:07:19 - src.gui.main_window - INFO - Scheduling post for 2026-02-09 04:07:00
+2026-02-09 03:19:53 - src.main - INFO - Starting AIOperator...
+2026-02-09 03:19:57 - src.core.browser_connect - INFO - Loaded 1 connected accounts
+2026-02-09 03:19:57 - src.gui.widgets.post_history - INFO - Loaded 65 post records
+2026-02-09 03:19:58 - src.gui.widgets.content_editor - INFO - LLM client initialized
+2026-02-09 03:19:59 - apscheduler.scheduler - INFO - Scheduler started
+2026-02-09 03:19:59 - src.core.scheduler - INFO - Scheduler started
+2026-02-09 03:19:59 - src.gui.main_window - INFO - AIOperator started successfully
+2026-02-09 03:19:59 - src.main - INFO - GUI initialized successfully
+2026-02-09 03:20:15 - src.gui.main_window - INFO - Scheduling post for 2026-02-09 04:20:00
+2026-02-09 03:20:15 - src.gui.main_window - INFO - No database account found for facebook, creating one...
+2026-02-09 03:20:15 - src.gui.main_window - INFO - Created database account with ID 2
+2026-02-09 03:20:15 - apscheduler.scheduler - INFO - Added job "execute_scheduled_post" to job store "default"
+2026-02-09 03:20:15 - src.core.scheduler - INFO - Scheduled post post_2 for 2026-02-09 04:20:00
+2026-02-09 03:20:15 - src.gui.main_window - INFO - Successfully scheduled post 2 for 2026-02-09 04:20:00
+2026-02-09 04:20:02 - apscheduler.executors.default - INFO - Running job "execute_scheduled_post (trigger: date[2026-02-09 04:20:00 +06], next run at: 2026-02-09 04:20:00 +06)" (scheduled at 2026-02-09 04:20:00+06:00)
+2026-02-09 04:20:02 - src.core.scheduler_tasks - INFO - Executing scheduled post for facebook, account 2
+2026-02-09 04:20:03 - apscheduler.scheduler - INFO - Removed job post_2
+2026-02-09 04:20:03 - src.core.scheduler_tasks - ERROR - Error executing scheduled post: No password available
+Traceback (most recent call last):
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/core/scheduler_tasks.py", line 74, in execute_scheduled_post
+    password=account.get_decrypted_password()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/src/data/models.py", line 50, in get_decrypted_password
+    raise ValueError("No password available")
+ValueError: No password available
+2026-02-09 04:20:03 - apscheduler.executors.default - INFO - Job "execute_scheduled_post (trigger: date[2026-02-09 04:20:00 +06], next run at: 2026-02-09 04:20:00 +06)" executed successfully
+2026-02-09 04:20:03 - src.core.scheduler - INFO - Job post_2 executed successfully
+2026-02-09 19:18:04 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-02-09 19:18:04 - src.core.scheduler - INFO - Scheduler stopped
+2026-02-09 19:18:04 - src.gui.main_window - INFO - AIOperator shutting down

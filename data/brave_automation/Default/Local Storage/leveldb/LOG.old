@@ -1,27 +1,14 @@
-2026/02/06-12:35:56.336 1f84 Reusing MANIFEST C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Local Storage\leveldb/MANIFEST-000001
-2026/02/06-12:35:56.350 1f84 Recovering log #1291
-2026/02/06-12:35:56.356 1f84 Reusing old log C:\Users\shanc\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Local Storage\leveldb/001291.log 
-2026/02/06-13:08:51.944 4a14 Level-0 table #1295: started
-2026/02/06-13:08:51.949 4a14 Level-0 table #1295: 22936 bytes OK
-2026/02/06-13:08:51.953 4a14 Delete type=0 #1291
-2026/02/06-13:46:24.733 4a14 Level-0 table #1297: started
-2026/02/06-13:46:24.736 4a14 Level-0 table #1297: 26996 bytes OK
-2026/02/06-13:46:24.740 4a14 Delete type=0 #1294
-2026/02/06-13:46:24.741 4a14 Compacting 4@0 + 1@1 files
-2026/02/06-13:46:24.761 4a14 Generated table #1298@0: 1910 keys, 848644 bytes
-2026/02/06-13:46:24.761 4a14 Compacted 4@0 + 1@1 files => 848644 bytes
-2026/02/06-13:46:24.762 4a14 compacted to: files[ 0 1 1 0 0 0 0 ]
-2026/02/06-13:46:24.763 4a14 Delete type=2 #1288
-2026/02/06-13:46:24.763 4a14 Delete type=2 #1290
-2026/02/06-13:46:24.763 4a14 Delete type=2 #1292
-2026/02/06-13:46:24.763 4a14 Delete type=2 #1295
-2026/02/06-13:46:24.763 4a14 Delete type=2 #1297
-2026/02/06-17:26:52.026 4a14 Level-0 table #1300: started
-2026/02/06-17:26:52.031 4a14 Level-0 table #1300: 14965 bytes OK
-2026/02/06-17:26:52.034 4a14 Delete type=0 #1296
-2026/02/06-17:42:49.979 4a14 Level-0 table #1302: started
-2026/02/06-17:42:49.986 4a14 Level-0 table #1302: 16552 bytes OK
-2026/02/06-17:42:49.991 4a14 Delete type=0 #1299
-2026/02/06-18:44:02.565 4a14 Level-0 table #1304: started
-2026/02/06-18:44:02.571 4a14 Level-0 table #1304: 13505 bytes OK
-2026/02/06-18:44:02.575 4a14 Delete type=0 #1301
+2026/02/07-00:48:11.679 80f5e Reusing MANIFEST /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation/Default/Local Storage/leveldb/MANIFEST-000001
+2026/02/07-00:48:11.687 80f5e Recovering log #1303
+2026/02/07-00:48:11.734 80f5e Level-0 table #1306: started
+2026/02/07-00:48:11.774 80f5e Level-0 table #1306: 15161 bytes OK
+2026/02/07-00:48:11.784 80f5e Delete type=0 #1303
+2026/02/07-00:48:11.790 80f61 Compacting 4@0 + 1@1 files
+2026/02/07-00:48:11.824 80f61 Generated table #1308@0: 2385 keys, 756178 bytes
+2026/02/07-00:48:11.824 80f61 Compacted 4@0 + 1@1 files => 756178 bytes
+2026/02/07-00:48:11.829 80f61 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/02/07-00:48:11.830 80f61 Delete type=2 #1302
+2026/02/07-00:48:11.830 80f61 Delete type=2 #1300
+2026/02/07-00:48:11.830 80f61 Delete type=2 #1304
+2026/02/07-00:48:11.830 80f61 Delete type=2 #1298
+2026/02/07-00:48:11.830 80f61 Delete type=2 #1306

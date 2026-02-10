@@ -27,7 +27,7 @@ from src.gui.threads.post_thread import FacebookPostWorker
 from src.gui.styles.dark_theme import get_dark_stylesheet
 from src.utils.logger import get_logger, GUILogHandler, QtLogEmitter
 from src.core.scheduler import get_scheduler
-
+from src.data.database import get_database
 
 logger = get_logger(__name__)
 
@@ -39,6 +39,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("AIOperator - Social Media Automation")
         self.setMinimumSize(1200, 800)
+        self.db = get_database()
         
         # Apply dark theme
         self.setStyleSheet(get_dark_stylesheet() + """
@@ -144,13 +145,13 @@ class MainWindow(QMainWindow):
         center_layout.setContentsMargins(10, 10, 10, 10)
         center_layout.setSpacing(8)
         
+        # Scheduler - Scheduled Posts (moved above Content Editor)
+        self.scheduler_widget = SchedulerWidget()
+        center_layout.addWidget(self.scheduler_widget, stretch=1)
+        
         # Content editor
         self.content_editor = ContentEditorWidget()
-        center_layout.addWidget(self.content_editor, stretch=3)
-        
-        # Scheduler
-        self.scheduler_widget = SchedulerWidget()
-        center_layout.addWidget(self.scheduler_widget, stretch=2)
+        center_layout.addWidget(self.content_editor, stretch=4)
         
         splitter.addWidget(center_widget)
         
@@ -270,9 +271,100 @@ class MainWindow(QMainWindow):
             toast_warning("No Account", "Please select an account first")
             return
         
+        # Allow scheduling with just content (no media required)
+        if not content.strip():
+            toast_warning("No Content", "Please write some content to schedule")
+            return
+        
         logger.info(f"Scheduling post for {scheduled_time}")
-        self.status_label.setText(f"Scheduled for {scheduled_time}")
-        toast_success("Scheduled", f"Post scheduled for {scheduled_time}")
+        self.status_label.setText("Scheduling post...")
+        
+        try:
+            # Get platform name from connected account (it's a SocialPlatform enum)
+            platform_name = account.platform.value.lower()
+            
+            # Find database account that matches the connected account
+            db_accounts = self.db.get_all_accounts()
+            
+            # Find database account with matching platform (case-insensitive)
+            db_account = None
+            for acc in db_accounts:
+                if acc.platform.lower() == platform_name:
+                    db_account = acc
+                    break
+            
+            # If no database account found, create one
+            if not db_account:
+                logger.info(f"No database account found for {platform_name}, creating one...")
+                from src.data.models import Account
+                
+                new_account = Account(
+                    id=None,  # Auto-generated
+                    platform=platform_name,
+                    username=account.display_name,
+                    is_active=True,
+                )
+                
+                try:
+                    account_id = self.db.add_account(new_account)
+                    db_account = self.db.get_account(account_id)
+                    logger.info(f"Created database account with ID {account_id}")
+                except Exception as e:
+                    # Handle UNIQUE constraint violation - account may already exist
+                    logger.warning(f"Could not create account (may already exist): {e}")
+                    # Try to find by username as well
+                    for acc in db_accounts:
+                        if acc.username.lower() == account.display_name.lower():
+                            db_account = acc
+                            break
+            
+            if not db_account:
+                toast_error("Account Error", "Could not find or create database account for scheduling.")
+                self.status_label.setText("Account error")
+                return
+            
+            # Save to database
+            from src.data.models import ScheduledPost, PostStatusEnum
+            from src.core.scheduler import get_scheduler
+            
+            scheduler = get_scheduler()
+            
+            # Create scheduled post
+            post = ScheduledPost(
+                id=None,  # Auto-generated
+                account_id=db_account.id,
+                content=content,
+                scheduled_time=scheduled_time,
+                status=PostStatusEnum.PENDING,
+                media_paths=media_paths or [],
+            )
+            
+            # Save to database
+            post_id = self.db.add_scheduled_post(post)
+            
+            # Schedule the job
+            job_id = f"post_{post_id}"
+            scheduler.schedule_post(
+                job_id=job_id,
+                run_at=scheduled_time,
+                platform=platform_name,
+                account_id=db_account.id,
+                content=content,
+                media_paths=media_paths or [],
+            )
+            
+            # Refresh scheduler widget to show new post
+            self.scheduler_widget.refresh()
+            
+            self.status_label.setText("Post scheduled")
+            toast_success("Scheduled", f"Post scheduled for {scheduled_time.strftime('%Y-%m-%d %H:%M')}")
+            
+            logger.info(f"Successfully scheduled post {post_id} for {scheduled_time}")
+            
+        except Exception as e:
+            self.status_label.setText("Scheduling failed")
+            toast_error("Scheduling Failed", f"Failed to schedule post: {e}")
+            logger.error(f"Failed to schedule post: {e}")
     
     def _show_settings(self):
         """Show settings dialog."""

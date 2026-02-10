@@ -7,7 +7,7 @@ These functions are called by the scheduler when jobs execute.
 import logging
 from pathlib import Path
 
-from src.core.platforms import FacebookPlatform, TwitterPlatform, LinkedInPlatform, YouTubePlatform
+from src.core.platforms import FacebookPlatform, XPlatform, LinkedInPlatform, YouTubePlatform
 from src.core.platforms.base import Credentials, PostStatus
 from src.data.database import get_database
 from src.data.models import Account, ScheduledPost, PostStatusEnum
@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 PLATFORM_CLASSES = {
     "facebook": FacebookPlatform,
-    "twitter": TwitterPlatform,
+    "x": XPlatform,
     "linkedin": LinkedInPlatform,
     "youtube": YouTubePlatform,
 }

@@ -13,6 +13,7 @@ from PyQt5.QtCore import pyqtSignal, Qt
 from src.core.browser_connect import get_browser_connect, SocialPlatform, PLATFORM_CONFIG
 from src.gui.widgets.simple_connect_dialog import SimpleConnectDialog
 from src.gui.widgets.toast_notifications import toast_success, toast_error
+from src.gui.widgets.platform_icons import get_platform_icon
 from src.utils.logger import get_logger
 
 
@@ -23,13 +24,6 @@ class AccountManagerWidget(QWidget):
     """Widget for managing social media accounts."""
     
     account_selected = pyqtSignal(int)  # Emits account index
-    
-    PLATFORM_ICONS = {
-        SocialPlatform.FACEBOOK: "📘",
-        SocialPlatform.TWITTER: "🐦",
-        SocialPlatform.LINKEDIN: "💼",
-        SocialPlatform.YOUTUBE: "🎬",
-    }
     
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -99,8 +93,8 @@ class AccountManagerWidget(QWidget):
             self.account_list.addItem(item)
         else:
             for idx, account in enumerate(accounts):
-                icon = self.PLATFORM_ICONS.get(account.platform, "📱")
-                item = QListWidgetItem(f"{icon} {account.display_name}")
+                item = QListWidgetItem(account.display_name)
+                item.setIcon(get_platform_icon(account.platform.value, 20))
                 item.setData(Qt.UserRole, account.platform)
                 item.setData(Qt.UserRole + 1, idx)
                 self.account_list.addItem(item)

@@ -1,3 +1,3 @@
-2026/02/06-20:07:28.709 3ef0 Reusing MANIFEST E:\AIOperator\data\brave_automation\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/02/06-20:07:28.710 3ef0 Recovering log #4
-2026/02/06-20:07:28.719 3ef0 Reusing old log E:\AIOperator\data\brave_automation\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/000004.log 
+2026/02/07-01:10:48.004 84476 Reusing MANIFEST /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/02/07-01:10:48.004 84476 Recovering log #4
+2026/02/07-01:10:48.054 84476 Reusing old log /Users/macbookpr0/SN Mac Drive/5-WORKS/ChoyOperator/ChoyOperator/data/brave_automation/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/000004.log 
